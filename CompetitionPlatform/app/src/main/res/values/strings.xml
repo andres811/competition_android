@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Plataforma Competición</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Configuración</string>
+
+
+    <string name="base_url_services">http://192.168.1.100:8080/pfinal/services/</string>
+    <string name="authentication">auth</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+    <string name="title_activity_event_list">EventListActivity</string>
+    <string name="title_activity_main22">Main22Activity</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="title_activity_main_competition">MainCompetitionActivity</string>
+    <string name="title_activity_competition_list">CompetitionListActivity</string>
+    <string name="title_activity_competition">CompetitionActivity</string>
+</resources>
