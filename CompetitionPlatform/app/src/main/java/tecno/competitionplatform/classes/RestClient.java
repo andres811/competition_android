@@ -119,59 +119,49 @@ public class RestClient {
         InputStream inputStream;
         OutputStreamWriter outputStreamWriter;
 
-        try {
-            conn = (HttpURLConnection) this.url.openConnection();
-            conn.setRequestMethod(this.method);
+
+        conn = (HttpURLConnection) this.url.openConnection();
+        conn.setRequestMethod(this.method);
 
 
-           // conn.getHeaderField("Accept: application/json");
-            if(this.method.equals("GET")){
+        // conn.getHeaderField("Accept: application/json");
+        if(this.method.equals("GET")){
 
-                conn.setRequestProperty("User-Agent", "Mozilla/5.0");
-                conn.setRequestProperty("Accept", "application/json");
+            conn.setRequestProperty("User-Agent", "Mozilla/5.0");
+            conn.setRequestProperty("Accept", "application/json");
 
-            } else if (this.method.equals("POST")) {
+        } else if (this.method.equals("POST")) {
 
-                conn.setRequestProperty("Content-Type", "application/json");
-                conn.setDoOutput(true);
-                conn.setDoInput(true);
-                //Set request json data if needed
-                if(this.requestData != null) {
-                    outputStreamWriter = new OutputStreamWriter(conn.getOutputStream());
-                    outputStreamWriter.write(this.requestData.toString());
-                    outputStreamWriter.flush();
-                }
+            conn.setRequestProperty("Content-Type", "application/json");
+            conn.setDoOutput(true);
+            conn.setDoInput(true);
+            //Set request json data if needed
+            if(this.requestData != null) {
+                outputStreamWriter = new OutputStreamWriter(conn.getOutputStream());
+                outputStreamWriter.write(this.requestData.toString());
+                outputStreamWriter.flush();
             }
-            //set response code
-            this.responseCode = conn.getResponseCode();
+        }
+        //set response code
+        this.responseCode = conn.getResponseCode();
 
-            //get response data
-            inputStream = conn.getInputStream();
-            BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
-            String jsonResponse="", temp;
-            while (null != ((temp = br.readLine())))
-            {
-                jsonResponse=jsonResponse + temp;
+        //get response data
+        inputStream = conn.getInputStream();
+        BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
+        String jsonResponse="", temp;
+        while (null != ((temp = br.readLine())))
+        {
+            jsonResponse=jsonResponse + temp;
+        }
+        if(!jsonResponse.equals("")){
+            Object auxJson = new JSONTokener(jsonResponse).nextValue();
+            if (auxJson instanceof JSONObject){
+                this.responseData = new JSONObject(jsonResponse);
             }
-            if(!jsonResponse.equals("")){
-                Object auxJson = new JSONTokener(jsonResponse).nextValue();
-                if (auxJson instanceof JSONObject){
-                    this.responseData = new JSONObject(jsonResponse);
-                }
-                else if (auxJson instanceof JSONArray) {
-                    this.responseDataArray  = new JSONArray(auxJson.toString());
-                }
-
+            else if (auxJson instanceof JSONArray) {
+                this.responseDataArray  = new JSONArray(auxJson.toString());
             }
 
-
-        //ver luego
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
-            e.printStackTrace();
         }
 
         conn.disconnect();

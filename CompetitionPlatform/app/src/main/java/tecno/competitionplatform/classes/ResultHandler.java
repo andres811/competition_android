@@ -24,8 +24,8 @@ public class ResultHandler<Object> {
         this.data = data;
     }
 
-    public Boolean isResultValid() {
-        return (this.exception == null);
+    public Boolean hasError() {
+        return (this.exception != null);
     }
 
 

@@ -328,11 +328,11 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             mAuthTask = null;
             showProgress(false);
 
-            if (result !=null && result.isResultValid()) {
+            if (result !=null && !result.hasError()) {
 
                 Subscriber subscriber = result.getData();
                 SessionManager sessionManager = new SessionManager(getApplicationContext());
-                sessionManager.createLoginSession(1,subscriber.getFirstname(),mEmail, subscriber.getToken());
+                sessionManager.createLoginSession(subscriber.getSubscriberId(),subscriber.getFirstname(),subscriber.getEmail(), subscriber.getToken());
 
 
                 finish();

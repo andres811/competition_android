@@ -3,12 +3,14 @@ package tecno.competitionplatform.activities;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.View;
+import android.widget.ProgressBar;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -22,6 +24,7 @@ import java.net.MalformedURLException;
 import java.util.List;
 
 import tecno.competitionplatform.activities.R;
+import tecno.competitionplatform.classes.AlertDialogManager;
 import tecno.competitionplatform.classes.RestClient;
 import tecno.competitionplatform.classes.ResultHandler;
 import tecno.competitionplatform.classes.SessionManager;
@@ -32,21 +35,23 @@ import tecno.competitionplatform.entities.Subscriber;
 public class MainCompetitionListActivity extends Activity {
 
     private ListMainCompetition mListMainCompetitionTask = null;
-    private View mProgressView;
+    private ProgressDialog mDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_list);
         //getActionBar().setDisplayHomeAsUpEnabled(true);
-        mProgressView = findViewById(R.id.loading_progress);
-        showProgress(true);
+        //mProgressView = findViewById(R.id.loading_progress);
+        //showProgress(true);
+
+        mDialog = new ProgressDialog(MainCompetitionListActivity.this);
         mListMainCompetitionTask = new ListMainCompetition(0,10);
         mListMainCompetitionTask.execute((Void) null);
 
     }
 
-
+/*
     @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
     public void showProgress(final boolean show) {
         // On Honeycomb MR2 we have the ViewPropertyAnimator APIs, which allow
@@ -71,7 +76,7 @@ public class MainCompetitionListActivity extends Activity {
 
         }
     }
-
+*/
 
     public class ListMainCompetition extends AsyncTask<Void, Void, ResultHandler<List<MainCompetition>>> {
 
@@ -86,16 +91,15 @@ public class MainCompetitionListActivity extends Activity {
         @Override
         protected void onPreExecute() {
 
-            ProgressDialog spinner  = new ProgressDialog(MainCompetitionListActivity.this);
-            spinner.setMessage("Forza Roma");
-            spinner.show();
+            mDialog.setMessage("Penal para nacional");
+            mDialog.show();
 
         }
 
         @Override
         protected ResultHandler<List<MainCompetition>> doInBackground(Void... params) {
 
-            JSONArray mainCompetitionsJson = null;
+            JSONArray mainCompetitionsJson;
             ResultHandler<List<MainCompetition>> result = new ResultHandler<>();
             String url = Config.BASE_URL_SERVICES + Config.MAINCOMPETITION;
             url = url + "/" + from + "/" + to;
@@ -108,12 +112,13 @@ public class MainCompetitionListActivity extends Activity {
 
                 switch (responseCode) {
 
-                    case HttpURLConnection.HTTP_OK:
+                    //case HttpURLConnection.HTTP_OK:
+                    case 1:
                         //get json response and save in json response
                         mainCompetitionsJson = restClient.getResponseDataArray();
                         break;
 
-                    case HttpURLConnection.HTTP_NO_CONTENT:
+                    case HttpURLConnection.HTTP_NOT_FOUND:
                         throw new Exception("No hay eventos");
 
                     case HttpURLConnection.HTTP_INTERNAL_ERROR:
@@ -147,16 +152,18 @@ public class MainCompetitionListActivity extends Activity {
 
         @Override
         protected void onPostExecute(final ResultHandler<List<MainCompetition>> result) {
+            mDialog.dismiss();
 
-            //showProgress(false);
-
-            if (result !=null && result.isResultValid()) {
+            if (result !=null && !result.hasError()) {
 
                 //TODO
 
-                finish();
-            } else {
 
+                finish();
+
+            } else {
+               //AlertDialogManager.getErrorDialog(MainCompetitionListActivity.this, "Error", result.getException().getMessage());
+                String hola = "asd";
             }
         }
 
