@@ -5,11 +5,15 @@ import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
 import android.widget.ProgressBar;
 
 import com.google.gson.Gson;
@@ -21,6 +25,7 @@ import org.json.JSONObject;
 
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import tecno.competitionplatform.activities.R;
@@ -112,9 +117,8 @@ public class MainCompetitionListActivity extends Activity {
 
                 switch (responseCode) {
 
-                    //case HttpURLConnection.HTTP_OK:
-                    case 1:
-                        //get json response and save in json response
+                    case HttpURLConnection.HTTP_OK:
+                    //get json response and save in json response
                         mainCompetitionsJson = restClient.getResponseDataArray();
                         break;
 
@@ -155,15 +159,30 @@ public class MainCompetitionListActivity extends Activity {
             mDialog.dismiss();
 
             if (result !=null && !result.hasError()) {
+                List<MainCompetition> mainCompetitionList = result.getData();
+                ArrayList<Button> buttonArrayList = new ArrayList<>();
+                ArrayAdapter<Button> adapter;
+                ListView listView = (ListView)findViewById(R.id.list_buttons);
+                adapter=new ArrayAdapter<>(MainCompetitionListActivity.this,
+                        android.R.layout.simple_list_item_1,
+                        buttonArrayList);
+                listView.setAdapter(adapter);
 
-                //TODO
+
+                for (MainCompetition mc: mainCompetitionList) {
+                    Button btn = new Button(MainCompetitionListActivity.this);
+                    btn.setText(mc.getName());
+                    buttonArrayList.add(btn);
+                }
+                adapter.notifyDataSetChanged();
 
 
-                finish();
+                //finish();
 
             } else {
-               //AlertDialogManager.getErrorDialog(MainCompetitionListActivity.this, "Error", result.getException().getMessage());
+                AlertDialogManager.getErrorDialog(MainCompetitionListActivity.this, "Error", result.getException().getMessage(),"Volver", true);
                 String hola = "asd";
+
             }
         }
 

@@ -1,5 +1,6 @@
 package tecno.competitionplatform.classes;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -9,17 +10,19 @@ import android.content.DialogInterface;
  */
 public class AlertDialogManager {
 
-    public static void getErrorDialog(Context context, String title, String message) {
+    public static void getErrorDialog(final Context context, String title, String message, String btnText, final boolean backToPrevActivity ) {
 
-        final AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle(title);
-        builder.setMessage(message);
-        builder.setNegativeButton("Cerrar", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
-                dialog.cancel();
-            }
-        });
-        AlertDialog alert = builder.create();
-        alert.show();
+        new AlertDialog.Builder(context)
+                .setTitle(title)
+                .setMessage(message)
+                .setNegativeButton(btnText, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        if (backToPrevActivity == true) {
+                            ((Activity) context).finish();
+                        }
+                    }
+                })
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .show();
     }
 }
