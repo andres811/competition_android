@@ -29,6 +29,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import tecno.competitionplatform.activities.R;
+import tecno.competitionplatform.adapters.ListMainCompetitionAdapter;
 import tecno.competitionplatform.classes.AlertDialogManager;
 import tecno.competitionplatform.classes.RestClient;
 import tecno.competitionplatform.classes.ResultHandler;
@@ -96,7 +97,7 @@ public class MainCompetitionListActivity extends Activity {
         @Override
         protected void onPreExecute() {
 
-            mDialog.setMessage("Penal para nacional");
+            mDialog.setMessage("Cargando Eventos...");
             mDialog.show();
 
         }
@@ -159,7 +160,8 @@ public class MainCompetitionListActivity extends Activity {
             mDialog.dismiss();
 
             if (result !=null && !result.hasError()) {
-                List<MainCompetition> mainCompetitionList = result.getData();
+                /*
+
                 ArrayList<Button> buttonArrayList = new ArrayList<>();
                 ArrayAdapter<Button> adapter;
                 ListView listView = (ListView)findViewById(R.id.list_buttons);
@@ -175,14 +177,22 @@ public class MainCompetitionListActivity extends Activity {
                     buttonArrayList.add(btn);
                 }
                 adapter.notifyDataSetChanged();
+                */
 
+                List<MainCompetition> mainCompetitionList = result.getData();
+
+                ListView mainCompetitionListView = (ListView) findViewById(R.id.main_competition_list_view);
+
+                // get data from the table by the ListAdapter
+                ListMainCompetitionAdapter listMainCompetitionAdapter = new ListMainCompetitionAdapter(MainCompetitionListActivity.this, R.layout.itemlistrow, mainCompetitionList);
+
+                listMainCompetitionAdapter.notifyDataSetChanged();
+                mainCompetitionListView.setAdapter(listMainCompetitionAdapter);
 
                 //finish();
 
             } else {
                 AlertDialogManager.getErrorDialog(MainCompetitionListActivity.this, "Error", result.getException().getMessage(),"Volver", true);
-                String hola = "asd";
-
             }
         }
 

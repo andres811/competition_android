@@ -12,6 +12,7 @@ public class MainCompetitionActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_competition);
         getActionBar().setDisplayHomeAsUpEnabled(true);
+        int mainCompetitionId = getIntent().getExtras().getInt("mainCompetitionId");
     }
 
 }
