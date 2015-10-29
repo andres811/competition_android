@@ -1,46 +1,31 @@
 package tecno.competitionplatform.activities;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
-import android.annotation.TargetApi;
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Bundle;
 import android.app.Activity;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
-import android.widget.ProgressBar;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
-import java.util.ArrayList;
 import java.util.List;
 
-import tecno.competitionplatform.activities.R;
 import tecno.competitionplatform.adapters.ListMainCompetitionAdapter;
 import tecno.competitionplatform.classes.AlertDialogManager;
 import tecno.competitionplatform.classes.RestClient;
 import tecno.competitionplatform.classes.ResultHandler;
-import tecno.competitionplatform.classes.SessionManager;
 import tecno.competitionplatform.config.Config;
 import tecno.competitionplatform.entities.MainCompetition;
-import tecno.competitionplatform.entities.Subscriber;
 
 public class MainCompetitionListActivity extends Activity {
 
-    private ListMainCompetition mListMainCompetitionTask = null;
+    private ListMainCompetitionTask mListMainCompetitionTask = null;
     private ProgressDialog mDialog;
 
     @Override
@@ -52,7 +37,7 @@ public class MainCompetitionListActivity extends Activity {
         //showProgress(true);
 
         mDialog = new ProgressDialog(MainCompetitionListActivity.this);
-        mListMainCompetitionTask = new ListMainCompetition(0,10);
+        mListMainCompetitionTask = new ListMainCompetitionTask(0,10);
         mListMainCompetitionTask.execute((Void) null);
 
     }
@@ -84,12 +69,12 @@ public class MainCompetitionListActivity extends Activity {
     }
 */
 
-    public class ListMainCompetition extends AsyncTask<Void, Void, ResultHandler<List<MainCompetition>>> {
+    public class ListMainCompetitionTask extends AsyncTask<Void, Void, ResultHandler<List<MainCompetition>>> {
 
         private final int from;
         private final int to;
 
-        public ListMainCompetition(int from, int to) {
+        public ListMainCompetitionTask(int from, int to) {
             this.from = from;
             this.to = to;
         }
@@ -159,7 +144,7 @@ public class MainCompetitionListActivity extends Activity {
         protected void onPostExecute(final ResultHandler<List<MainCompetition>> result) {
             mDialog.dismiss();
 
-            if (result !=null && !result.hasError()) {
+            if (result !=null && result.validateResponse()) {
                 /*
 
                 ArrayList<Button> buttonArrayList = new ArrayList<>();
@@ -184,7 +169,7 @@ public class MainCompetitionListActivity extends Activity {
                 ListView mainCompetitionListView = (ListView) findViewById(R.id.main_competition_list_view);
 
                 // get data from the table by the ListAdapter
-                ListMainCompetitionAdapter listMainCompetitionAdapter = new ListMainCompetitionAdapter(MainCompetitionListActivity.this, R.layout.itemlistrow, mainCompetitionList);
+                ListMainCompetitionAdapter listMainCompetitionAdapter = new ListMainCompetitionAdapter(MainCompetitionListActivity.this, R.layout.main_competition_list_row, mainCompetitionList);
 
                 listMainCompetitionAdapter.notifyDataSetChanged();
                 mainCompetitionListView.setAdapter(listMainCompetitionAdapter);

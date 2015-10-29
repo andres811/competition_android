@@ -12,7 +12,6 @@ import android.widget.TextView;
 import java.util.List;
 
 import tecno.competitionplatform.activities.MainCompetitionActivity;
-import tecno.competitionplatform.activities.MainCompetitionListActivity;
 import tecno.competitionplatform.activities.R;
 import tecno.competitionplatform.entities.MainCompetition;
 
@@ -41,14 +40,14 @@ public class ListMainCompetitionAdapter extends ArrayAdapter<MainCompetition> {
         if (v == null) {
             LayoutInflater vi;
             vi = LayoutInflater.from(getContext());
-            v = vi.inflate(R.layout.itemlistrow, null);
+            v = vi.inflate(R.layout.main_competition_list_row, null);
         }
 
         final MainCompetition mc = getItem(position);
 
         if (mc != null) {
-            TextView name = (TextView) v.findViewById(R.id.name);
-            TextView description = (TextView) v.findViewById(R.id.description);
+            TextView name = (TextView) v.findViewById(R.id.onlist_main_competition_title);
+            TextView description = (TextView) v.findViewById(R.id.onlist_main_competition_description);
             TextView btn = (Button) v.findViewById(R.id.btn_main_competition);
 
 
@@ -65,7 +64,7 @@ public class ListMainCompetitionAdapter extends ArrayAdapter<MainCompetition> {
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(context, MainCompetitionActivity.class);
-                    intent.putExtra("mainCompetitionId",mc.getMainCompetitionId());
+                    intent.putExtra("mainCompetitionId", mc.getMainCompetitionId());
                     context.startActivity(intent);
 
                 }

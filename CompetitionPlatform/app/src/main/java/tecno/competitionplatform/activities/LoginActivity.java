@@ -328,7 +328,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             mAuthTask = null;
             showProgress(false);
 
-            if (result !=null && !result.hasError()) {
+            if (result !=null && result.validateResponse()) {
 
                 Subscriber subscriber = result.getData();
                 SessionManager sessionManager = new SessionManager(getApplicationContext());

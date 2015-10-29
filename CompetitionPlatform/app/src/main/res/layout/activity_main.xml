@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Iniciar sesión"
-        android:id="@+id/btnLogin"
+        android:id="@+id/btn_login"
         android:layout_marginTop="46dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -19,8 +19,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Suscribirse"
-        android:id="@+id/btnSubscribe"
-        android:layout_below="@+id/btnLogin"
+        android:id="@+id/btn_subscribe"
+        android:layout_below="@+id/btn_login"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="44dp" />
 
@@ -28,8 +28,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Eventos"
-        android:id="@+id/btnListMainCompetition"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="btnListMainCompetitions"/>
+        android:id="@+id/btn_list_main_competitions"
+        android:onClick="btnListMainCompetitions"
+        android:layout_marginTop="100dp"
+        android:layout_below="@+id/btn_subscribe"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
