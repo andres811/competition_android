@@ -8,14 +8,11 @@ import java.util.Date;
 public class MainCompetition {
 
     private Integer mainCompetitionId;
-
-    public Integer getMainCompetitionId() {
-        return mainCompetitionId;
-    }
-
-    public void setMainCompetitionId(Integer mainCompetitionId) {
-        this.mainCompetitionId = mainCompetitionId;
-    }
+    private String description;
+    private String name;
+    private Integer styleType;
+    private Date startDate;
+    private Date endDate;
 
     public String getDescription() {
         return description;
@@ -33,15 +30,22 @@ public class MainCompetition {
         this.name = name;
     }
 
-    public int getStyleType() {
+    public Integer getStyleType() {
         return styleType;
     }
 
-    public void setStyleType(int styleType) {
+    public void setStyleType(Integer styleType) {
         this.styleType = styleType;
     }
 
-    /*
+    public Integer getMainCompetitionId() {
+        return mainCompetitionId;
+    }
+
+    public void setMainCompetitionId(Integer mainCompetitionId) {
+        this.mainCompetitionId = mainCompetitionId;
+    }
+
     public Date getStartDate() {
         return startDate;
     }
@@ -58,19 +62,4 @@ public class MainCompetition {
         this.endDate = endDate;
     }
 
-*/
-
-    private String description;
-
-    private String name;
-
-    private int styleType;
-
-    //private Date startDate;
-
-    //private Date endDate;
-
-    //private Collection<Competition> competitionCollection;
-
-    //private Tag tag;
 }
