@@ -68,7 +68,7 @@ public class CompetitionActivity extends Activity {
                 try {
                     RestClient restClient = new RestClient(url,"GET");
                     restClient.executeRequest();
-                    
+
                     switch (restClient.getResponseCode()) {
 
                         case HttpURLConnection.HTTP_OK:
