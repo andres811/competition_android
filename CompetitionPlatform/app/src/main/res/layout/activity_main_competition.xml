@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Título Competición"
+        android:text="Título Evento"
         android:id="@+id/main_competition_title"
         android:textSize="25dp"
         android:gravity="center"

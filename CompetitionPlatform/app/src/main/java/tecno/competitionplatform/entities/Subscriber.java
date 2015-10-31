@@ -7,11 +7,21 @@ import java.text.SimpleDateFormat;
  * Created by Andres on 13/10/2015.
  */
 public class Subscriber {
+
     private Integer subscriberId;
     private String email;
     private String firstname;
+    private Date dob;
     //private Date tokenExpiresAt;
     private String token;
+
+    public Date getDob() {
+        return dob;
+    }
+
+    public void setDob(Date dob) {
+        this.dob = dob;
+    }
 
     public String getEmail() {
         return email;

@@ -40,7 +40,7 @@ public class ListCompetitionAdapter extends ArrayAdapter<Competition> {
         if (v == null) {
             LayoutInflater vi;
             vi = LayoutInflater.from(getContext());
-            v = vi.inflate(R.layout.main_competition_list_row, null);
+            v = vi.inflate(R.layout.competition_list_row, null);
         }
 
         final Competition c = getItem(position);

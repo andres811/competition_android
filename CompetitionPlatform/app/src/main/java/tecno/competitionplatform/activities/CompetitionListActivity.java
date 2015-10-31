@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.widget.ListView;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import org.json.JSONArray;
@@ -18,36 +19,12 @@ import java.util.List;
 
 import tecno.competitionplatform.activities.R;
 import tecno.competitionplatform.adapters.ListCompetitionAdapter;
-import tecno.competitionplatform.adapters.ListMainCompetitionAdapter;
 import tecno.competitionplatform.classes.AlertDialogManager;
 import tecno.competitionplatform.classes.RestClient;
 import tecno.competitionplatform.classes.ResultHandler;
 import tecno.competitionplatform.config.Config;
 import tecno.competitionplatform.entities.Competition;
 
-
-import android.app.ProgressDialog;
-import android.os.AsyncTask;
-import android.os.Bundle;
-import android.app.Activity;
-import android.widget.ListView;
-
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.util.List;
-
-import tecno.competitionplatform.adapters.ListMainCompetitionAdapter;
-import tecno.competitionplatform.classes.AlertDialogManager;
-import tecno.competitionplatform.classes.RestClient;
-import tecno.competitionplatform.classes.ResultHandler;
-import tecno.competitionplatform.config.Config;
-import tecno.competitionplatform.entities.Competition;
 
 
 public class CompetitionListActivity extends Activity {
@@ -116,6 +93,7 @@ public class CompetitionListActivity extends Activity {
                 }
 
                 //mapping json to entity
+                //Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").create();
                 Gson gson = new Gson();
                 List<Competition> competitionList = gson.fromJson(competitionsJson.toString(), new TypeToken<List<Competition>>(){}.getType());
 
@@ -163,7 +141,7 @@ public class CompetitionListActivity extends Activity {
 
                 List<Competition> competitionList = result.getData();
 
-                ListView competitionListView = (ListView) findViewById(R.id.main_competition_list_view);
+                ListView competitionListView = (ListView) findViewById(R.id.competition_list_view);
 
                 // get data from the table by the ListAdapter
                 ListCompetitionAdapter listCompetitionAdapter = new ListCompetitionAdapter(CompetitionListActivity.this, R.layout.competition_list_row, competitionList);

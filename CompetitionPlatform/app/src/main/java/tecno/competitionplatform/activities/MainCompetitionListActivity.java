@@ -31,7 +31,7 @@ public class MainCompetitionListActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_event_list);
+        setContentView(R.layout.activity_main_competition_list);
         //getActionBar().setDisplayHomeAsUpEnabled(true);
         //mProgressView = findViewById(R.id.loading_progress);
         //showProgress(true);
@@ -119,6 +119,7 @@ public class MainCompetitionListActivity extends Activity {
                 }
 
                 //mapping json to entity
+               // Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").create();
                 Gson gson = new Gson();
                 List<MainCompetition> mainCompetitionList = gson.fromJson(mainCompetitionsJson.toString(), new TypeToken<List<MainCompetition>>(){}.getType());
 
