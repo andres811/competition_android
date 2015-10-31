@@ -7,10 +7,10 @@ public class Competition {
 
     private Integer competitionId;
     private MainCompetition mainCompetitionId;
-    private Location location;
+    private Location locationId;
     private String name;
     private String description;
-    private Discipline discipline;
+    private Discipline disciplineId;
 
     public Integer getCompetitionId() {
         return competitionId;
@@ -29,11 +29,11 @@ public class Competition {
     }
 
     public Location getLocation() {
-        return location;
+        return locationId;
     }
 
     public void setLocation(Location location) {
-        this.location = location;
+        this.locationId = location;
     }
 
     public String getName() {
@@ -53,10 +53,10 @@ public class Competition {
     }
 
     public Discipline getDiscipline() {
-        return discipline;
+        return disciplineId;
     }
 
     public void setDiscipline(Discipline discipline) {
-        this.discipline = discipline;
+        this.disciplineId = discipline;
     }
 }

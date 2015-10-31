@@ -120,24 +120,7 @@ public class CompetitionListActivity extends Activity {
             mDialog.dismiss();
 
             if (result !=null && result.validateResponse()) {
-                /*
 
-                ArrayList<Button> buttonArrayList = new ArrayList<>();
-                ArrayAdapter<Button> adapter;
-                ListView listView = (ListView)findViewById(R.id.list_buttons);
-                adapter=new ArrayAdapter<>(MainCompetitionListActivity.this,
-                        android.R.layout.simple_list_item_1,
-                        buttonArrayList);
-                listView.setAdapter(adapter);
-
-
-                for (MainCompetition mc: mainCompetitionList) {
-                    Button btn = new Button(MainCompetitionListActivity.this);
-                    btn.setText(mc.getName());
-                    buttonArrayList.add(btn);
-                }
-                adapter.notifyDataSetChanged();
-                */
 
                 List<Competition> competitionList = result.getData();
 
@@ -154,12 +137,6 @@ public class CompetitionListActivity extends Activity {
             } else {
                 AlertDialogManager.getErrorDialog(CompetitionListActivity.this, "Error", result.getException().getMessage(), "Volver", true);
             }
-        }
-
-        @Override
-        protected void onCancelled() {
-
-            //showProgress(false);
         }
     }
 
