@@ -1,15 +1,13 @@
 package tecno.competitionplatform.activities;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Activity;
-import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -17,13 +15,11 @@ import org.json.JSONObject;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 
-import tecno.competitionplatform.activities.R;
 import tecno.competitionplatform.classes.AlertDialogManager;
 import tecno.competitionplatform.classes.RestClient;
 import tecno.competitionplatform.classes.ResultHandler;
 import tecno.competitionplatform.config.Config;
 import tecno.competitionplatform.entities.Competition;
-import tecno.competitionplatform.entities.MainCompetition;
 
 public class CompetitionActivity extends Activity {
 
@@ -37,6 +33,7 @@ public class CompetitionActivity extends Activity {
         getActionBar().setDisplayHomeAsUpEnabled(true);
         int competitionId = getIntent().getExtras().getInt("competitionId");
         mDialog = new ProgressDialog(CompetitionActivity.this);
+        mDialog.setCanceledOnTouchOutside(false);
         mReadCompetitionTask = new ReadCompetitionTask(competitionId);
         mReadCompetitionTask.execute((Void) null);
     }
@@ -62,7 +59,7 @@ public class CompetitionActivity extends Activity {
 
                 JSONObject competitionJson;
                 ResultHandler<Competition> result = new ResultHandler<>();
-                String url = Config.BASE_URL_SERVICES + Config.COMPETITION;
+                String url = Config.BASE_URL_SERVICES + Config.COMPETITION_SERVICE;
                 url = url + "/" + competitionId;
 
                 try {
@@ -87,7 +84,8 @@ public class CompetitionActivity extends Activity {
                     }
 
                     //mapping json to entity
-                    Gson gson = new Gson();
+                    Gson gson = new GsonBuilder().setDateFormat(Config.GSON_DATE_FORMAT).create();
+                    // Gson gson = new Gson();
                     Competition competition = gson.fromJson(competitionJson.toString(), Competition.class);
 
                     //saving data in result

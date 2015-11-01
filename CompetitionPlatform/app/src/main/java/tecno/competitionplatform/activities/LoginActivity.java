@@ -271,7 +271,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             JSONObject requestData;
             JSONObject responseData;
             ResultHandler<Subscriber> result = new ResultHandler<>();
-            String url = Config.BASE_URL_SERVICES + Config.AUTHENTICATION;
+            String url = Config.BASE_URL_SERVICES + Config.AUTHENTICATION_SERVICE;
 
             try {
                 requestData = new JSONObject();

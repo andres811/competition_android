@@ -10,12 +10,14 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
+import java.text.SimpleDateFormat;
 
 import tecno.competitionplatform.classes.AlertDialogManager;
 import tecno.competitionplatform.classes.RestClient;
@@ -35,6 +37,7 @@ public class MainCompetitionActivity extends Activity {
         getActionBar().setDisplayHomeAsUpEnabled(true);
         int mainCompetitionId = getIntent().getExtras().getInt("mainCompetitionId");
         mDialog = new ProgressDialog(MainCompetitionActivity.this);
+        mDialog.setCanceledOnTouchOutside(false);
         mReadMainCompetitionTask = new ReadMainCompetitionTask(mainCompetitionId);
         mReadMainCompetitionTask.execute((Void) null);
     }
@@ -60,7 +63,7 @@ public class MainCompetitionActivity extends Activity {
 
             JSONObject mainCompetitionsJson;
             ResultHandler<MainCompetition> result = new ResultHandler<>();
-            String url = Config.BASE_URL_SERVICES + Config.MAINCOMPETITION;
+            String url = Config.BASE_URL_SERVICES + Config.MAINCOMPETITION_SERVICE;
             url = url + "/" + mainCompetitionId;
 
             try {
@@ -86,8 +89,10 @@ public class MainCompetitionActivity extends Activity {
                         throw new Exception("Error");
                 }
 
+                //date format dates gson config
+                Gson gson = new GsonBuilder().setDateFormat(Config.GSON_DATE_FORMAT).create();
+               // Gson gson = new Gson();
                 //mapping json to entity
-                Gson gson = new Gson();
                 MainCompetition mainCompetition = gson.fromJson(mainCompetitionsJson.toString(), MainCompetition.class);
 
                 //saving data in result
@@ -125,10 +130,14 @@ public class MainCompetitionActivity extends Activity {
                 TextView txtEndDate = (TextView)findViewById(R.id.main_competition_end_date);
                 Button btnListCompetitions = (Button)findViewById(R.id.main_competition_btn_competitions);
 
+                //date formatter
+                SimpleDateFormat sdf = new SimpleDateFormat(Config.VIEW_DATE_FORMAT);
+
+                //setting data in the view
                 txtTitle.setText(mainCompetition.getName());
                 txtDescription.setText(mainCompetition.getDescription());
-                //txtStartDate.setText(mainCompetition.getStartDate().toString());
-                //txtEndDate.setText(mainCompetition.getEndDate().toString()));
+                txtStartDate.setText(sdf.format(mainCompetition.getStartDate()).toString());
+                txtEndDate.setText(sdf.format(mainCompetition.getEndDate()).toString());
 
                 btnListCompetitions.setOnClickListener(new View.OnClickListener() {
 

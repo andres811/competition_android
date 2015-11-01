@@ -17,7 +17,6 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.util.List;
 
-import tecno.competitionplatform.activities.R;
 import tecno.competitionplatform.adapters.ListCompetitionAdapter;
 import tecno.competitionplatform.classes.AlertDialogManager;
 import tecno.competitionplatform.classes.RestClient;
@@ -39,16 +38,19 @@ public class CompetitionListActivity extends Activity {
         getActionBar().setDisplayHomeAsUpEnabled(true);
         int mainCompetitionId = getIntent().getExtras().getInt("mainCompetitionId");
         mDialog = new ProgressDialog(CompetitionListActivity.this);
-        mListCompetitionsTask = new ListCompetitionsTask(0,1000);
+        mDialog.setCanceledOnTouchOutside(false);
+        mListCompetitionsTask = new ListCompetitionsTask(mainCompetitionId,0,1000);
         mListCompetitionsTask.execute((Void) null);
     }
 
     public class ListCompetitionsTask extends AsyncTask<Void, Void, ResultHandler<List<Competition>>> {
 
+        private final int mcId;
         private final int from;
         private final int to;
 
-        public ListCompetitionsTask(int from, int to) {
+        public ListCompetitionsTask(int mcId, int from, int to) {
+            this.mcId = mcId;
             this.from = from;
             this.to = to;
         }
@@ -66,8 +68,8 @@ public class CompetitionListActivity extends Activity {
 
             JSONArray competitionsJson;
             ResultHandler<List<Competition>> result = new ResultHandler<>();
-            String url = Config.BASE_URL_SERVICES + Config.COMPETITION;
-            url = url + "/" + from + "/" + to;
+            String url = Config.BASE_URL_SERVICES + Config.COMPETITION_SERVICE;
+            url = url + "/" + mcId + "/" + from + "/" + to;
 
             try {
                 RestClient restClient = new RestClient(url,"GET");
@@ -83,7 +85,7 @@ public class CompetitionListActivity extends Activity {
                         break;
 
                     case HttpURLConnection.HTTP_NOT_FOUND:
-                        throw new Exception("No hay competencias");
+                        throw new Exception("No hay competencias para este evento");
 
                     case HttpURLConnection.HTTP_INTERNAL_ERROR:
                         throw new Exception("Error del servidor");
@@ -93,8 +95,8 @@ public class CompetitionListActivity extends Activity {
                 }
 
                 //mapping json to entity
-                //Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").create();
-                Gson gson = new Gson();
+                Gson gson = new GsonBuilder().setDateFormat(Config.GSON_DATE_FORMAT).create();
+                // Gson gson = new Gson();
                 List<Competition> competitionList = gson.fromJson(competitionsJson.toString(), new TypeToken<List<Competition>>(){}.getType());
 
                 //saving data in result

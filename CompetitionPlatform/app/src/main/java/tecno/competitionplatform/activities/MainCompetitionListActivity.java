@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.widget.ListView;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import org.json.JSONArray;
@@ -37,6 +38,7 @@ public class MainCompetitionListActivity extends Activity {
         //showProgress(true);
 
         mDialog = new ProgressDialog(MainCompetitionListActivity.this);
+        mDialog.setCanceledOnTouchOutside(false);
         mListMainCompetitionTask = new ListMainCompetitionTask(0,10);
         mListMainCompetitionTask.execute((Void) null);
 
@@ -92,7 +94,7 @@ public class MainCompetitionListActivity extends Activity {
 
             JSONArray mainCompetitionsJson;
             ResultHandler<List<MainCompetition>> result = new ResultHandler<>();
-            String url = Config.BASE_URL_SERVICES + Config.MAINCOMPETITION;
+            String url = Config.BASE_URL_SERVICES + Config.MAINCOMPETITION_SERVICE;
             url = url + "/" + from + "/" + to;
 
             try {
@@ -119,9 +121,10 @@ public class MainCompetitionListActivity extends Activity {
                 }
 
                 //mapping json to entity
-               // Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").create();
-                Gson gson = new Gson();
-                List<MainCompetition> mainCompetitionList = gson.fromJson(mainCompetitionsJson.toString(), new TypeToken<List<MainCompetition>>(){}.getType());
+                Gson gson = new GsonBuilder().setDateFormat(Config.GSON_DATE_FORMAT).create();
+               // Gson gson = new Gson();
+                List<MainCompetition> mainCompetitionList = gson.fromJson(mainCompetitionsJson.toString(), new TypeToken<List<MainCompetition>>() {
+                }.getType());
 
                 //saving data in result
                 result.setData(mainCompetitionList);
@@ -146,24 +149,6 @@ public class MainCompetitionListActivity extends Activity {
             mDialog.dismiss();
 
             if (result !=null && result.validateResponse()) {
-                /*
-
-                ArrayList<Button> buttonArrayList = new ArrayList<>();
-                ArrayAdapter<Button> adapter;
-                ListView listView = (ListView)findViewById(R.id.list_buttons);
-                adapter=new ArrayAdapter<>(MainCompetitionListActivity.this,
-                        android.R.layout.simple_list_item_1,
-                        buttonArrayList);
-                listView.setAdapter(adapter);
-
-
-                for (MainCompetition mc: mainCompetitionList) {
-                    Button btn = new Button(MainCompetitionListActivity.this);
-                    btn.setText(mc.getName());
-                    buttonArrayList.add(btn);
-                }
-                adapter.notifyDataSetChanged();
-                */
 
                 List<MainCompetition> mainCompetitionList = result.getData();
 

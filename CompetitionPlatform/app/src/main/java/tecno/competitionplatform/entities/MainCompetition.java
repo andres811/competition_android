@@ -11,8 +11,8 @@ public class MainCompetition {
     private String description;
     private String name;
     private Integer styleType;
-    //private Date startDate;
-    //private Date endDate;
+    private Date startDate;
+    private Date endDate;
 
     public String getDescription() {
         return description;
@@ -45,7 +45,7 @@ public class MainCompetition {
     public void setMainCompetitionId(Integer mainCompetitionId) {
         this.mainCompetitionId = mainCompetitionId;
     }
-/*
+
     public Date getStartDate() {
         return startDate;
     }
@@ -61,5 +61,4 @@ public class MainCompetition {
     public void setEndDate(Date endDate) {
         this.endDate = endDate;
     }
-*/
 }
