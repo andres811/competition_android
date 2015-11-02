@@ -16,11 +16,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.ArrayAdapter;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import tecno.competitionplatform.activities.R;
 
-public class BaseActivity extends Activity
+public abstract class BaseActivity extends Activity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
     /**
@@ -33,10 +35,13 @@ public class BaseActivity extends Activity
      */
     private CharSequence mTitle;
 
+    protected FrameLayout actContainer;
+    protected LinearLayout fullLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_base);
+        this.setContentView(R.layout.activity_base);
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getFragmentManager().findFragmentById(R.id.navigation_drawer);
@@ -46,6 +51,16 @@ public class BaseActivity extends Activity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+    }
+
+    @Override
+    public void setContentView(final int layoutResID) {
+
+        fullLayout= (LinearLayout) getLayoutInflater().inflate(R.layout.activity_base, null);
+        actContainer = (FrameLayout) fullLayout.findViewById(R.id.container);
+
+        getLayoutInflater().inflate(layoutResID, actContainer, true);
+        super.setContentView(fullLayout);
     }
 
     @Override
@@ -73,7 +88,7 @@ public class BaseActivity extends Activity
 
     public void restoreActionBar() {
         ActionBar actionBar = getActionBar();
-        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
+       // actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
         actionBar.setDisplayShowTitleEnabled(true);
         actionBar.setTitle(mTitle);
     }

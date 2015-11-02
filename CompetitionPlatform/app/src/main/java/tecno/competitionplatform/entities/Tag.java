@@ -7,13 +7,14 @@ public class Tag {
 
     private MainCompetition mainCompetitionId;
     private String tag;
+    private Integer tagId;
 
     public MainCompetition getMainCompetition() {
         return mainCompetitionId;
     }
 
-    public void setMainCompetition(MainCompetition mainCompetition) {
-        this.mainCompetitionId = mainCompetition;
+    public void setMainCompetition(MainCompetition mainCompetitionId) {
+        this.mainCompetitionId = mainCompetitionId;
     }
 
     public String getTag() {
@@ -22,5 +23,13 @@ public class Tag {
 
     public void setTag(String tag) {
         this.tag = tag;
+    }
+
+    public Integer getTagId() {
+        return tagId;
+    }
+
+    public void setTagId(Integer tagId) {
+        this.tagId = tagId;
     }
 }

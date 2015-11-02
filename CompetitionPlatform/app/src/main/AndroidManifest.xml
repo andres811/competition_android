@@ -71,8 +71,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="tecno.competitionplatform.activities.CompetitionListActivity" />
         </activity>
-        <activity android:name=".Main2Activity" >
-        </activity>
     </application>
 
 </manifest>
