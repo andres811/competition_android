@@ -23,7 +23,7 @@ import tecno.competitionplatform.config.Config;
 public class RestClient {
 
 
-    private String method = "POST";
+    private String method = "GET";
 
     private URL url = null;
 

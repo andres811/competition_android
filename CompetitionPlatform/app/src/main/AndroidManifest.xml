@@ -44,10 +44,6 @@
                 android:value="tecno.competitionplatform.activities.MainActivity" />
         </activity>
         <activity
-            android:name=".BaseActivity"
-            android:label="@string/title_activity_base" >
-        </activity>
-        <activity
             android:name=".MainCompetitionActivity"
             android:label="@string/title_activity_main_competition"
             android:parentActivityName=".MainCompetitionListActivity" >
@@ -70,6 +66,10 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="tecno.competitionplatform.activities.CompetitionListActivity" />
+        </activity>
+        <activity
+            android:name=".BaseActivity"
+            android:label="@string/title_activity_base" >
         </activity>
     </application>
 

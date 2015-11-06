@@ -6,6 +6,7 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.content.CursorLoader;
+import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.net.Uri;
@@ -44,7 +45,7 @@ import tecno.competitionplatform.entities.Subscriber;
 /**
  * A login screen that offers login via email/password.
  */
-public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
+public class LoginActivity extends BaseActivity implements LoaderCallbacks<Cursor> {
 
     /*
      * Keep track of the login task to ensure we can cancel it if requested.
@@ -268,20 +269,19 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         @Override
         protected ResultHandler<Subscriber> doInBackground(Void... params) {
 
-            JSONObject requestData;
+            JSONObject credentials;
             JSONObject responseData;
             ResultHandler<Subscriber> result = new ResultHandler<>();
             String url = Config.BASE_URL_SERVICES + Config.AUTHENTICATION_SERVICE;
 
             try {
-                requestData = new JSONObject();
-                requestData.put("username", mEmail);
-                requestData.put("password", mPassword);
-                RestClient restClient = new RestClient(url , requestData);
+                credentials = new JSONObject();
+                credentials.put("username", mEmail);
+                credentials.put("password", mPassword);
+                RestClient restClient = new RestClient(url , credentials,"POST");
                 restClient.executeRequest();
-                int responseCode = restClient.getResponseCode();
 
-                switch (responseCode) {
+                switch (restClient.getResponseCode()) {
 
                     case HttpURLConnection.HTTP_OK:
                         //get json response and save in json response
@@ -331,9 +331,10 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             if (result !=null && result.validateResponse()) {
 
                 Subscriber subscriber = result.getData();
-                SessionManager sessionManager = new SessionManager(getApplicationContext());
-                sessionManager.createLoginSession(subscriber.getSubscriberId(),subscriber.getFirstname(),subscriber.getEmail(), subscriber.getToken());
+                getSessionManager().createLoginSession(subscriber.getSubscriberId(), subscriber.getFirstname(), subscriber.getEmail(), subscriber.getToken());
 
+                Intent intent = new Intent(getBaseContext(), MainActivity.class);
+                startActivity(intent);
 
                 finish();
             } else {
