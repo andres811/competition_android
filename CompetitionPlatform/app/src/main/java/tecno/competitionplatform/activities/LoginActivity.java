@@ -36,6 +36,7 @@ import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import tecno.competitionplatform.classes.AlertDialogManager;
 import tecno.competitionplatform.classes.RestClient;
 import tecno.competitionplatform.classes.ResultHandler;
 import tecno.competitionplatform.classes.SessionManager;
@@ -289,7 +290,7 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
                         break;
 
                     case HttpURLConnection.HTTP_UNAUTHORIZED:
-                        throw new Exception("La dirección de mail o la contraseña, es incorrecta");
+                        throw new Exception(getString(R.string.error_incorrect_password));
 
                     case HttpURLConnection.HTTP_INTERNAL_ERROR:
                         throw new Exception("Error del servidor");
@@ -336,7 +337,8 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
 
                 finish();
             } else {
-                mPasswordView.setError(getString(R.string.error_incorrect_password));
+                //mPasswordView.setError(getString(R.string.error_incorrect_password));
+                AlertDialogManager.getErrorDialog(LoginActivity.this, "ERROR", result.getException().getMessage(), "Volver", true);
                 mPasswordView.requestFocus();
             }
         }
