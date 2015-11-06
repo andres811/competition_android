@@ -333,8 +333,6 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
                 Subscriber subscriber = result.getData();
                 getSessionManager().createLoginSession(subscriber.getSubscriberId(), subscriber.getFirstname(), subscriber.getEmail(), subscriber.getToken());
 
-                Intent intent = new Intent(getBaseContext(), MainActivity.class);
-                startActivity(intent);
 
                 finish();
             } else {

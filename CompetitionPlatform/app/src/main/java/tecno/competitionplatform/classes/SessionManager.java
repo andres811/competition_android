@@ -4,10 +4,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.support.v4.content.IntentCompat;
 
 import java.util.HashMap;
 
 import tecno.competitionplatform.activities.LoginActivity;
+import tecno.competitionplatform.activities.MainActivity;
 
 /**
  * Created by Andres on 20/10/2015.
@@ -71,6 +73,15 @@ public class SessionManager {
 
         // commit changes
         editor.commit();
+
+        // redirect him to Main Activity
+        Intent i = new Intent(_context, MainActivity.class);
+        // Closing all the Activities
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
+                IntentCompat.FLAG_ACTIVITY_CLEAR_TASK);
+
+        _context.startActivity(i);
+
     }
 
     /**
@@ -84,10 +95,8 @@ public class SessionManager {
             // user is not logged in redirect him to Login Activity
             Intent i = new Intent(_context, LoginActivity.class);
             // Closing all the Activities
-            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-
-            // Add new Flag to start new Activity
-            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
+                    IntentCompat.FLAG_ACTIVITY_CLEAR_TASK);
 
             // Staring Login Activity
             _context.startActivity(i);
@@ -101,7 +110,7 @@ public class SessionManager {
      * Get stored session data
      * */
     public HashMap<String, String> getUser(){
-        HashMap<String, String> user = new HashMap<String, String>();
+        HashMap<String, String> user = new HashMap<>();
         // user name
         user.put(KEY_NAME, pref.getString(KEY_NAME, null));
 
@@ -123,13 +132,11 @@ public class SessionManager {
         editor.clear();
         editor.commit();
 
-        // After logout redirect user to Loing Activity
-        Intent i = new Intent(_context, LoginActivity.class);
+        // After logout redirect user to Main Activity
+        Intent i = new Intent(_context, MainActivity.class);
         // Closing all the Activities
-        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-
-        // Add new Flag to start new Activity
-        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
+                IntentCompat.FLAG_ACTIVITY_CLEAR_TASK);
 
         // Staring Login Activity
         _context.startActivity(i);
