@@ -1,10 +1,11 @@
 package tecno.competitionplatform.activities;
 
 import android.app.ActionBar;
-import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.app.Activity;
-import android.util.Log;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -58,6 +59,10 @@ public class BaseActivity extends Activity {
 
         if(getSessionManager().isLoggedIn()){
             inflater.inflate(R.menu.account_actions, menu);
+            MenuItem labelNameItem = menu.findItem(R.id.label_account_name);
+            SpannableString s = new SpannableString(getSessionManager().getUser().getFirstname());
+            s.setSpan(new ForegroundColorSpan(Color.BLUE), 0, s.length(), 0);
+            labelNameItem.setTitle(s);
         } else {
 
         }
@@ -74,7 +79,7 @@ public class BaseActivity extends Activity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_logout) {
+        if (id == R.id.action_account_logout) {
             getSessionManager().logoutUser();
             return true;
         }

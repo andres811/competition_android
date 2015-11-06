@@ -15,6 +15,14 @@ public class Subscriber {
     //private Date tokenExpiresAt;
     private String token;
 
+
+    public Subscriber(Integer subscriberId, String email, String firstname, String token) {
+        this.subscriberId = subscriberId;
+        this.email = email;
+        this.firstname = firstname;
+        this.token = token;
+    }
+
     public Date getDob() {
         return dob;
     }

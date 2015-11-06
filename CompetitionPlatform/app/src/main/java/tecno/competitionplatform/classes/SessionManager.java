@@ -10,6 +10,7 @@ import java.util.HashMap;
 
 import tecno.competitionplatform.activities.LoginActivity;
 import tecno.competitionplatform.activities.MainActivity;
+import tecno.competitionplatform.entities.Subscriber;
 
 /**
  * Created by Andres on 20/10/2015.
@@ -108,7 +109,7 @@ public class SessionManager {
 
     /**
      * Get stored session data
-     * */
+     *
     public HashMap<String, String> getUser(){
         HashMap<String, String> user = new HashMap<>();
         // user name
@@ -123,7 +124,10 @@ public class SessionManager {
         // return user
         return user;
     }
-
+*/
+    public Subscriber getUser() {
+        return new Subscriber(pref.getInt(ID,0),pref.getString(KEY_EMAIL, null), pref.getString(KEY_NAME, null), pref.getString(TOKEN, null));
+    }
     /**
      * Clear session details
      * */
