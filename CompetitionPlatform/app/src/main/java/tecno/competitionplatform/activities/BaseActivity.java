@@ -1,6 +1,7 @@
 package tecno.competitionplatform.activities;
 
 import android.app.ActionBar;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.app.Activity;
@@ -15,7 +16,7 @@ import tecno.competitionplatform.classes.SessionManager;
 
 public class BaseActivity extends Activity {
 
-    private SessionManager _sessionManager;
+    private SessionManager mSessionManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,12 +60,12 @@ public class BaseActivity extends Activity {
 
         if(getSessionManager().isLoggedIn()){
             inflater.inflate(R.menu.account_actions, menu);
-            MenuItem labelNameItem = menu.findItem(R.id.label_account_name);
+            MenuItem labelNameItem = menu.findItem(R.id.action_account_info);
             SpannableString s = new SpannableString(getSessionManager().getUser().getFirstname());
             s.setSpan(new ForegroundColorSpan(Color.BLUE), 0, s.length(), 0);
             labelNameItem.setTitle(s);
         } else {
-
+            //Do nothing
         }
 
 
@@ -82,16 +83,20 @@ public class BaseActivity extends Activity {
         if (id == R.id.action_account_logout) {
             getSessionManager().logoutUser();
             return true;
+        } else if ((id == R.id.action_account_info)) {
+            Intent intent = new Intent(this, AccountActivity.class);
+            startActivity(intent);
+            return true;
         }
 
         return false;
     }
 
     protected SessionManager getSessionManager(){
-        if( _sessionManager == null){
-            _sessionManager = new SessionManager(getApplicationContext());
+        if( mSessionManager == null){
+            mSessionManager = new SessionManager(getApplicationContext());
         }
-        return _sessionManager;
+        return mSessionManager;
     }
 
 }

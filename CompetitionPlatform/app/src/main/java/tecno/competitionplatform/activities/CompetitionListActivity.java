@@ -25,7 +25,7 @@ import tecno.competitionplatform.classes.RestClient;
 import tecno.competitionplatform.classes.ResultHandler;
 import tecno.competitionplatform.config.Config;
 import tecno.competitionplatform.entities.Competition;
-
+import tecno.competitionplatform.entities.MainCompetition;
 
 
 public class CompetitionListActivity extends Activity {
@@ -38,8 +38,13 @@ public class CompetitionListActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_competition_list);
+
         getActionBar().setDisplayHomeAsUpEnabled(true);
         mMainCompetitionId = getIntent().getExtras().getInt("mainCompetitionId");
+
+        Intent intent = new Intent(CompetitionListActivity.this, MainCompetitionActivity.class);
+        intent.putExtra("mainCompetitionId", mMainCompetitionId);
+        setResult(RESULT_OK, intent);
         mDialog = new ProgressDialog(CompetitionListActivity.this);
         mDialog.setCanceledOnTouchOutside(false);
         mListCompetitionsTask = new ListCompetitionsTask(mMainCompetitionId,0,1000);
@@ -145,24 +150,6 @@ public class CompetitionListActivity extends Activity {
         }
     }
 
-    @Override
-    public void onBackPressed() {
-        Intent intent = new Intent();
-        intent.putExtra("mainCompetitionId",mMainCompetitionId);
-        setResult(RESULT_OK, intent);
-        finish();
-    }
 
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            Intent intent = new Intent();
-            intent.putExtra("mainCompetitionId",mMainCompetitionId);
-            setResult(RESULT_OK, intent);
-            finish();
-            return true;
-        }
-        return super.onKeyDown(keyCode, event);
-    }
 
 }
