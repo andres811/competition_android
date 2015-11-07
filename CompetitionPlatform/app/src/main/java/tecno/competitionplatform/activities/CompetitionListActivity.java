@@ -1,9 +1,11 @@
 package tecno.competitionplatform.activities;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Activity;
+import android.view.KeyEvent;
 import android.widget.ListView;
 
 import com.google.gson.Gson;
@@ -30,16 +32,17 @@ public class CompetitionListActivity extends Activity {
 
     private ListCompetitionsTask mListCompetitionsTask = null;
     private ProgressDialog mDialog;
+    private Integer mMainCompetitionId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_competition_list);
         getActionBar().setDisplayHomeAsUpEnabled(true);
-        int mainCompetitionId = getIntent().getExtras().getInt("mainCompetitionId");
+        mMainCompetitionId = getIntent().getExtras().getInt("mainCompetitionId");
         mDialog = new ProgressDialog(CompetitionListActivity.this);
         mDialog.setCanceledOnTouchOutside(false);
-        mListCompetitionsTask = new ListCompetitionsTask(mainCompetitionId,0,1000);
+        mListCompetitionsTask = new ListCompetitionsTask(mMainCompetitionId,0,1000);
         mListCompetitionsTask.execute((Void) null);
     }
 
@@ -140,6 +143,26 @@ public class CompetitionListActivity extends Activity {
                 AlertDialogManager.getErrorDialog(CompetitionListActivity.this, "Error", result.getException().getMessage(), "Volver", true);
             }
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent();
+        intent.putExtra("mainCompetitionId",mMainCompetitionId);
+        setResult(RESULT_OK, intent);
+        finish();
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            Intent intent = new Intent();
+            intent.putExtra("mainCompetitionId",mMainCompetitionId);
+            setResult(RESULT_OK, intent);
+            finish();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 
 }

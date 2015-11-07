@@ -143,9 +143,16 @@ public class MainCompetitionActivity extends Activity {
 
                     @Override
                     public void onClick(View view) {
+                        /*
                         Intent intent = new Intent(MainCompetitionActivity.this, CompetitionListActivity.class);
                         intent.putExtra("mainCompetitionId", mainCompetitionId);
                         startActivity(intent);
+                        */
+
+                        Intent intent = new Intent(MainCompetitionActivity.this,  CompetitionListActivity.class);
+                        intent.putExtra("mainCompetitionId", mainCompetitionId);
+                        startActivityForResult(intent, 1);
+
 
                     }
                 });
@@ -163,7 +170,17 @@ public class MainCompetitionActivity extends Activity {
             //showProgress(false);
         }
     }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1) {
+            if(resultCode == RESULT_OK){
+                String stredittext=data.getStringExtra("edittextvalue");
+            }
+        }
 
+    }
 }
+
 
 
