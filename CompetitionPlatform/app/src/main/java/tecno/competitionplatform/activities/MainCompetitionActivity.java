@@ -89,9 +89,9 @@ public class MainCompetitionActivity extends Activity {
                         throw new Exception("Error");
                 }
 
-                //date format dates gson config
+                //date format gson config
                 Gson gson = new GsonBuilder().setDateFormat(Config.GSON_DATE_FORMAT).create();
-               // Gson gson = new Gson();
+
                 //mapping json to entity
                 MainCompetition mainCompetition = gson.fromJson(mainCompetitionsJson.toString(), MainCompetition.class);
 

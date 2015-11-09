@@ -52,41 +52,42 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/MainCompetitionActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="173" column="77" selection-start-line="173" selection-start-column="77" selection-end-line="173" selection-end-column="77" />
+              <caret line="138" column="79" selection-start-line="138" selection-start-column="79" selection-end-line="138" selection-end-column="79" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AccountActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AccountActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/AccountActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.33333334">
+              <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_account.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_account.xml">
+      <file leaf-file-name="ActivityThread.java" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-23/android/app/ActivityThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4859611">
-              <caret line="52" column="66" selection-start-line="52" selection-start-column="66" selection-end-line="52" selection-end-column="66" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2427" column="0" selection-start-line="2427" selection-start-column="0" selection-end-line="2427" selection-end-column="0" />
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
         </entry>
       </file>
-      <file leaf-file-name="account_actions.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/account_actions.xml">
+      <file leaf-file-name="SessionUser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/entities/SessionUser.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-              <folding />
+              <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+              <folding>
+                <element signature="e#259#260#0" expanded="true" />
+                <element signature="e#288#289#0" expanded="true" />
+                <element signature="method#SessionUser#0;class#SessionUser#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -95,7 +96,64 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/BaseActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="87" column="34" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
+              <caret line="86" column="55" selection-start-line="86" selection-start-column="55" selection-end-line="86" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RestClient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/classes/RestClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+              <folding>
+                <element signature="e#1172#1173#0" expanded="true" />
+                <element signature="e#1212#1213#0" expanded="true" />
+                <element signature="e#1546#1547#0" expanded="true" />
+                <element signature="e#1592#1593#0" expanded="true" />
+                <element signature="e#1627#1628#0" expanded="true" />
+                <element signature="e#1657#1658#0" expanded="true" />
+                <element signature="method#setUrl#1;class#RestClient#0" expanded="false" />
+                <element signature="e#1807#1808#0" expanded="true" />
+                <element signature="e#1843#1844#0" expanded="true" />
+                <element signature="method#RestClient#0;class#RestClient#0" expanded="false" />
+                <element signature="method#RestClient#1;class#RestClient#0" expanded="false" />
+                <element signature="method#RestClient#2;class#RestClient#0" expanded="false" />
+                <element signature="method#RestClient#3;class#RestClient#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Config.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/config/Config.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Subscriber.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/entities/Subscriber.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_account.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_account.xml">
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="67" column="37" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -105,207 +163,8 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/classes/SessionManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="78" column="60" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="60" />
+              <caret line="128" column="22" selection-start-line="128" selection-start-column="22" selection-end-line="128" selection-end-column="22" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CompetitionListActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/CompetitionListActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="44" column="80" selection-start-line="44" selection-start-column="80" selection-end-line="44" selection-end-column="80" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainCompetition.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/entities/MainCompetition.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding>
-                <element signature="e#362#363#0" expanded="false" />
-                <element signature="e#396#397#0" expanded="false" />
-                <element signature="e#450#451#0" expanded="false" />
-                <element signature="e#496#497#0" expanded="false" />
-                <element signature="e#527#528#0" expanded="false" />
-                <element signature="e#554#555#0" expanded="false" />
-                <element signature="e#594#595#0" expanded="false" />
-                <element signature="e#626#627#0" expanded="false" />
-                <element signature="e#663#664#0" expanded="false" />
-                <element signature="e#695#696#0" expanded="false" />
-                <element signature="e#746#747#0" expanded="false" />
-                <element signature="e#788#789#0" expanded="false" />
-                <element signature="e#833#834#0" expanded="false" />
-                <element signature="e#873#874#0" expanded="false" />
-                <element signature="e#1032#1033#0" expanded="false" />
-                <element signature="e#1064#1065#0" expanded="false" />
-                <element signature="e#1112#1113#0" expanded="false" />
-                <element signature="e#1154#1155#0" expanded="false" />
-                <element signature="e#1186#1187#0" expanded="false" />
-                <element signature="e#1216#1217#0" expanded="false" />
-                <element signature="e#1260#1261#0" expanded="false" />
-                <element signature="e#1298#1299#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CompetitionActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/CompetitionActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Activity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-23/android/app/Activity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2497" column="22" selection-start-line="2497" selection-start-column="16" selection-end-line="2497" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#280082#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#37036#37051#0" expanded="false" />
-                <element signature="e#38135#38136#0" expanded="false" />
-                <element signature="e#38165#38166#0" expanded="false" />
-                <element signature="e#38552#38553#0" expanded="false" />
-                <element signature="e#38587#38588#0" expanded="false" />
-                <element signature="e#38695#38696#0" expanded="false" />
-                <element signature="e#38730#38731#0" expanded="false" />
-                <element signature="e#38833#38834#0" expanded="false" />
-                <element signature="e#38871#38872#0" expanded="false" />
-                <element signature="e#38985#38986#0" expanded="false" />
-                <element signature="e#39015#39016#0" expanded="false" />
-                <element signature="e#39129#39130#0" expanded="false" />
-                <element signature="e#39166#39167#0" expanded="false" />
-                <element signature="e#39514#39515#0" expanded="false" />
-                <element signature="e#39544#39545#0" expanded="false" />
-                <element signature="e#39681#39682#0" expanded="false" />
-                <element signature="e#39733#39734#0" expanded="false" />
-                <element signature="e#40075#40076#0" expanded="false" />
-                <element signature="e#40148#40149#0" expanded="false" />
-                <element signature="e#48983#48984#0" expanded="false" />
-                <element signature="e#49035#49036#0" expanded="false" />
-                <element signature="e#52431#52432#0" expanded="false" />
-                <element signature="e#52461#52462#0" expanded="false" />
-                <element signature="e#55061#55062#0" expanded="false" />
-                <element signature="e#55108#55109#0" expanded="false" />
-                <element signature="e#55966#55967#0" expanded="false" />
-                <element signature="e#56005#56006#0" expanded="false" />
-                <element signature="e#67446#67447#0" expanded="false" />
-                <element signature="e#67474#67475#0" expanded="false" />
-                <element signature="e#68254#68255#0" expanded="false" />
-                <element signature="e#68281#68282#0" expanded="false" />
-                <element signature="e#78226#78227#0" expanded="false" />
-                <element signature="e#78267#78268#0" expanded="false" />
-                <element signature="e#82550#82551#0" expanded="false" />
-                <element signature="e#82577#82578#0" expanded="false" />
-                <element signature="e#84275#84276#0" expanded="false" />
-                <element signature="e#84302#84303#0" expanded="false" />
-                <element signature="e#85757#85758#0" expanded="false" />
-                <element signature="e#85811#85812#0" expanded="false" />
-                <element signature="e#92856#92857#0" expanded="false" />
-                <element signature="e#92907#92908#0" expanded="false" />
-                <element signature="e#99266#99267#0" expanded="false" />
-                <element signature="e#99318#99319#0" expanded="false" />
-                <element signature="e#99488#99489#0" expanded="false" />
-                <element signature="e#99542#99543#0" expanded="false" />
-                <element signature="e#107363#107364#0" expanded="false" />
-                <element signature="e#107391#107392#0" expanded="false" />
-                <element signature="e#108766#108767#0" expanded="false" />
-                <element signature="e#108794#108795#0" expanded="false" />
-                <element signature="e#111490#111491#0" expanded="false" />
-                <element signature="e#111518#111519#0" expanded="false" />
-                <element signature="e#112748#112749#0" expanded="false" />
-                <element signature="e#112776#112777#0" expanded="false" />
-                <element signature="e#117258#117259#0" expanded="false" />
-                <element signature="e#117282#117283#0" expanded="false" />
-                <element signature="e#121787#121788#0" expanded="false" />
-                <element signature="e#121814#121815#0" expanded="false" />
-                <element signature="e#133758#133759#0" expanded="false" />
-                <element signature="e#133795#133796#0" expanded="false" />
-                <element signature="e#138032#138033#0" expanded="false" />
-                <element signature="e#138089#138090#0" expanded="false" />
-                <element signature="e#138425#138426#0" expanded="false" />
-                <element signature="e#138482#138483#0" expanded="false" />
-                <element signature="e#138784#138785#0" expanded="false" />
-                <element signature="e#138822#138823#0" expanded="false" />
-                <element signature="e#140695#140696#0" expanded="false" />
-                <element signature="e#140722#140723#0" expanded="false" />
-                <element signature="e#142424#142425#0" expanded="false" />
-                <element signature="e#142465#142466#0" expanded="false" />
-                <element signature="e#142659#142660#0" expanded="false" />
-                <element signature="e#142704#142705#0" expanded="false" />
-                <element signature="e#144414#144415#0" expanded="false" />
-                <element signature="e#144450#144451#0" expanded="false" />
-                <element signature="e#151513#151514#0" expanded="false" />
-                <element signature="e#151548#151549#0" expanded="false" />
-                <element signature="e#154871#154872#0" expanded="false" />
-                <element signature="e#154917#154918#0" expanded="false" />
-                <element signature="e#156672#156673#0" expanded="false" />
-                <element signature="e#156726#156727#0" expanded="false" />
-                <element signature="e#178899#178900#0" expanded="false" />
-                <element signature="e#178947#178948#0" expanded="false" />
-                <element signature="e#180755#180756#0" expanded="false" />
-                <element signature="e#180801#180802#0" expanded="false" />
-                <element signature="e#196008#196009#0" expanded="false" />
-                <element signature="e#196035#196036#0" expanded="false" />
-                <element signature="e#202194#202195#0" expanded="false" />
-                <element signature="e#202221#202222#0" expanded="false" />
-                <element signature="e#205912#205913#0" expanded="false" />
-                <element signature="e#205944#205945#0" expanded="false" />
-                <element signature="e#206123#206124#0" expanded="false" />
-                <element signature="e#206156#206157#0" expanded="false" />
-                <element signature="e#206720#206721#0" expanded="false" />
-                <element signature="e#206766#206767#0" expanded="false" />
-                <element signature="e#208671#208672#0" expanded="false" />
-                <element signature="e#208700#208701#0" expanded="false" />
-                <element signature="e#210420#210421#0" expanded="false" />
-                <element signature="e#210444#210445#0" expanded="false" />
-                <element signature="e#212615#212616#0" expanded="false" />
-                <element signature="e#212643#212644#0" expanded="false" />
-                <element signature="e#222590#222591#0" expanded="false" />
-                <element signature="e#222623#222624#0" expanded="false" />
-                <element signature="e#224858#224859#0" expanded="false" />
-                <element signature="e#224900#224901#0" expanded="false" />
-                <element signature="e#225492#225493#0" expanded="false" />
-                <element signature="e#225521#225522#0" expanded="false" />
-                <element signature="e#225561#225562#0" expanded="false" />
-                <element signature="e#225595#225596#0" expanded="false" />
-                <element signature="e#232061#232062#0" expanded="false" />
-                <element signature="e#232120#232121#0" expanded="false" />
-                <element signature="e#233529#233530#0" expanded="false" />
-                <element signature="e#233584#233585#0" expanded="false" />
-                <element signature="e#234727#234728#0" expanded="false" />
-                <element signature="e#234754#234755#0" expanded="false" />
-                <element signature="e#246717#246718#0" expanded="false" />
-                <element signature="e#246747#246748#0" expanded="false" />
-                <element signature="e#261243#261244#0" expanded="false" />
-                <element signature="e#261309#261310#0" expanded="false" />
-                <element signature="e#261778#261779#0" expanded="false" />
-                <element signature="e#261810#261811#0" expanded="false" />
-                <element signature="e#270644#270645#0" expanded="false" />
-                <element signature="e#270675#270676#0" expanded="false" />
-                <element signature="e#277465#277466#0" expanded="false" />
-                <element signature="e#277522#277523#0" expanded="false" />
-                <element signature="e#277796#277797#0" expanded="false" />
-                <element signature="e#277841#277842#0" expanded="false" />
-                <element signature="e#278494#278495#0" expanded="false" />
-                <element signature="e#278538#278539#0" expanded="false" />
-                <element signature="e#278605#278606#0" expanded="false" />
-                <element signature="e#278666#278667#0" expanded="false" />
-                <element signature="e#279380#279381#0" expanded="false" />
-                <element signature="e#279430#279431#0" expanded="false" />
-                <element signature="e#279842#279843#0" expanded="false" />
-                <element signature="e#279903#279904#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -1665,7 +1524,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform" value="4334717019690" />
+        <entry key="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform" value="4340823236361" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1995,7 +1854,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/itemlistrow.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/classes/ResultHandler.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/main_competition_list_row.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/adapters/ListMainCompetitionAdapter.java" />
@@ -2017,7 +1875,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/entities/AthleteDiscipline.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/entities/Participation.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/entities/MainCompetition.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/config/Config.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/CompetitionActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/entities/Tag.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/windows_title.xml" />
@@ -2031,22 +1888,31 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/arrays.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/custom_actionbar.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_base.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/classes/RestClient.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/activity_main_actions.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/entities/Subscriber.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/classes/SessionManager.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings_activity_login.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/LoginActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/CompetitionListActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/MainCompetitionActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/account_actions.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/AccountActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/BaseActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_account.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/classes/RestClient.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/entities/SessionUser.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/classes/SessionManager.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/entities/Subscriber.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/config/Config.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/MainCompetitionActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/AccountActivity.java" />
       </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
     </option>
   </component>
   <component name="NamedScopeManager">
@@ -2081,35 +1947,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CompetitionPlatform" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CompetitionPlatform" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tecno.competitionplatform" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2144,7 +1981,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2161,10 +1997,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2198,6 +2030,10 @@
               <option name="myItemId" value="competitionplatform" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -2207,6 +2043,66 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="competitionplatform" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CompetitionPlatform" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="competitionplatform" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CompetitionPlatform" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CompetitionPlatform" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tecno.competitionplatform" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -2224,6 +2120,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="resourcesRoot" value="file://C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\src\main\res" />
+    <property name="SearchEverywhereHistoryKey" value="base&#9;FILE&#9;file://C:/Users/Andres/Documents/GitHub Repo/competition_android/CompetitionPlatform/app/src/main/java/tecno/competitionplatform/activities/BaseActivity.java&#10;login&#9;FILE&#9;file://C:/Users/Andres/Documents/GitHub Repo/competition_android/CompetitionPlatform/app/src/main/java/tecno/competitionplatform/activities/LoginActivity.java&#10;restC&#9;FILE&#9;file://C:/Users/Andres/Documents/GitHub Repo/competition_android/CompetitionPlatform/app/src/main/java/tecno/competitionplatform/classes/RestClient.java" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -2448,11 +2345,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.491404" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.48853868" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24856733" sideWeight="0.5153846" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24856733" sideWeight="0.5236295" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5028653" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2463,21 +2360,21 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.48853868" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2767733" sideWeight="0.5114613" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2642559" sideWeight="0.51432663" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24856733" sideWeight="0.4846154" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24856733" sideWeight="0.4763705" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.49713466" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2767733" sideWeight="0.48853868" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2642559" sideWeight="0.48567334" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -2542,41 +2439,33 @@
           <properties />
           <option name="timeStamp" value="80" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/AccountActivity.java</url>
+          <line>138</line>
+          <properties />
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="96" />
+      <option name="time" value="101" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/entities/Participation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18813314">
-          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main_competition_list_row.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3325893">
           <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/adapters/ListMainCompetitionAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="48" column="76" selection-start-line="48" selection-start-column="76" selection-end-line="48" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/config/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -2637,13 +2526,13 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-23/data/res/layout/simple_spinner_dropdown_item.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/arrays.xml">
@@ -2660,34 +2549,26 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_actionbar.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_base.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_base.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.1034484">
           <caret line="7" column="70" selection-start-line="7" selection-start-column="70" selection-end-line="7" selection-end-column="70" />
           <folding>
             <element signature="e#382#415#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/classes/RestClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2736,10 +2617,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/drawable-mdpi/abc_scrubber_primary_mtrl_alpha.9.png">
-      <provider selected="true" editor-type-id="ninepatcheditor">
+      <provider editor-type-id="images">
         <state />
       </provider>
-      <provider editor-type-id="images">
+      <provider selected="true" editor-type-id="ninepatcheditor">
         <state />
       </provider>
     </entry>
@@ -2757,14 +2638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="583" column="0" selection-start-line="583" selection-start-column="0" selection-end-line="583" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/entities/Subscriber.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="91" selection-start-line="18" selection-start-column="91" selection-end-line="18" selection-end-column="91" />
         </state>
       </provider>
     </entry>
@@ -2785,25 +2658,25 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.43504533">
           <caret line="26" column="87" selection-start-line="26" selection-start-column="87" selection-end-line="26" selection-end-column="87" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings_activity_login.xml">
@@ -2822,14 +2695,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="292" column="88" selection-start-line="292" selection-start-column="88" selection-end-line="292" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2837,14 +2702,6 @@
           <folding>
             <element signature="e#1213#1240#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-23/android/app/ActivityThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="2426" column="0" selection-start-line="2426" selection-start-column="0" selection-end-line="2426" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3043,7 +2900,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3082,7 +2941,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="44" column="80" selection-start-line="44" selection-start-column="80" selection-end-line="44" selection-end-column="80" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3094,18 +2955,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="308" column="43" selection-start-line="304" selection-start-column="16" selection-end-line="308" selection-end-column="43" />
+          <folding>
+            <element signature="e#10469#10513#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/entities/SessionUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+          <folding>
+            <element signature="e#259#260#0" expanded="true" />
+            <element signature="e#288#289#0" expanded="true" />
+            <element signature="method#SessionUser#0;class#SessionUser#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/classes/SessionManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="60" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="60" />
+          <caret line="128" column="22" selection-start-line="128" selection-start-column="22" selection-end-line="128" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/MainCompetitionActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_account.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="67" column="37" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/entities/Subscriber.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="173" column="77" selection-start-line="173" selection-start-column="77" selection-end-line="173" selection-end-column="77" />
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -3113,28 +3007,63 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/BaseActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="87" column="34" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
+          <caret line="86" column="55" selection-start-line="86" selection-start-column="55" selection-end-line="86" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-23/android/app/ActivityThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2427" column="0" selection-start-line="2427" selection-start-column="0" selection-end-line="2427" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/config/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/classes/RestClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+          <folding>
+            <element signature="e#1172#1173#0" expanded="true" />
+            <element signature="e#1212#1213#0" expanded="true" />
+            <element signature="e#1546#1547#0" expanded="true" />
+            <element signature="e#1592#1593#0" expanded="true" />
+            <element signature="e#1627#1628#0" expanded="true" />
+            <element signature="e#1657#1658#0" expanded="true" />
+            <element signature="method#setUrl#1;class#RestClient#0" expanded="false" />
+            <element signature="e#1807#1808#0" expanded="true" />
+            <element signature="e#1843#1844#0" expanded="true" />
+            <element signature="method#RestClient#0;class#RestClient#0" expanded="false" />
+            <element signature="method#RestClient#1;class#RestClient#0" expanded="false" />
+            <element signature="method#RestClient#2;class#RestClient#0" expanded="false" />
+            <element signature="method#RestClient#3;class#RestClient#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/MainCompetitionActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="138" column="79" selection-start-line="138" selection-start-column="79" selection-end-line="138" selection-end-column="79" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/AccountActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_account.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4859611">
-          <caret line="52" column="66" selection-start-line="52" selection-start-column="66" selection-end-line="52" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
   </component>

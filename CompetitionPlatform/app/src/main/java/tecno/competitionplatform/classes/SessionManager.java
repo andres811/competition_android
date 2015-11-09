@@ -10,6 +10,7 @@ import java.util.HashMap;
 
 import tecno.competitionplatform.activities.LoginActivity;
 import tecno.competitionplatform.activities.MainActivity;
+import tecno.competitionplatform.entities.SessionUser;
 import tecno.competitionplatform.entities.Subscriber;
 
 /**
@@ -125,8 +126,8 @@ public class SessionManager {
         return user;
     }
 */
-    public Subscriber getUser() {
-        return new Subscriber(pref.getInt(ID,0),pref.getString(KEY_EMAIL, null), pref.getString(KEY_NAME, null), pref.getString(TOKEN, null));
+    public SessionUser getUser() {
+        return new SessionUser(pref.getInt(ID,0),pref.getString(KEY_EMAIL, null), pref.getString(KEY_NAME, null), pref.getString(TOKEN, null));
     }
     /**
      * Clear session details

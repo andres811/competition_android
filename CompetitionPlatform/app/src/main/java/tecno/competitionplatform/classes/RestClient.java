@@ -14,6 +14,8 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 
 import tecno.competitionplatform.config.Config;
 
@@ -22,18 +24,20 @@ import tecno.competitionplatform.config.Config;
  */
 public class RestClient {
 
-
+    //Request method (GET method by default)
     private String method = "GET";
-
+    //Url
     private URL url = null;
-
+    //request data in json
     private JSONObject requestData = null;
-
-    private JSONObject responseData = null;
-
-    private JSONArray responseDataArray = null;
-
+    //Extra headers
+    private HashMap<String,String> headers = null;
+    //Response code
     private int responseCode;
+    //The response can be saved in a JSONObject...
+    private JSONObject responseData = null;
+    //or a JSONArray, depends of the services response data.
+    private JSONArray responseDataArray = null;
 
 
     public JSONArray getResponseDataArray() {
@@ -68,84 +72,93 @@ public class RestClient {
         this.method = method;
     }
 
-
-    //Constructors
-
-    public RestClient(URL url, JSONObject requestData, String method) {
-        this.url = url;
-        this.requestData = requestData;
-        this.method = method;
-    }
-
-    public RestClient(URL url, JSONObject requestData) {
-        this.url = url;
-        this.requestData = requestData;
-    }
-
-    public RestClient(String url, JSONObject requestData) throws MalformedURLException {
+    /*
+     * Contructors
+     */
+    public RestClient(String url) throws MalformedURLException {
         this.url = new URL(url);
-        this.requestData = requestData;
-    }
-
-    public RestClient(String url, JSONObject requestData, String method) throws MalformedURLException {
-        this.url = new URL(url);
-        this.requestData = requestData;
-        this.method = method;
     }
     public RestClient(String url, String method) throws MalformedURLException {
         this.url = new URL(url);
         this.method = method;
     }
-
-
-    public RestClient(){
+    public RestClient(String url, JSONObject requestData) throws MalformedURLException {
+        this.url = new URL(url);
+        this.requestData = requestData;
     }
-
-
-    public void AddHeader(String name, String value)
-    {
-        //todo
+    public RestClient(String url, JSONObject requestData, String method) throws MalformedURLException {
+        this.url = new URL(url);
+        this.requestData = requestData;
+        this.method = method;
     }
 
     /*
-    Web services call
+     * Add extra headers
+     * (Like Token)
+     */
+    public void addHeader(String name, String value) {
+        if(headers == null) {
+            headers = new HashMap<>();
+        }
+
+        headers.put(name,value);
+
+    }
+
+    /*
+     * Service call
      */
     public void executeRequest() throws Exception {
+
         if(url == null) {
             throw new Exception("Url is missing.");
         }
 
-        HttpURLConnection conn = null;
+        HttpURLConnection conn;
         InputStream inputStream;
         OutputStreamWriter outputStreamWriter;
 
-
+        //Create connection
         conn = (HttpURLConnection) this.url.openConnection();
+        //Set request method
         conn.setRequestMethod(this.method);
 
+        //Set Extra headers
+        if(headers != null && headers.size() > 0) {
+            for (Map.Entry<String,String> header: headers.entrySet()){
+                conn.setRequestProperty(header.getKey(), header.getValue());
+            }
+        }
 
-        // conn.getHeaderField("Accept: application/json");
+        //CASE GET
         if(this.method.equals("GET")){
 
             conn.setRequestProperty("User-Agent", "Mozilla/5.0");
+
+            //Set header data type JSON, by default
             conn.setRequestProperty("Accept", "application/json");
 
+
+        //CASE POST
         } else if (this.method.equals("POST")) {
 
+            //Default request data type
             conn.setRequestProperty("Content-Type", "application/json");
             conn.setDoOutput(true);
             conn.setDoInput(true);
-            //Set request json data if needed
+
+            //Set request json data here
             if(this.requestData != null) {
                 outputStreamWriter = new OutputStreamWriter(conn.getOutputStream());
                 outputStreamWriter.write(this.requestData.toString());
                 outputStreamWriter.flush();
             }
         }
-        //set response code
+
+        //get response code
         this.responseCode = conn.getResponseCode();
 
-        //get response data
+        //get response data and saved in responseData or responseDataArray
         inputStream = conn.getInputStream();
         BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
         String jsonResponse="", temp;
@@ -164,6 +177,7 @@ public class RestClient {
 
         }
 
+        //Destroy connection
         conn.disconnect();
 
     }
