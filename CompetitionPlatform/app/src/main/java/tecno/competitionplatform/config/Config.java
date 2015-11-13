@@ -11,6 +11,7 @@ public class Config {
     public static final String MAINCOMPETITION_SERVICE = "entities.maincompetition";
     public static final String COMPETITION_SERVICE = "entities.competition";
     public static final String SUBSCRIBER_SERVICE = "suscriber";
+    public static final String COUNTRY_SERVICE = "entities.country";
 
     //Date formats
     public static final String GSON_DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss"; //Can't touch this

@@ -404,6 +404,7 @@
     <string name="title_activity_main2">Main2Activity</string>
     <string name="title_activity_main22">Main22Activity</string>
     <string name="title_activity_main_competition">MainCompetitionActivity</string>
+    <string name="title_activity_subscribe">SubscribeActivity</string>
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>
     <string name="title_section3">Section 3</string>

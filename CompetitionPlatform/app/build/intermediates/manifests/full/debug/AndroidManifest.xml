@@ -94,6 +94,14 @@
             android:name="tecno.competitionplatform.activities.AccountActivity"
             android:label="@string/title_activity_account" >
         </activity>
+        <activity
+            android:name="tecno.competitionplatform.activities.SubscribeActivity"
+            android:label="@string/title_activity_subscribe"
+            android:parentActivityName="tecno.competitionplatform.activities.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="tecno.competitionplatform.activities.MainActivity" />
+        </activity>
         <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
         <activity
             android:name="com.google.android.gms.ads.AdActivity"

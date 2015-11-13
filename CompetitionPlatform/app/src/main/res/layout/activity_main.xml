@@ -20,6 +20,7 @@
         android:layout_height="wrap_content"
         android:text="Suscribirse"
         android:id="@+id/btn_subscribe"
+        android:onClick="subscribeAction"
         android:layout_below="@+id/btn_login"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="44dp" />

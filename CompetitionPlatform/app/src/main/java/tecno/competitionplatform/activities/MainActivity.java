@@ -42,4 +42,8 @@ public class MainActivity extends BaseActivity {
         Intent intent = new Intent(getBaseContext(), MainCompetitionListActivity.class);
         startActivity(intent);
     }
+    public void subscribeAction(View v) {
+        Intent intent = new Intent(getBaseContext(), SubscribeActivity.class);
+        startActivity(intent);
+    }
 }

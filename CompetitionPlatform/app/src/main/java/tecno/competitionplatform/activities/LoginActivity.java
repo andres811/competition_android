@@ -150,12 +150,10 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
     }
 
     private boolean isEmailValid(String email) {
-        //TODO
         return email.contains("@");
     }
 
     private boolean isPasswordValid(String password) {
-        //TODO
         return password.length() > 4;
     }
 
