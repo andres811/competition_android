@@ -2,6 +2,7 @@ package tecno.competitionplatform.adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,39 +42,59 @@ public class ListCountryAdapter extends ArrayAdapter<Country> {
         if (v == null) {
             LayoutInflater vi;
             vi = LayoutInflater.from(getContext());
-            v = vi.inflate(R.layout.competition_list_row, null);
+            v = vi.inflate(R.layout.country_list_row, null);
         }
 
         final Country c = getItem(position);
 
         if (c != null) {
-            TextView name = (TextView) v.findViewById(R.id.onlist_competition_title);
-            TextView description = (TextView) v.findViewById(R.id.onlist_competition_description);
-            TextView btn = (Button) v.findViewById(R.id.btn_competition);
+            TextView nameView = (TextView) v.findViewById(R.id.onlist_country_name);
+            TextView idView = (TextView) v.findViewById(R.id.onlist_country_id);
 
 
-            if (name != null) {
-                name.setText(c.getName());
+            if (nameView != null) {
+                nameView.setText(c.getName());
             }
 
-            if (description != null) {
-                description.setText(c.getName());
+            if (idView != null) {
+                idView.setText(c.getCountryId().toString());
             }
-
-            btn.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(context, CompetitionActivity.class);
-                    intent.putExtra("competitionId", c.getName());
-                    context.startActivity(intent);
-
-                }
-            });
 
         }
 
         return v;
+    }
+
+
+    @Override
+    public View getDropDownView(int position, View convertView, ViewGroup parent) {
+        LayoutInflater inflater = LayoutInflater.from(getContext());
+        //return  inflater.inflate( R.layout.country_list_row, parent, false);
+        //return super.getDropDownView(position, convertView, parent);
+        return createViewFromResource(inflater, position, convertView, parent, R.layout.country_list_row);
+    }
+
+
+    private View createViewFromResource(LayoutInflater inflater, int position, View convertView,
+                                        ViewGroup parent, int resource) {
+        View view;
+        TextView text;
+        int mFieldId = R.id.onlist_country_name;
+
+        if (convertView == null) {
+            view = inflater.inflate(resource, parent, false);
+        } else {
+            view = convertView;
+        }
+
+        text = (TextView) view.findViewById(mFieldId);
+
+
+        Country item = getItem(position);
+
+        text.setText(item.getName());
+
+        return view;
     }
 
 }

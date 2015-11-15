@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import tecno.competitionplatform.adapters.ListCountryAdapter;
 import tecno.competitionplatform.classes.AlertDialogManager;
 import tecno.competitionplatform.classes.RestClient;
 import tecno.competitionplatform.classes.ResultHandler;
@@ -83,14 +84,14 @@ public class SubscribeActivity extends Activity {
         String password = mPasswordView.getText().toString();
         String passwordRepeat = mPasswordRepeatView.getText().toString();
         String dob = mDobView.getText().toString();
-        String country = mCountrySpinner.getSelectedItem().toString();
+        String country = ((Country)mCountrySpinner.getSelectedItem()).getName();
 
         boolean cancel = false;
         View focusView = null;
 
         /*
          * VALIDATIONS
-         */
+        */
 
         //Country
         if(TextUtils.isEmpty(country)){
@@ -119,7 +120,7 @@ public class SubscribeActivity extends Activity {
             mPasswordView.setError(getString(R.string.error_invalid_password));
             focusView = mPasswordView;
             cancel = true;
-        } else if(password != passwordRepeat) {
+        } else if(!password.equals(passwordRepeat)) {
             mPasswordRepeatView.setError("Las contraseñas no coinciden");
             focusView = mPasswordRepeatView;
             cancel = true;
@@ -253,7 +254,7 @@ public class SubscribeActivity extends Activity {
             //mDialog.dismiss();
 
             if (result !=null && result.validateResponse()) {
-
+                /*
                 List<String> countryArrayList = new ArrayList<>();
                 Spinner countrySelect = (Spinner) findViewById(R.id.subscribe_country);
                 for(Country c : result.getData()){countryArrayList.add(c.getName());}
@@ -261,8 +262,12 @@ public class SubscribeActivity extends Activity {
                 ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(SubscribeActivity.this, android.R.layout.simple_spinner_item,countryArrayList);
                 dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 countrySelect.setAdapter(dataAdapter);
-                //dataAdapter.notifyDataSetChanged();
-                //finish();
+                */
+
+                ListCountryAdapter listCountryAdapter = new ListCountryAdapter(SubscribeActivity.this, R.layout.country_list_row, result.getData() );
+
+                listCountryAdapter.notifyDataSetChanged();
+                mCountrySpinner.setAdapter(listCountryAdapter);
 
             } else {
                 AlertDialogManager.getErrorDialog(SubscribeActivity.this, "Error", result.getException().getMessage(),"Volver", true);
