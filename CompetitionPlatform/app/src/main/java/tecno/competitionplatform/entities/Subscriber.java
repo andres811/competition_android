@@ -11,6 +11,7 @@ public class Subscriber {
     private String email;
     private String firstname;
     private String lastname;
+    private String password;
     private Date dob;
     private String token;
     private Country countryId;
@@ -23,12 +24,21 @@ public class Subscriber {
         this.token = token;
     }
 
-    public Subscriber(String email, String firstname, String lastname, Date dob, Country countryId) {
+    public Subscriber(String email, String firstname, String lastname, String password, Date dob, Country countryId) {
         this.email = email;
         this.firstname = firstname;
         this.lastname = lastname;
+        this.password = password;
         this.dob = dob;
         this.countryId = countryId;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public Country getCountry() {

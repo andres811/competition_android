@@ -35,7 +35,7 @@ import tecno.competitionplatform.config.Config;
 import tecno.competitionplatform.entities.Country;
 import tecno.competitionplatform.entities.Subscriber;
 
-public class SubscribeActivity extends Activity {
+public class SubscribeActivity extends BaseActivity {
 
     private ListCountriesTask mGetCountriesTask = null;
     private ProgressDialog mDialog;
@@ -57,8 +57,7 @@ public class SubscribeActivity extends Activity {
         getActionBar().setDisplayHomeAsUpEnabled(true);
         mDialog = new ProgressDialog(SubscribeActivity.this);
         mDialog.setCanceledOnTouchOutside(false);
-        mGetCountriesTask = new ListCountriesTask();
-        mGetCountriesTask.execute((Void) null);
+
         
         //getting form elements
         mNameView = (EditText) findViewById(R.id.subscribe_name);
@@ -68,6 +67,9 @@ public class SubscribeActivity extends Activity {
         mPasswordRepeatView = (EditText) findViewById(R.id.subscribe_repeat_password);
         mDobView = (EditText) findViewById(R.id.subscribe_dob);
         mCountrySpinner = (Spinner) findViewById(R.id.subscribe_country);
+
+        mGetCountriesTask = new ListCountriesTask(SubscribeActivity.this, mCountrySpinner);
+        mGetCountriesTask.execute((Void) null);
 
         Button mSubscribeButton = (Button) findViewById(R.id.subscribe_button);
         mSubscribeButton.setOnClickListener(new View.OnClickListener() {
@@ -166,13 +168,14 @@ public class SubscribeActivity extends Activity {
             focusView.requestFocus();
         } else {
             // perform the user subscribe attempt.
-            SimpleDateFormat sdf = new SimpleDateFormat(Config.VIEW_DATE_FORMAT);
+            //pass the subscriber data in a new subscriber instance
             mSubscribeTask = new UserSubscribeTask(
                     new Subscriber(
                             email,
                             name,
                             lastname,
-                            sdf.parse(dob),
+                            password,
+                            new SimpleDateFormat(Config.VIEW_DATE_FORMAT).parse(dob),
                             country
                     )
             );
@@ -209,112 +212,12 @@ public class SubscribeActivity extends Activity {
         mDobView.setError(null);
     }
 
-    public class ListCountriesTask extends AsyncTask<Void, Void, ResultHandler<List<Country>>> {
+    public class UserSubscribeTask extends AsyncTask<Void, Void, ResultHandler<Subscriber>> {
 
-        public ListCountriesTask() {
-
-        }
-
-        @Override
-        protected void onPreExecute() {
-
-            //mDialog.setMessage("Cargando");
-            //mDialog.show();
-
-        }
-
-        @Override
-        protected ResultHandler<List<Country>> doInBackground(Void... params) {
-
-            JSONArray countryListJson;
-            ResultHandler<List<Country>> result = new ResultHandler<>();
-            String url = Config.BASE_URL_SERVICES + Config.COUNTRY_SERVICE;
-
-            try {
-                RestClient restClient = new RestClient(url,"GET");
-                restClient.executeRequest();
-                int responseCode = restClient.getResponseCode();
-
-                switch (responseCode) {
-
-                    case HttpURLConnection.HTTP_OK:
-                        //get json response and save in json response
-                        countryListJson = restClient.getResponseDataArray();
-                        break;
-
-                    case HttpURLConnection.HTTP_NOT_FOUND:
-                        throw new Exception("No se qué pasó aquí");
-
-                    case HttpURLConnection.HTTP_INTERNAL_ERROR:
-                        throw new Exception("Error del servidor");
-
-                    default:
-                        throw new Exception("Error");
-                }
-
-                //mapping json to entity
-                Gson gson = new Gson();
-                List<Country> countryList = gson.fromJson(
-                        countryListJson.toString(),
-                        new TypeToken<List<Country>>() {}.getType()
-                );
-
-                //saving data in result
-                result.setData(countryList);
-
-
-            } catch (JSONException e) {
-                e.printStackTrace();
-                result.setException(e);
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-                result.setException(e);
-            } catch (Exception e) {
-                e.printStackTrace();
-                result.setException(e);
-            }
-
-            return result;
-        }
-
-        @Override
-        protected void onPostExecute(final ResultHandler<List<Country>> result) {
-            //mDialog.dismiss();
-
-            if (result !=null && result.validateResponse()) {
-                /*
-                List<String> countryArrayList = new ArrayList<>();
-                Spinner countrySelect = (Spinner) findViewById(R.id.subscribe_country);
-                for(Country c : result.getData()){countryArrayList.add(c.getName());}
-
-                ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(SubscribeActivity.this, android.R.layout.simple_spinner_item,countryArrayList);
-                dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                countrySelect.setAdapter(dataAdapter);
-                */
-
-                ListCountryAdapter listCountryAdapter = new ListCountryAdapter(SubscribeActivity.this, R.layout.country_list_row, result.getData() );
-
-                listCountryAdapter.notifyDataSetChanged();
-                mCountrySpinner.setAdapter(listCountryAdapter);
-
-            } else {
-                AlertDialogManager.getErrorDialog(SubscribeActivity.this, "Error", result.getException().getMessage(),"Volver", true);
-            }
-        }
-
-        @Override
-        protected void onCancelled() {
-
-            //showProgress(false);
-        }
-    }
-
-    public class UserSubscribeTask extends AsyncTask<Void, Void, ResultHandler<Boolean>> {
-
-        Subscriber mSubscriber = null;
+        Subscriber mSubscriberData = null;
 
         public UserSubscribeTask(Subscriber subscriber) {
-            this.mSubscriber = subscriber;
+            this.mSubscriberData = subscriber;
         }
 
         @Override
@@ -325,26 +228,26 @@ public class SubscribeActivity extends Activity {
         }
 
         @Override
-        protected ResultHandler<Boolean> doInBackground(Void... params) {
+        protected ResultHandler<Subscriber> doInBackground(Void... params) {
 
-            JSONObject userDataJson = null;
-            Gson gson = new GsonBuilder().setDateFormat(Config.GSON_DATE_FORMAT).create();
-            ResultHandler<Boolean> result = new ResultHandler<>();
+            ResultHandler<Subscriber> result = new ResultHandler<>();
+
             String url = Config.BASE_URL_SERVICES + Config.SUBSCRIBER_SERVICE;
 
             try {
+                //Create gson with custom date format
+                Gson gson = new GsonBuilder().setDateFormat(Config.GSON_DATE_FORMAT).create();
 
-                userDataJson = new JSONObject(gson.toJson(mSubscriber));
+                JSONObject subscriberDataJson = new JSONObject(gson.toJson(mSubscriberData));
+                RestClient restClient = new RestClient(url,subscriberDataJson,"POST");
 
-                RestClient restClient = new RestClient(url);
+                //Executing request.
                 restClient.executeRequest();
-                int responseCode = restClient.getResponseCode();
 
-                switch (responseCode) {
+                switch (restClient.getResponseCode()) {
 
                     case HttpURLConnection.HTTP_OK:
-                        //get json response and save in json response
-                        //countryListJson = restClient.getResponseDataArray();
+                        //Response ok. Break and continue
                         break;
 
                     case HttpURLConnection.HTTP_NOT_FOUND:
@@ -357,10 +260,9 @@ public class SubscribeActivity extends Activity {
                         throw new Exception("Error");
                 }
 
-
-
-                //saving data in result
-                result.setData(false);
+                //get json response and save in result
+                JSONObject responseSubscribeDataJson = restClient.getResponseData();
+                result.setData(gson.fromJson(responseSubscribeDataJson.toString(), Subscriber.class));
 
 
             } catch (JSONException e) {
@@ -378,22 +280,21 @@ public class SubscribeActivity extends Activity {
         }
 
         @Override
-        protected void onPostExecute(final ResultHandler<Boolean> result) {
+        protected void onPostExecute(final ResultHandler<Subscriber> result) {
 
             mDialog.dismiss();
 
             if (result !=null && result.validateResponse()) {
-                //SUCCESS
+
+
+                Subscriber subscriberData = result.getData();
+                UserLoginTask userLoginTask = new UserLoginTask(subscriberData.getEmail(), subscriberData.getPassword());
+                userLoginTask.execute((Void) null);
+
 
             } else {
-                AlertDialogManager.getErrorDialog(SubscribeActivity.this, "Error", result.getException().getMessage(),"Volver", true);
+                AlertDialogManager.getErrorDialog(SubscribeActivity.this, "Error", result.getException().getMessage(), "Volver", true);
             }
-        }
-
-        @Override
-        protected void onCancelled() {
-
-            //showProgress(false);
         }
     }
 }

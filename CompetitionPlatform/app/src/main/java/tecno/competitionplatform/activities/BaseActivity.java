@@ -1,8 +1,10 @@
 package tecno.competitionplatform.activities;
 
 import android.app.ActionBar;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Activity;
 import android.text.SpannableString;
@@ -11,8 +13,27 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Spinner;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.util.List;
+
+import tecno.competitionplatform.adapters.ListCountryAdapter;
+import tecno.competitionplatform.classes.AlertDialogManager;
+import tecno.competitionplatform.classes.RestClient;
+import tecno.competitionplatform.classes.ResultHandler;
 import tecno.competitionplatform.classes.SessionManager;
+import tecno.competitionplatform.config.Config;
+import tecno.competitionplatform.entities.Country;
+import tecno.competitionplatform.entities.Subscriber;
 
 public class BaseActivity extends Activity {
 
@@ -97,6 +118,204 @@ public class BaseActivity extends Activity {
             mSessionManager = new SessionManager(getApplicationContext());
         }
         return mSessionManager;
+    }
+
+    /**
+     * Represents an asynchronous login task used to authenticate
+     * the user.
+     */
+    public class UserLoginTask extends AsyncTask<Void, Void, ResultHandler<Subscriber>> {
+
+        private final String mEmail;
+        private final String mPassword;
+
+        UserLoginTask(String email, String password) {
+            //mEmail = email;
+            //mPassword = password;
+
+            //Dummy credentials.
+            mEmail = "despacito@porlaspiedras.com";
+            mPassword = "123123123";
+        }
+
+        @Override
+        protected ResultHandler<Subscriber> doInBackground(Void... params) {
+
+            JSONObject credentials;
+            JSONObject responseData;
+            ResultHandler<Subscriber> result = new ResultHandler<>();
+            String url = Config.BASE_URL_SERVICES + Config.AUTHENTICATION_SERVICE;
+
+            try {
+                credentials = new JSONObject();
+                credentials.put("username", mEmail);
+                credentials.put("password", mPassword);
+                RestClient restClient = new RestClient(url , credentials,"POST");
+                restClient.executeRequest();
+
+                switch (restClient.getResponseCode()) {
+
+                    case HttpURLConnection.HTTP_OK:
+                        //get json response and save in json response
+                        responseData = restClient.getResponseData();
+                        break;
+
+                    case HttpURLConnection.HTTP_UNAUTHORIZED:
+                        throw new Exception(getString(R.string.error_incorrect_password));
+
+                    case HttpURLConnection.HTTP_INTERNAL_ERROR:
+                        throw new Exception("Error del servidor");
+
+                    default:
+                        throw new Exception("Ha ocurrido un error");
+                }
+
+                //mapping json to entity
+                //Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSzz").create();
+                //Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").create();
+                Gson gson = new Gson();
+                Subscriber subscriber = gson.fromJson(responseData.toString(), Subscriber.class);
+
+                //saving data in result
+                result.setData(subscriber);
+
+
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+                result.setException(e);
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+                result.setException(e);
+            } catch (Exception e) {
+                e.printStackTrace();
+                result.setException(e);
+            }
+
+            return result;
+        }
+
+        @Override
+        protected void onPostExecute(final ResultHandler<Subscriber> result) {
+
+            if (result !=null && result.validateResponse()) {
+
+                Subscriber subscriber = result.getData();
+                getSessionManager().createLoginSession(subscriber.getSubscriberId(), subscriber.getFirstname(), subscriber.getEmail(), subscriber.getToken());
+
+
+                finish();
+            } else {
+                //mPasswordView.setError(getString(R.string.error_incorrect_password));
+                AlertDialogManager.getErrorDialog(BaseActivity.this, "ERROR", result.getException().getMessage(), "Volver", true);
+                //mPasswordView.requestFocus();
+            }
+        }
+
+    }
+
+    public class ListCountriesTask extends AsyncTask<Void, Void, ResultHandler<List<Country>>> {
+
+        private final Context mChildContext;
+        private Spinner mCountrySpinner;
+
+        public ListCountriesTask(Context childContext, Spinner countrySpinner) {
+            this.mCountrySpinner = countrySpinner;
+            this.mChildContext = childContext;
+        }
+
+        @Override
+        protected void onPreExecute() {
+
+            //mDialog.setMessage("Cargando");
+            //mDialog.show();
+
+        }
+
+        @Override
+        protected ResultHandler<List<Country>> doInBackground(Void... params) {
+
+            JSONArray countryListJson;
+            ResultHandler<List<Country>> result = new ResultHandler<>();
+            String url = Config.BASE_URL_SERVICES + Config.COUNTRY_SERVICE;
+
+            try {
+                RestClient restClient = new RestClient(url,"GET");
+                restClient.executeRequest();
+                int responseCode = restClient.getResponseCode();
+
+                switch (responseCode) {
+
+                    case HttpURLConnection.HTTP_OK:
+                        //get json response and save in json response
+                        countryListJson = restClient.getResponseDataArray();
+                        break;
+
+                    case HttpURLConnection.HTTP_NOT_FOUND:
+                        throw new Exception("No se qué pasó aquí");
+
+                    case HttpURLConnection.HTTP_INTERNAL_ERROR:
+                        throw new Exception("Error del servidor");
+
+                    default:
+                        throw new Exception("Error");
+                }
+
+                //mapping json to entity
+                Gson gson = new Gson();
+                List<Country> countryList = gson.fromJson(
+                        countryListJson.toString(),
+                        new TypeToken<List<Country>>() {}.getType()
+                );
+
+                //saving data in result
+                result.setData(countryList);
+
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+                result.setException(e);
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+                result.setException(e);
+            } catch (Exception e) {
+                e.printStackTrace();
+                result.setException(e);
+            }
+
+            return result;
+        }
+
+        @Override
+        protected void onPostExecute(final ResultHandler<List<Country>> result) {
+            //mDialog.dismiss();
+
+            if (result !=null && result.validateResponse()) {
+                /*
+                List<String> countryArrayList = new ArrayList<>();
+                Spinner countrySelect = (Spinner) findViewById(R.id.subscribe_country);
+                for(Country c : result.getData()){countryArrayList.add(c.getName());}
+
+                ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(SubscribeActivity.this, android.R.layout.simple_spinner_item,countryArrayList);
+                dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                countrySelect.setAdapter(dataAdapter);
+                */
+
+                ListCountryAdapter listCountryAdapter = new ListCountryAdapter(mChildContext, R.layout.country_list_row, result.getData() );
+
+                listCountryAdapter.notifyDataSetChanged();
+                mCountrySpinner.setAdapter(listCountryAdapter);
+
+            } else {
+                AlertDialogManager.getErrorDialog(mChildContext, "Error", result.getException().getMessage(),"Volver", true);
+            }
+        }
+
+        @Override
+        protected void onCancelled() {
+
+            //showProgress(false);
+        }
     }
 
 }

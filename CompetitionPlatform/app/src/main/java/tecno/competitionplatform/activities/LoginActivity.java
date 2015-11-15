@@ -248,9 +248,9 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
     }
 
     /**
-     * Represents an asynchronous login/registration task used to authenticate
+     * Represents an asynchronous login task used to authenticate
      * the user.
-     */
+
     public class UserLoginTask extends AsyncTask<Void, Void, ResultHandler<Subscriber>> {
 
         private final String mEmail;
@@ -346,6 +346,6 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
             mAuthTask = null;
             showProgress(false);
         }
-    }
+    }*/
 }
 
