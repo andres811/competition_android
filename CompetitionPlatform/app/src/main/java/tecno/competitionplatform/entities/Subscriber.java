@@ -1,6 +1,6 @@
 package tecno.competitionplatform.entities;
 
-import java.sql.Date;
+import java.util.Date;
 
 /**
  * Created by Andres on 13/10/2015.
@@ -21,6 +21,14 @@ public class Subscriber {
         this.email = email;
         this.firstname = firstname;
         this.token = token;
+    }
+
+    public Subscriber(String email, String firstname, String lastname, Date dob, Country countryId) {
+        this.email = email;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.dob = dob;
+        this.countryId = countryId;
     }
 
     public Country getCountry() {

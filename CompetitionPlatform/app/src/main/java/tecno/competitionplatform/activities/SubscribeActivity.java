@@ -12,10 +12,12 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -31,6 +33,7 @@ import tecno.competitionplatform.classes.RestClient;
 import tecno.competitionplatform.classes.ResultHandler;
 import tecno.competitionplatform.config.Config;
 import tecno.competitionplatform.entities.Country;
+import tecno.competitionplatform.entities.Subscriber;
 
 public class SubscribeActivity extends Activity {
 
@@ -45,6 +48,7 @@ public class SubscribeActivity extends Activity {
     private EditText mPasswordRepeatView;
     private EditText mDobView;
     private Spinner mCountrySpinner;
+    private UserSubscribeTask mSubscribeTask;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,12 +73,17 @@ public class SubscribeActivity extends Activity {
         mSubscribeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                attemptSubscribe();
+                try {
+                    attemptSubscribe();
+                } catch (ParseException e) {
+                    //Only because android ask for it
+                    e.printStackTrace();
+                }
             }
         });
     }
 
-    private void attemptSubscribe() {
+    private void attemptSubscribe() throws ParseException {
         cleanErrors();
 
         // Store values at the time of the subscribe attempt.
@@ -84,7 +93,7 @@ public class SubscribeActivity extends Activity {
         String password = mPasswordView.getText().toString();
         String passwordRepeat = mPasswordRepeatView.getText().toString();
         String dob = mDobView.getText().toString();
-        String country = ((Country)mCountrySpinner.getSelectedItem()).getName();
+        Country country = (Country)mCountrySpinner.getSelectedItem();
 
         boolean cancel = false;
         View focusView = null;
@@ -94,7 +103,7 @@ public class SubscribeActivity extends Activity {
         */
 
         //Country
-        if(TextUtils.isEmpty(country)){
+        if(TextUtils.isEmpty(country.getName())){
             focusView = mPasswordView;
             cancel = true;
         }
@@ -149,6 +158,25 @@ public class SubscribeActivity extends Activity {
             mNameView.setError(getString(R.string.error_field_required));
             focusView = mNameView;
             cancel = true;
+        }
+
+        if (cancel) {
+            // There was an error; don't attempt subscribe and focus the first
+            // form field with an error.
+            focusView.requestFocus();
+        } else {
+            // perform the user subscribe attempt.
+            SimpleDateFormat sdf = new SimpleDateFormat(Config.VIEW_DATE_FORMAT);
+            mSubscribeTask = new UserSubscribeTask(
+                    new Subscriber(
+                            email,
+                            name,
+                            lastname,
+                            sdf.parse(dob),
+                            country
+                    )
+            );
+            mSubscribeTask.execute((Void) null);
         }
 
     }
@@ -281,4 +309,91 @@ public class SubscribeActivity extends Activity {
         }
     }
 
+    public class UserSubscribeTask extends AsyncTask<Void, Void, ResultHandler<Boolean>> {
+
+        Subscriber mSubscriber = null;
+
+        public UserSubscribeTask(Subscriber subscriber) {
+            this.mSubscriber = subscriber;
+        }
+
+        @Override
+        protected void onPreExecute() {
+
+            mDialog.setMessage("Suscribiendo");
+            mDialog.show();
+        }
+
+        @Override
+        protected ResultHandler<Boolean> doInBackground(Void... params) {
+
+            JSONObject userDataJson = null;
+            Gson gson = new GsonBuilder().setDateFormat(Config.GSON_DATE_FORMAT).create();
+            ResultHandler<Boolean> result = new ResultHandler<>();
+            String url = Config.BASE_URL_SERVICES + Config.SUBSCRIBER_SERVICE;
+
+            try {
+
+                userDataJson = new JSONObject(gson.toJson(mSubscriber));
+
+                RestClient restClient = new RestClient(url);
+                restClient.executeRequest();
+                int responseCode = restClient.getResponseCode();
+
+                switch (responseCode) {
+
+                    case HttpURLConnection.HTTP_OK:
+                        //get json response and save in json response
+                        //countryListJson = restClient.getResponseDataArray();
+                        break;
+
+                    case HttpURLConnection.HTTP_NOT_FOUND:
+                        throw new Exception("No se qué pasó aquí");
+
+                    case HttpURLConnection.HTTP_INTERNAL_ERROR:
+                        throw new Exception("Error del servidor");
+
+                    default:
+                        throw new Exception("Error");
+                }
+
+
+
+                //saving data in result
+                result.setData(false);
+
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+                result.setException(e);
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+                result.setException(e);
+            } catch (Exception e) {
+                e.printStackTrace();
+                result.setException(e);
+            }
+
+            return result;
+        }
+
+        @Override
+        protected void onPostExecute(final ResultHandler<Boolean> result) {
+
+            mDialog.dismiss();
+
+            if (result !=null && result.validateResponse()) {
+                //SUCCESS
+
+            } else {
+                AlertDialogManager.getErrorDialog(SubscribeActivity.this, "Error", result.getException().getMessage(),"Volver", true);
+            }
+        }
+
+        @Override
+        protected void onCancelled() {
+
+            //showProgress(false);
+        }
+    }
 }
