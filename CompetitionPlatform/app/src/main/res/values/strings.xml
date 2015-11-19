@@ -5,8 +5,6 @@
     <string name="action_settings">Configuración</string>
 
 
-    <string name="base_url_services">http://192.168.1.100:8080/pfinal/services/</string>
-    <string name="authentication">auth</string>
     <string name="title_activity_main2">Main2Activity</string>
 
     <string name="title_section1">Section 1</string>
@@ -17,12 +15,12 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_example">Example action</string>
-    <string name="title_activity_event_list">EventListActivity</string>
+    <string name="title_activity_event_list">Eventos</string>
     <string name="title_activity_main22">Main22Activity</string>
     <string name="title_activity_base">BaseActivity</string>
-    <string name="title_activity_main_competition">MainCompetitionActivity</string>
-    <string name="title_activity_competition_list">CompetitionListActivity</string>
-    <string name="title_activity_competition">CompetitionActivity</string>
-    <string name="title_activity_account">AccountActivity</string>
-    <string name="title_activity_subscribe">SubscribeActivity</string>
+    <string name="title_activity_main_competition">Detalle del Evento</string>
+    <string name="title_activity_competition_list">Competencias</string>
+    <string name="title_activity_competition">Detalle de la competencia</string>
+    <string name="title_activity_account">Mi cuenta</string>
+    <string name="title_activity_subscribe">Suscripción</string>
 </resources>

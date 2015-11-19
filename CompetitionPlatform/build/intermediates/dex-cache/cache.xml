@@ -2,165 +2,11 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.5.0\jars\classes.jar"
+        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.5.0\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="272bc5d7063f24bc3a33ea1d318cde8f31f5ec4c">
-        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-d4f91ce34194d153701c09c7b2f2c7f0b93b743e.jar" />
-    </item>
-    <item
-        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="a1372c17fccacca753d3951d3ad820571cbce075">
-        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-90029ac727e3c1cf52357fff973b83d63e4bef2c.jar" />
-    </item>
-    <item
-        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
-        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-19e40e4c1990ad4bb2ba33954cc417e6c1dc9fe6.jar" />
-    </item>
-    <item
-        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="1e98ef3f124bb7a11f8575f9ff5dfea330b61b6f">
-        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-856a93b106af605c0e1fd3726ae62e0d422b5db1.jar" />
-    </item>
-    <item
-        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="8d736fefa22d896e84a268354b3ed48a42663150">
-        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-207dccde29c2bee75c0825c9609950df3378440c.jar" />
-    </item>
-    <item
-        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
-        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-99520254dc939b672995151be0cac0c270aa288e.jar" />
-    </item>
-    <item
-        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="69dd177337ead693c408c8dddc9546bb6f1244fa">
-        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-4e9aecaba4c8edb18797adcf8c364eaa1f654a0b.jar" />
-    </item>
-    <item
-        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="02bac2dc792d78241077861566f2c82da955e7fa">
-        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-b709c4f65b1360ec9d29ec596acbf0c785d83a66.jar" />
-    </item>
-    <item
-        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="f02127a85abd52a2cd526d4c2409f21969f80ee8">
-        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-c330bfb08c58a0e3131fc6f22141c1c5510fdb7e.jar" />
-    </item>
-    <item
-        jar="C:\Users\Andres\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3.1\ecb6e1f8e4b0e84c4b886c2f14a1500caf309757\gson-2.3.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
-        <dex dex="C:\Users\Andres\AndroidStudioProjects\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\gson-2.3.1-7afe57e82b7355d7b13b3cf3d271d81080981a31.jar" />
-    </item>
-    <item
-        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="e7b35244f50663b3f8d150714bca9ecd7a290da1">
-        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-86e18e491ce233207e8db3b1438a8baeb186821a.jar" />
-    </item>
-    <item
-        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="63ec6e9f4fe5482a7447d0f3091b8e543a02554c">
-        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-76e55e640baad2e6b2591e6b116299e294a228f2.jar" />
-    </item>
-    <item
-        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="a172852a35ff919e85b9b7f14bbc15c5bee25520">
-        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-e223910b491b90faa0eb21c29d53185aa8a6e3ea.jar" />
-    </item>
-    <item
-        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="29ebc7e04d877062317c8cc0e68b20f0c1fcda66">
-        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-73c0eba1187bda52ef18b0ca162d39c45533104f.jar" />
-    </item>
-    <item
-        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="6836d188602ec5382d1967c58b00960eb8ff8773">
-        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-0b4284e8a12997657fcbfc594b18661d51bf7740.jar" />
-    </item>
-    <item
-        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="ba207be21987c11b37d9f8faa08ed6e722569f30">
-        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-36220da5c291de6eba44e11eaf8b5e61c44742ef.jar" />
-    </item>
-    <item
-        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="d405025c600055237c171a0bbabaa49d69696573">
-        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-1775724432fa3ec5985d6263ae89eec8b9f4be98.jar" />
-    </item>
-    <item
-        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="68c140702c7242d914655bcb3164d9e8c45b84cb">
-        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-042cc447cb7b84875bbc5a425085cbe67a9e3cca.jar" />
-    </item>
-    <item
-        jar="C:\Users\Andres\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
-        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.0-fe79c117adba47c2a5f93277cf872bdda1f9c3be.jar" />
-    </item>
-    <item
-        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
-        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.0-22af19b6482f9dc3c8e77557996381c724052b65.jar" />
-    </item>
-    <item
-        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="6440e5e5cfe368f9bff3c537fb8988048069cb33">
-        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-fcc985c1112723880af60322b6a0a1a731d36860.jar" />
-    </item>
-    <item
-        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="1a6411087ab88ce5542f593e63a2752b6b0d6f1a">
-        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-69da6cf76c10512247a0b8c7f65cda5f5467cb39.jar" />
-    </item>
-    <item
-        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="06a42becc33232ec0ee125161da68c1829c9f8fd">
-        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-959261ee9bec62b6a0e07830e55f9fcc48a9499e.jar" />
+        sha1="8e3a972f28b8bae817e382257ba177a31bcadbbc">
+        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-ba8b667b63765e5e45d12179ec02b469060b5513.jar" />
     </item>
     <item
         jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.0.0\jars\libs\internal_impl-22.0.0.jar"
@@ -170,18 +16,102 @@
         <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-4ffb99c38f7d8234409c6b109964b979d353872d.jar" />
     </item>
     <item
-        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\jars\classes.jar"
+        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.5.0\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="a78183f30e769a98ab4820794f597763088d3065">
-        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-4f9ffdd40878fe7a8d21c0bf636d48d5af615165.jar" />
+        sha1="69dd177337ead693c408c8dddc9546bb6f1244fa">
+        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-4e9aecaba4c8edb18797adcf8c364eaa1f654a0b.jar" />
     </item>
     <item
-        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.5.0\jars\classes.jar"
+        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.5.0\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="8e3a972f28b8bae817e382257ba177a31bcadbbc">
-        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-ba8b667b63765e5e45d12179ec02b469060b5513.jar" />
+        sha1="8d736fefa22d896e84a268354b3ed48a42663150">
+        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-207dccde29c2bee75c0825c9609950df3378440c.jar" />
+    </item>
+    <item
+        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f02127a85abd52a2cd526d4c2409f21969f80ee8">
+        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-c330bfb08c58a0e3131fc6f22141c1c5510fdb7e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="02bac2dc792d78241077861566f2c82da955e7fa">
+        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-b709c4f65b1360ec9d29ec596acbf0c785d83a66.jar" />
+    </item>
+    <item
+        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6440e5e5cfe368f9bff3c537fb8988048069cb33">
+        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-fcc985c1112723880af60322b6a0a1a731d36860.jar" />
+    </item>
+    <item
+        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e7b35244f50663b3f8d150714bca9ecd7a290da1">
+        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-86e18e491ce233207e8db3b1438a8baeb186821a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1e98ef3f124bb7a11f8575f9ff5dfea330b61b6f">
+        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-856a93b106af605c0e1fd3726ae62e0d422b5db1.jar" />
+    </item>
+    <item
+        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-19e40e4c1990ad4bb2ba33954cc417e6c1dc9fe6.jar" />
+    </item>
+    <item
+        jar="C:\Users\Andres\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3.1\ecb6e1f8e4b0e84c4b886c2f14a1500caf309757\gson-2.3.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\gson-2.3.1-7afe57e82b7355d7b13b3cf3d271d81080981a31.jar" />
+    </item>
+    <item
+        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="68c140702c7242d914655bcb3164d9e8c45b84cb">
+        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-042cc447cb7b84875bbc5a425085cbe67a9e3cca.jar" />
+    </item>
+    <item
+        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1a6411087ab88ce5542f593e63a2752b6b0d6f1a">
+        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-69da6cf76c10512247a0b8c7f65cda5f5467cb39.jar" />
+    </item>
+    <item
+        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a1372c17fccacca753d3951d3ad820571cbce075">
+        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-90029ac727e3c1cf52357fff973b83d63e4bef2c.jar" />
+    </item>
+    <item
+        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="272bc5d7063f24bc3a33ea1d318cde8f31f5ec4c">
+        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-d4f91ce34194d153701c09c7b2f2c7f0b93b743e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Andres\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
+        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.0-fe79c117adba47c2a5f93277cf872bdda1f9c3be.jar" />
     </item>
     <item
         jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.5.0\jars\classes.jar"
@@ -189,6 +119,76 @@
         revision="22.0.1"
         sha1="f44d03c138cb6488fdbaa65e3a7e5878861a56d8">
         <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-0106aaedc4dd70efc7e47a027a35e34c888adbae.jar" />
+    </item>
+    <item
+        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a78183f30e769a98ab4820794f597763088d3065">
+        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-4f9ffdd40878fe7a8d21c0bf636d48d5af615165.jar" />
+    </item>
+    <item
+        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a172852a35ff919e85b9b7f14bbc15c5bee25520">
+        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-e223910b491b90faa0eb21c29d53185aa8a6e3ea.jar" />
+    </item>
+    <item
+        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="06a42becc33232ec0ee125161da68c1829c9f8fd">
+        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-959261ee9bec62b6a0e07830e55f9fcc48a9499e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.0-22af19b6482f9dc3c8e77557996381c724052b65.jar" />
+    </item>
+    <item
+        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="63ec6e9f4fe5482a7447d0f3091b8e543a02554c">
+        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-76e55e640baad2e6b2591e6b116299e294a228f2.jar" />
+    </item>
+    <item
+        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-99520254dc939b672995151be0cac0c270aa288e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6836d188602ec5382d1967c58b00960eb8ff8773">
+        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-0b4284e8a12997657fcbfc594b18661d51bf7740.jar" />
+    </item>
+    <item
+        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="29ebc7e04d877062317c8cc0e68b20f0c1fcda66">
+        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-73c0eba1187bda52ef18b0ca162d39c45533104f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d405025c600055237c171a0bbabaa49d69696573">
+        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-1775724432fa3ec5985d6263ae89eec8b9f4be98.jar" />
+    </item>
+    <item
+        jar="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ba207be21987c11b37d9f8faa08ed6e722569f30">
+        <dex dex="C:\Users\Andres\Documents\GitHub Repo\competition_android\CompetitionPlatform\app\build\intermediates\pre-dexed\debug\classes-36220da5c291de6eba44e11eaf8b5e61c44742ef.jar" />
     </item>
 
 </items>

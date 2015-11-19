@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+<resources xmlns:ns1="http://schemas.android.com/apk/res/android">
     <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/src/main/res/values/arrays.xml -->
     <eat-comment/>
     <string-array name="actions">
@@ -36,6 +36,12 @@
     <color name="abc_search_url_text_selected">@android:color/black</color>
     <color name="accent_material_dark">@color/material_deep_teal_200</color>
     <color name="accent_material_light">@color/material_deep_teal_500</color>
+    <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="action_bar_background">#5BC0DE</color>
+    <color name="background">#4E5D6C</color>
+    <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <eat-comment/>
     <color name="background_floating_material_dark">@color/material_grey_800</color>
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
@@ -46,8 +52,17 @@
     <color name="bright_foreground_inverse_material_light">@color/bright_foreground_material_dark</color>
     <color name="bright_foreground_material_dark">@android:color/white</color>
     <color name="bright_foreground_material_light">@android:color/black</color>
+    <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="button_default">#5BC0DE</color>
+    <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <eat-comment/>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
+    <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="button_pressed">#DF691A</color>
+    <color name="button_text">#FFF</color>
     <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/res/values/common_colors.xml -->
     <eat-comment/>
     <color name="common_action_bar_splitter">#d2d2d2</color>
@@ -84,6 +99,11 @@
     <color name="material_grey_800">#ff424242</color>
     <color name="material_grey_850">#ff303030</color>
     <color name="material_grey_900">#ff212121</color>
+    <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="normal_text">#FFF</color>
+    <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <eat-comment/>
     <color name="primary_dark_material_dark">@android:color/black</color>
     <color name="primary_dark_material_light">@color/material_grey_600</color>
     <color name="primary_material_dark">@color/material_grey_900</color>
@@ -305,10 +325,6 @@
     <eat-comment/>
     <string name="auth_google_play_services_client_facebook_display_name">Facebook</string>
     <string name="auth_google_play_services_client_google_display_name">Google</string>
-    <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/src/main/res/values/strings.xml -->
-    <eat-comment/>
-    <string name="authentication">auth</string>
-    <string name="base_url_services">http://192.168.1.100:8080/pfinal/services/</string>
     <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.5.0/res/values/cast_strings.xml -->
     <eat-comment/>
     <string name="cast_notification_connected_message">Connected to <ns1:g id="name">%1$s</ns1:g></string>
@@ -391,11 +407,11 @@
     <string name="store_picture_title">Save image</string>
     <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="title_activity_account">AccountActivity</string>
+    <string name="title_activity_account">Mi cuenta</string>
     <string name="title_activity_base">BaseActivity</string>
-    <string name="title_activity_competition">CompetitionActivity</string>
-    <string name="title_activity_competition_list">CompetitionListActivity</string>
-    <string name="title_activity_event_list">EventListActivity</string>
+    <string name="title_activity_competition">Detalle de la competencia</string>
+    <string name="title_activity_competition_list">Competencias</string>
+    <string name="title_activity_event_list">Eventos</string>
     <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/src/main/res/values/strings_activity_login.xml -->
     <eat-comment/>
     <string name="title_activity_login">Iniciar Sesión</string>
@@ -403,8 +419,8 @@
     <eat-comment/>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="title_activity_main22">Main22Activity</string>
-    <string name="title_activity_main_competition">MainCompetitionActivity</string>
-    <string name="title_activity_subscribe">SubscribeActivity</string>
+    <string name="title_activity_main_competition">Detalle del Evento</string>
+    <string name="title_activity_subscribe">Suscripción</string>
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>
     <string name="title_section3">Section 3</string>
@@ -419,10 +435,21 @@
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
     <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/src/main/res/values/styles.xml -->
     <eat-comment/>
-    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="android:actionOverflowButtonStyle">@style/MyActionButtonOverflow</item>
+    <style name="AppTheme" parent="android:Theme.Holo.Light">
+        <item name="android:actionOverflowButtonStyle">@style/AppTheme.ActionButtonOverflow</item>
+        <item name="android:actionBarStyle">@style/AppTheme.ActionBar</item>
 
+    </style>
+    <style name="AppTheme.ActionBar" parent="android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@color/background</item>
+        <item name="android:titleTextStyle">@style/AppTheme.ActionBar.TitleText</item>
+    </style>
+    <style name="AppTheme.ActionBar.TitleText" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/normal_text</item>
+    </style>
+    <style name="AppTheme.ActionButtonOverflow" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_perm_identity</item>
+        <item name="android:background">@drawable/background_action_bar_button</item>
     </style>
     <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
@@ -1375,12 +1402,18 @@
         <item name="android:background">#323331</item>
 
     </style>
-    <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/src/main/res/values/DefaultCustomTheme.xml -->
     <eat-comment/>
-    <style name="MyActionButtonOverflow" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
-        <item name="android:src">@drawable/ic_perm_identity</item>
-        <item name="android:background">?android:attr/actionBarItemBackground</item>
-        <item name="android:contentDescription">"Lala"</item>
+    <style name="DefaultCustomTheme" parent="AppTheme">
+        <item name="android:buttonStyle">@style/DefaultCustomTheme.ButtonDefault</item>
+        <item name="android:background">@color/background</item>
+
+    </style>
+    <style name="DefaultCustomTheme.ButtonDefault" parent="@android:style/Widget.Button">
+        <item name="android:textColor">@color/button_text</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:background">@drawable/background_button_color</item>
+
     </style>
     <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>

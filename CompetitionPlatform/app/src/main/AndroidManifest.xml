@@ -12,7 +12,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_action_achievement"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
+        android:theme="@style/DefaultCustomTheme"
         android:windowSoftInputMode="adjustResize">
         <activity
             android:name=".MainActivity"

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Buttons -->
+    <color name="button_default">#5BC0DE</color>
+    <color name="button_pressed">#DF691A</color>
+    <color name="button_text">#FFF</color>
+
+    <!-- Background -->
+    <color name="background">#4E5D6C</color>
+    <color name="action_bar_background">#5BC0DE</color>
+
+    <!-- Text -->
+    <color name="normal_text">#FFF</color>
+
+
+</resources>
+
