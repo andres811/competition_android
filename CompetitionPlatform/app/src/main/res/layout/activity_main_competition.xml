@@ -18,37 +18,52 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Fecha de inicio"
-        android:id="@+id/label_main_competition_start_date"
-        android:layout_marginTop="92dp"
-        android:singleLine="true"
-        android:layout_below="@+id/main_competition_title"
-        android:layout_alignParentStart="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Fecha de clausura"
-        android:id="@+id/label_main_competition_end_date"
-        android:layout_marginTop="34dp"
-        android:singleLine="true"
-        android:layout_below="@+id/label_main_competition_start_date"
-        android:layout_alignStart="@+id/label_main_competition_start_date" />
 
-    <TextView
-        android:layout_width="wrap_content"
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Descripción del evento"
-        android:id="@+id/main_competition_description"
         android:layout_below="@+id/main_competition_title"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp" />
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Inicio"
+            android:id="@+id/label_main_competition_start_date"
+            android:layout_marginTop="49dp"
+            android:singleLine="true"
+
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Clausura"
+            android:id="@+id/label_main_competition_end_date"
+            android:singleLine="true"
+            android:layout_below="@+id/label_main_competition_start_date"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Descripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del evento"
+            android:id="@+id/main_competition_description"
+            android:textColor="@color/description_text"
+
+            android:layout_alignTop="@+id/label_main_competition_start_date"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+</ScrollView>
 
     <TextView
         android:layout_width="wrap_content"
@@ -56,8 +71,8 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="01/01/2014"
         android:id="@+id/main_competition_start_date"
-        android:layout_alignTop="@+id/label_main_competition_start_date"
-        android:layout_alignParentEnd="true" />
+        android:layout_above="@+id/main_competition_end_date"
+        android:layout_toEndOf="@+id/main_competition_title" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -73,9 +88,8 @@
         android:layout_height="wrap_content"
         android:text="Ver Competencias &#8594;"
         android:id="@+id/main_competition_btn_competitions"
-        android:layout_marginTop="75dp"
-        android:layout_below="@+id/main_competition_end_date"
-        android:layout_alignEnd="@+id/main_competition_end_date"
-        android:layout_alignStart="@+id/label_main_competition_end_date" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

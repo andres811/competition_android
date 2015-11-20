@@ -92,7 +92,7 @@
     <color name="hint_foreground_material_light">@color/bright_foreground_disabled_material_light</color>
     <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/src/main/res/values/colors.xml -->
     <eat-comment/>
-    <color name="list_row_separator">#DF691A</color>
+    <color name="list_row_separator">#caddfc</color>
     <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <color name="material_blue_grey_800">#ff37474f</color>

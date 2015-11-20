@@ -25,7 +25,7 @@ import tecno.competitionplatform.classes.ResultHandler;
 import tecno.competitionplatform.config.Config;
 import tecno.competitionplatform.entities.MainCompetition;
 
-public class MainCompetitionActivity extends Activity {
+public class MainCompetitionActivity extends BaseActivity {
 
     private ReadMainCompetitionTask mReadMainCompetitionTask = null;
     private ProgressDialog mDialog;

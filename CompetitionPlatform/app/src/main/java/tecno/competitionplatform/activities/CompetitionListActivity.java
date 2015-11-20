@@ -6,6 +6,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.KeyEvent;
+import android.view.MenuItem;
 import android.widget.ListView;
 
 import com.google.gson.Gson;
@@ -28,7 +29,7 @@ import tecno.competitionplatform.entities.Competition;
 import tecno.competitionplatform.entities.MainCompetition;
 
 
-public class CompetitionListActivity extends Activity {
+public class CompetitionListActivity extends BaseActivity {
 
     private ListCompetitionsTask mListCompetitionsTask = null;
     private ProgressDialog mDialog;
@@ -39,7 +40,7 @@ public class CompetitionListActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_competition_list);
 
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+        getActionBar().setDisplayHomeAsUpEnabled(false);
         mMainCompetitionId = getIntent().getExtras().getInt("mainCompetitionId");
 
         Intent intent = new Intent(CompetitionListActivity.this, MainCompetitionActivity.class);
@@ -50,6 +51,7 @@ public class CompetitionListActivity extends Activity {
         mListCompetitionsTask = new ListCompetitionsTask(mMainCompetitionId,0,1000);
         mListCompetitionsTask.execute((Void) null);
     }
+
 
     public class ListCompetitionsTask extends AsyncTask<Void, Void, ResultHandler<List<Competition>>> {
 

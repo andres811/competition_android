@@ -45,8 +45,8 @@ public class BaseActivity extends Activity {
         setContentView(R.layout.activity_base);
 
         ActionBar mActionBar = getActionBar();
-        mActionBar.setDisplayShowHomeEnabled(true);
-        mActionBar.setDisplayHomeAsUpEnabled(true);
+        //mActionBar.setDisplayShowHomeEnabled(true);
+        //mActionBar.setDisplayHomeAsUpEnabled(true);
         mActionBar.setDisplayShowTitleEnabled(true);
         //mActionBar.setHomeAsUpIndicator(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
         LayoutInflater mInflater = LayoutInflater.from(this);

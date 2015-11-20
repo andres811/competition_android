@@ -30,7 +30,8 @@
             android:height="50sp"
             android:gravity="start"
             android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"/>
+            android:layout_marginRight="15dp"
+            android:textColor="@color/description_text"/>
 
     </TableRow>
 

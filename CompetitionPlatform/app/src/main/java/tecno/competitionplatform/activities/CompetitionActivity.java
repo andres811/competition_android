@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Activity;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -21,7 +22,7 @@ import tecno.competitionplatform.classes.ResultHandler;
 import tecno.competitionplatform.config.Config;
 import tecno.competitionplatform.entities.Competition;
 
-public class CompetitionActivity extends Activity {
+public class CompetitionActivity extends BaseActivity {
 
     private ReadCompetitionTask mReadCompetitionTask = null;
     private ProgressDialog mDialog;
@@ -36,6 +37,14 @@ public class CompetitionActivity extends Activity {
         mDialog.setCanceledOnTouchOutside(false);
         mReadCompetitionTask = new ReadCompetitionTask(competitionId);
         mReadCompetitionTask.execute((Void) null);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home ) {
+
+        }
+        return true;
     }
 
     public class ReadCompetitionTask extends AsyncTask<Void, Void, ResultHandler<Competition>> {
