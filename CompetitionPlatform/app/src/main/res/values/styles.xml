@@ -21,5 +21,18 @@
         <item name="android:textColor">@color/normal_text</item>
     </style>
 
+    <style name="AppTheme.TitleList" parent="Base.TextAppearance.AppCompat.Large">
+        <item name="android:textColor">@color/normal_text</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+
+    </style>
+
+    <style name="AppTheme.DescriptionText" parent="Base.TextAppearance.AppCompat.Large">
+        <item name="android:textColor">@color/normal_text</item>
+        <item name="android:textSize">18dp</item>
+
+    </style>
+
 
 </resources>

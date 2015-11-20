@@ -6,7 +6,7 @@
     <TableRow android:layout_height="wrap_content"
         android:layout_width="fill_parent">
 
-        <TextView android:textColor="#000"
+        <TextView
             android:id="@+id/onlist_country_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -18,7 +18,7 @@
 
     </TableRow>
 
-    <TextView android:textColor="#000"
+    <TextView
         android:id="@+id/onlist_country_id"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

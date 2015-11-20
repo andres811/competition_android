@@ -1,46 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="10dp">>
+
+
     <TableRow android:layout_width="fill_parent"
         android:id="@+id/TableRow01"
         android:layout_height="wrap_content">
 
-        <TextView android:textColor="#000"
+        <TextView
             android:id="@+id/onlist_competition_title"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="name" android:textStyle="bold"
+            android:text="name"
             android:gravity="left"
-            android:layout_weight="1"
             android:typeface="monospace"
-            android:height="60sp"
-            android:textSize="20dp"/>
+            style="@style/AppTheme.TitleList"/>
     </TableRow>
 
     <TableRow android:layout_height="wrap_content"
         android:layout_width="fill_parent">
 
-        <TextView android:textColor="#000"
+        <TextView
             android:id="@+id/onlist_competition_description"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="description"
-            android:layout_weight=".65"
             android:height="50sp"
-            android:gravity="left|center"/>
+            android:gravity="start"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"/>
 
-        <Button android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight=".35"
-            android:textColor="#FFFFFF"
-            android:gravity="right"
-            android:id="@+id/btn_competition"
-            android:text="Ver &#8594;"
-            android:height="20sp" />
     </TableRow>
 
-</TableLayout>
+    <Button android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/btn_competition"
+        android:text="Ver &#8594;"/>
+
+<!--
+    <View
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_width="fill_parent"
+        android:layout_height="0.2dp"
+        android:id="@+id/separator"
+        android:visibility="visible"
+        android:background="@android:color/darker_gray"/>
+-->
+
+</LinearLayout>
 
 
 <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/src/main/res/layout/competition_list_row.xml -->

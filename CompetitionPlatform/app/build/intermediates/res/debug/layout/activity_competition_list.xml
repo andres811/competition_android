@@ -12,6 +12,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/competition_list_view"
         android:layout_alignParentTop="true"
+        android:divider="@color/list_row_separator"
+        android:dividerHeight="1px"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

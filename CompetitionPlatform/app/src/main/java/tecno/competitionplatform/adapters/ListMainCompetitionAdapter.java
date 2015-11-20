@@ -13,6 +13,7 @@ import java.util.List;
 
 import tecno.competitionplatform.activities.MainCompetitionActivity;
 import tecno.competitionplatform.activities.R;
+import tecno.competitionplatform.classes.Helper;
 import tecno.competitionplatform.entities.MainCompetition;
 
 /**
@@ -56,11 +57,10 @@ public class ListMainCompetitionAdapter extends ArrayAdapter<MainCompetition> {
             }
 
             if (description != null) {
-                description.setText(mc.getDescription());
+                description.setText(Helper.getInstance().getPreviewString(mc.getDescription()));
             }
 
             btn.setOnClickListener(new View.OnClickListener() {
-
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(context, MainCompetitionActivity.class);

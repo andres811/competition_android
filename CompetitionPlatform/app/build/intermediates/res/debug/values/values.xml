@@ -75,6 +75,9 @@
     <color name="common_signin_btn_light_text_disabled">#FFAAAAAA</color>
     <color name="common_signin_btn_light_text_focused">#FF737373</color>
     <color name="common_signin_btn_light_text_pressed">@android:color/white</color>
+    <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="description_text">#caddfc</color>
     <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <color name="dim_foreground_disabled_material_dark">#80bebebe</color>
@@ -87,6 +90,11 @@
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="hint_foreground_material_dark">@color/bright_foreground_disabled_material_dark</color>
     <color name="hint_foreground_material_light">@color/bright_foreground_disabled_material_light</color>
+    <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="list_row_separator">#DF691A</color>
+    <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <eat-comment/>
     <color name="material_blue_grey_800">#ff37474f</color>
     <color name="material_blue_grey_900">#ff263238</color>
     <color name="material_blue_grey_950">#ff21272b</color>
@@ -450,6 +458,17 @@
     <style name="AppTheme.ActionButtonOverflow" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
         <item name="android:src">@drawable/ic_perm_identity</item>
         <item name="android:background">@drawable/background_action_bar_button</item>
+    </style>
+    <style name="AppTheme.DescriptionText" parent="Base.TextAppearance.AppCompat.Large">
+        <item name="android:textColor">@color/normal_text</item>
+        <item name="android:textSize">18dp</item>
+
+    </style>
+    <style name="AppTheme.TitleList" parent="Base.TextAppearance.AppCompat.Large">
+        <item name="android:textColor">@color/normal_text</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+
     </style>
     <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
@@ -1407,6 +1426,7 @@
     <style name="DefaultCustomTheme" parent="AppTheme">
         <item name="android:buttonStyle">@style/DefaultCustomTheme.ButtonDefault</item>
         <item name="android:background">@color/background</item>
+        <item name="android:textColor">@color/normal_text</item>
 
     </style>
     <style name="DefaultCustomTheme.ButtonDefault" parent="@android:style/Widget.Button">

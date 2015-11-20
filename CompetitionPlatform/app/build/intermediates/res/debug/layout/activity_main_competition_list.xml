@@ -12,6 +12,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/main_competition_list_view"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:divider="@color/list_row_separator"
+        android:dividerHeight="1px"/>
 </RelativeLayout>
 <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/src/main/res/layout/activity_main_competition_list.xml -->
