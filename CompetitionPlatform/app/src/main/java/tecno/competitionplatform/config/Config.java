@@ -19,7 +19,7 @@ public class Config {
     public static final String VIEW_DATETIME_FORMAT = "dd/MM/yyyy HH:mm";
 
     //Substring length in list view
-    public static final int PREVIEW_STRING_LENGTH = 120;
+    public static final int PREVIEW_STRING_LENGTH = 110;
 
 
 }

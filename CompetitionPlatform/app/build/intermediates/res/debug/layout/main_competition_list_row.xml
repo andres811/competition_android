@@ -1,59 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="10dp">
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:padding="5dp">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            style="@style/AppTheme.Image_ListItem"/>
+
+    </FrameLayout>
 
 
-
-    <TableRow android:layout_width="fill_parent"
-        android:id="@+id/TableRow01"
-        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/onlist_main_competition_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:text="name"
-            android:gravity="left"
-            android:typeface="monospace"
-            style="@style/AppTheme.TitleList"/>
-    </TableRow>
-
-    <TableRow android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-        android:orientation="horizontal">
+            style="@style/AppTheme.Title_ListItem"/>
 
         <TextView
             android:id="@+id/onlist_main_competition_description"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+
             android:text="description"
-            android:height="80sp"
-            android:gravity="start"
-            android:textColor="@color/description_text"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"/>
+            style="@style/AppTheme.DescriptionText_ListItem"/>
+
+        <Button
+            android:id="@+id/btn_main_competition"
+            android:text="Ver más &#8594;"
+            style="@style/AppTheme.Button_ListItem"/>
 
 
-    </TableRow>
+    </LinearLayout>
 
-    <Button
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:id="@+id/btn_main_competition"
-        android:text="Ver más &#8594;"  />
 
-<!--
-    <View
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp"
-        android:layout_width="fill_parent"
-        android:layout_height="0.5dp"
-        android:id="@+id/separator"
-        android:visibility="visible"
-        android:background="@android:color/darker_gray"/>
--->
+
+    <!--
+        <View
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:id="@+id/separator"
+            android:visibility="visible"
+            android:background="@android:color/darker_gray"/>
+    -->
 
 
 </LinearLayout>
