@@ -77,6 +77,14 @@
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/normal_text</item>
     </style>
+    <style name="AppTheme.DetailsView_TitleInfo">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">@color/normal_text</item>
+        <item name="android:padding">10dp</item>
+    </style>
 
     <style name="AppTheme.DetailsView_SubTitle" parent="TextAppearance.AppCompat.Title">
         <item name="android:layout_width">match_parent</item>
@@ -107,7 +115,7 @@
         <item name="android:paddingTop">15dp</item>
     </style>
 
-    <style name="AppTheme.DetailsView_ImageViewContainer">
+    <style name="AppTheme.DetailsView_ImageInfoContainer">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:orientation">horizontal</item>
@@ -133,12 +141,15 @@
     <style name="AppTheme.DetailsView_InfoLabel">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
     </style>
 
     <style name="AppTheme.DetailsView_Info">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/info</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:gravity">center</item>
     </style>
 
     <style name="AppTheme.DetailsView_DescriptionText">
@@ -160,6 +171,7 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:padding">0dp</item>
     </style>
+
 
 
 

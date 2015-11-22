@@ -2466,7 +2466,7 @@ containing a value of this type.
         public static final int AppTheme_DetailsView_FooterButton=0x7f0a0087;
         public static final int AppTheme_DetailsView_HeaderInfoContainer=0x7f0a0088;
         public static final int AppTheme_DetailsView_ImageView=0x7f0a0089;
-        public static final int AppTheme_DetailsView_ImageViewContainer=0x7f0a008a;
+        public static final int AppTheme_DetailsView_ImageInfoContainer =0x7f0a008a;
         public static final int AppTheme_DetailsView_Info=0x7f0a008b;
         public static final int AppTheme_DetailsView_InfoContainer=0x7f0a008c;
         public static final int AppTheme_DetailsView_InfoLabel=0x7f0a008d;

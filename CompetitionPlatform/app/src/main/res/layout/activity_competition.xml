@@ -22,7 +22,7 @@
 
         <LinearLayout style="@style/AppTheme.DetailsView_InfoContainer">
 
-            <LinearLayout style="@style/AppTheme.DetailsView_ImageViewContainer">
+            <LinearLayout style="@style/AppTheme.DetailsView_ImageInfoContainer">
 
                 <ImageView style="@style/AppTheme.DetailsView_ImageView"/>
 
@@ -36,7 +36,6 @@
                     <TextView
                         android:text="01/01/2014"
                         android:id="@+id/competition_start_date"
-                        android:layout_marginBottom="5dp"
                         style="@style/AppTheme.DetailsView_Info"/>
 
                     <TextView
@@ -57,16 +56,55 @@
                 android:paddingTop="10dp"
                 style="@style/AppTheme.DetailsView_DescriptionText" />
 
+            <View style="@style/AppTheme.Separator"/>
+
+            <TextView
+                android:gravity="start"
+                android:text="Lugar"
+                style="@style/AppTheme.DetailsView_TitleInfo" />
+
+            <LinearLayout style="@style/AppTheme.DetailsView_ImageInfoContainer">
+
+
+                <LinearLayout style="@style/AppTheme.DetailsView_HeaderInfoContainer">
+
+                    <TextView
+                        android:text="Estadio Centenario"
+                        style="@style/AppTheme.DetailsView_Info"/>
+
+                    <TextView
+                        android:text="Ciudad"
+                        style="@style/AppTheme.DetailsView_InfoLabel"/>
+
+                    <TextView
+                        android:text="Montevideo"
+                        style="@style/AppTheme.DetailsView_Info"/>
+
+                    <TextView
+                        android:text="Capacidad"
+                        style="@style/AppTheme.DetailsView_InfoLabel"/>
+
+                    <TextView
+                        android:text="60000"
+                        style="@style/AppTheme.DetailsView_Info"/>
+
+                </LinearLayout>
+
+                <ImageView style="@style/AppTheme.DetailsView_ImageView"/>
+
+            </LinearLayout>
+
+            <View style="@style/AppTheme.Separator"/>
+
             <TextView
                 android:gravity="start"
                 android:text="¿Cómo llegar?"
-                style="@style/AppTheme.DetailsView_Title" />
+                style="@style/AppTheme.DetailsView_TitleInfo" />
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
                 android:background="@drawable/default_gmap"/>
-
 
         </LinearLayout>
 

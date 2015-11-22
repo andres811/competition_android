@@ -1582,18 +1582,17 @@
     </style><style name="AppTheme.DetailsView_InfoLabel">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:gravity">left</item>
     </style><style name="AppTheme.DetailsView_Info">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/info</item>
-        <item name="android:gravity">right</item>
     </style><style name="AppTheme.DetailsView_SubTitle" parent="TextAppearance.AppCompat.Title">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">8sp</item>
+        <item name="android:textSize">10sp</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/info</item>
+        <item name="android:padding">3dp</item>
     </style><style name="AppTheme.DetailsView_HeaderInfoContainer">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_weight">3</item>

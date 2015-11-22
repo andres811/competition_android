@@ -23,7 +23,7 @@
 
             <LinearLayout style="@style/AppTheme.DetailsView_InfoContainer">
 
-                <LinearLayout style="@style/AppTheme.DetailsView_ImageViewContainer">
+                <LinearLayout style="@style/AppTheme.DetailsView_ImageInfoContainer">
 
                     <ImageView style="@style/AppTheme.DetailsView_ImageView"/>
 
