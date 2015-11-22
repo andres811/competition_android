@@ -1,95 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="tecno.competitionplatform.activities.MainCompetitionActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="tecno.competitionplatform.activities.MainCompetitionActivity"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Título Evento"
         android:id="@+id/main_competition_title"
-        android:textSize="25dp"
-        android:gravity="center"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        style="@style/AppTheme.DetailView_Title"/>
 
-
+    <View style="@style/AppTheme.Separator"/>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/main_competition_title"
-        android:padding="10dp">
+        android:layout_height="0dp"
+        android:layout_weight="8">
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="01/01/2014"
+                android:id="@+id/main_competition_start_date" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="01/01/2015"
+                android:id="@+id/main_competition_end_date" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del evento"
+                android:textSize="40dp"
+                android:id="@+id/main_competition_description"
+                android:textColor="@color/description_text" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <View style="@style/AppTheme.Separator"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="5dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Ver Competencias &#8594;"
+            android:id="@+id/main_competition_btn_competitions"/>
+
+    </FrameLayout>
+
+
+
+
+
+</LinearLayout>
+
+
+    <!--
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context="tecno.competitionplatform.activities.MainCompetitionActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Título Evento"
+            android:id="@+id/main_competition_title"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_competition_title"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Inicio"
+                android:id="@+id/label_main_competition_start_date"
+                android:layout_marginTop="49dp"
+                android:singleLine="true"
+
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Clausura"
+                android:id="@+id/label_main_competition_end_date"
+                android:singleLine="true"
+                android:layout_below="@+id/label_main_competition_start_date"
+                android:layout_alignParentStart="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Descripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del evento"
+                android:id="@+id/main_competition_description"
+                android:textColor="@color/description_text"
+
+                android:layout_alignTop="@+id/label_main_competition_start_date"
+                android:layout_alignParentStart="true" />
+
+        </RelativeLayout>
+    </ScrollView>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Inicio"
-            android:id="@+id/label_main_competition_start_date"
-            android:layout_marginTop="49dp"
-            android:singleLine="true"
-
-            android:layout_alignParentStart="true" />
+            android:text="01/01/2014"
+            android:id="@+id/main_competition_start_date"
+            android:layout_above="@+id/main_competition_end_date"
+            android:layout_toEndOf="@+id/main_competition_title" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Clausura"
-            android:id="@+id/label_main_competition_end_date"
-            android:singleLine="true"
-            android:layout_below="@+id/label_main_competition_start_date"
-            android:layout_alignParentStart="true" />
-        <TextView
+            android:text="01/01/2015"
+            android:id="@+id/main_competition_end_date"
+            android:layout_alignTop="@+id/label_main_competition_end_date"
+            android:layout_alignStart="@+id/main_competition_start_date" />
+
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Descripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del evento"
-            android:id="@+id/main_competition_description"
-            android:textColor="@color/description_text"
-
-            android:layout_alignTop="@+id/label_main_competition_start_date"
-            android:layout_alignParentStart="true" />
+            android:text="Ver Competencias &#8594;"
+            android:id="@+id/main_competition_btn_competitions"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
 
     </RelativeLayout>
-</ScrollView>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="01/01/2014"
-        android:id="@+id/main_competition_start_date"
-        android:layout_above="@+id/main_competition_end_date"
-        android:layout_toEndOf="@+id/main_competition_title" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="01/01/2015"
-        android:id="@+id/main_competition_end_date"
-        android:layout_alignTop="@+id/label_main_competition_end_date"
-        android:layout_alignStart="@+id/main_competition_start_date" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ver Competencias &#8594;"
-        android:id="@+id/main_competition_btn_competitions"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
-
-</RelativeLayout>
+    -->
 <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/src/main/res/layout/activity_main_competition.xml -->

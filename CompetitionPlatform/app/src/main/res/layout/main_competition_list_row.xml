@@ -12,7 +12,7 @@
 
         <ImageView
             android:id="@+id/imageView"
-            style="@style/AppTheme.Image_ListItem"/>
+            style="@style/AppTheme.ListItem_Image"/>
 
     </FrameLayout>
 
@@ -25,18 +25,18 @@
         <TextView
             android:id="@+id/onlist_main_competition_title"
             android:text="name"
-            style="@style/AppTheme.Title_ListItem"/>
+            style="@style/AppTheme.ListItem_Title"/>
 
         <TextView
             android:id="@+id/onlist_main_competition_description"
 
             android:text="description"
-            style="@style/AppTheme.DescriptionText_ListItem"/>
+            style="@style/AppTheme.ListItem_DescriptionText"/>
 
         <Button
             android:id="@+id/btn_main_competition"
             android:text="Ver más &#8594;"
-            style="@style/AppTheme.Button_ListItem"/>
+            style="@style/AppTheme.ListItem_Button"/>
 
 
     </LinearLayout>

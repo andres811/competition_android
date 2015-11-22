@@ -13,8 +13,8 @@
     <color name="normal_text">#FFF</color>
     <color name="description_text">#caddfc</color>
 
-    <!-- Line Separator -->
-    <color name="list_row_separator">#caddfc</color>
+    <!-- Separator -->
+    <color name="separator">#caddfc</color>
 
 
 </resources>

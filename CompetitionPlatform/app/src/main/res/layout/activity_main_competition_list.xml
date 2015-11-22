@@ -13,6 +13,7 @@
         android:id="@+id/main_competition_list_view"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:divider="@color/list_row_separator"
+        android:divider="@color/separator"
         android:dividerHeight="1px"/>
+
 </RelativeLayout>
