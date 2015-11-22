@@ -23,11 +23,11 @@
 
             <LinearLayout style="@style/AppTheme.DetailsView_InfoContainer">
 
-                <LinearLayout style="@style/AppTheme.DetailsView_ImageInfoContainer">
+                <LinearLayout style="@style/AppTheme.DetailsView_ImageAndInfoRowContainer">
 
                     <ImageView style="@style/AppTheme.DetailsView_ImageView"/>
 
-                    <LinearLayout style="@style/AppTheme.DetailsView_HeaderInfoContainer">
+                    <LinearLayout style="@style/AppTheme.DetailsView_InfoColContainer">
 
                         <TextView
                             android:text="Inicio"

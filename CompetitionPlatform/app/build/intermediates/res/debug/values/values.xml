@@ -128,7 +128,7 @@
     <color name="secondary_text_disabled_material_light">#24000000</color>
     <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/src/main/res/values/colors.xml -->
     <eat-comment/>
-    <color name="separator">#8492a9</color>
+    <color name="separator">#677386</color>
     <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <color name="switch_thumb_disabled_material_dark">#ff616161</color>
@@ -480,30 +480,37 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:padding">0dp</item>
     </style>
-    <style name="AppTheme.DetailsView_HeaderInfoContainer">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_weight">3</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:orientation">vertical</item>
-        <item name="android:padding">10dp</item>
-        <item name="android:gravity">center</item>
-    </style>
-    <style name="AppTheme.DetailsView_ImageView">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">145dp</item>
-        <item name="android:layout_weight">4</item>
-        <item name="android:background">@drawable/default_main_competition_image</item>
-    </style>
-    <style name="AppTheme.DetailsView_ImageViewContainer">
+    <style name="AppTheme.DetailsView_ImageAndInfoRowContainer">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:padding">5dp</item>
     </style>
+    <style name="AppTheme.DetailsView_ImageView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">145dp</item>
+        <item name="android:layout_weight">5</item>
+        <item name="android:background">@drawable/default_main_competition_image</item>
+    </style>
+    <style name="AppTheme.DetailsView_ImageViewUser">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">240dp</item>
+        <item name="android:background">@drawable/default_subscriber_image</item>
+    </style>
     <style name="AppTheme.DetailsView_Info">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/info</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:gravity">left</item>
+    </style>
+    <style name="AppTheme.DetailsView_InfoColContainer">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">4</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:gravity">center</item>
     </style>
     <style name="AppTheme.DetailsView_InfoContainer">
         <item name="android:layout_width">match_parent</item>
@@ -515,6 +522,7 @@
     <style name="AppTheme.DetailsView_InfoLabel">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">left</item>
     </style>
     <style name="AppTheme.DetailsView_ScrollViewContainer">
         <item name="android:layout_width">match_parent</item>
@@ -540,6 +548,14 @@
         <item name="android:textSize">25sp</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/normal_text</item>
+    </style>
+    <style name="AppTheme.DetailsView_TitleInfo">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">@color/normal_text</item>
+        <item name="android:padding">10dp</item>
     </style>
     <style name="AppTheme.ListItem_Button" parent="Base.TextAppearance.AppCompat.Widget.Button">
         <item name="android:layout_weight">2.5</item>
@@ -575,7 +591,7 @@
     </style>
     <style name="AppTheme.Separator">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">0.5dp</item>
+        <item name="android:layout_height">0.2dp</item>
         <item name="android:background">@color/separator</item>
     </style>
     <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->

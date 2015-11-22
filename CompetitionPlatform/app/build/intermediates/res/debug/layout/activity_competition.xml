@@ -22,11 +22,11 @@
 
         <LinearLayout style="@style/AppTheme.DetailsView_InfoContainer">
 
-            <LinearLayout style="@style/AppTheme.DetailsView_ImageViewContainer">
+            <LinearLayout style="@style/AppTheme.DetailsView_ImageAndInfoRowContainer">
 
                 <ImageView style="@style/AppTheme.DetailsView_ImageView"/>
 
-                <LinearLayout style="@style/AppTheme.DetailsView_HeaderInfoContainer">
+                <LinearLayout style="@style/AppTheme.DetailsView_InfoColContainer">
 
                     <TextView
                         android:text="Fecha"
@@ -36,7 +36,6 @@
                     <TextView
                         android:text="01/01/2014"
                         android:id="@+id/competition_start_date"
-                        android:layout_marginBottom="5dp"
                         style="@style/AppTheme.DetailsView_Info"/>
 
                     <TextView
@@ -53,93 +52,68 @@
             </LinearLayout>
 
             <TextView
+                android:text="Disciplina nombre"
+                style="@style/AppTheme.DetailsView_InfoLabel"/>
+
+            <TextView
+                android:text="Disciplina descripción"
+                style="@style/AppTheme.DetailsView_Info"/>
+
+            <TextView
                 android:id="@+id/competition_description"
                 android:paddingTop="10dp"
                 style="@style/AppTheme.DetailsView_DescriptionText" />
 
+            <View style="@style/AppTheme.Separator"/>
+
             <TextView
-                android:gravity="start"
+                android:text="Lugar"
+                style="@style/AppTheme.DetailsView_TitleInfo" />
+
+            <LinearLayout style="@style/AppTheme.DetailsView_ImageAndInfoRowContainer">
+
+
+                <LinearLayout style="@style/AppTheme.DetailsView_InfoColContainer">
+
+                    <TextView
+                        android:text="Estadio Centenario"
+                        style="@style/AppTheme.DetailsView_Info"/>
+
+                    <TextView
+                        android:text="Ciudad"
+                        style="@style/AppTheme.DetailsView_InfoLabel"/>
+
+                    <TextView
+                        android:text="Montevideo"
+                        style="@style/AppTheme.DetailsView_Info"/>
+
+                    <TextView
+                        android:text="Capacidad"
+                        style="@style/AppTheme.DetailsView_InfoLabel"/>
+
+                    <TextView
+                        android:text="60000"
+                        style="@style/AppTheme.DetailsView_Info"/>
+
+                </LinearLayout>
+
+                <ImageView style="@style/AppTheme.DetailsView_ImageView"/>
+
+            </LinearLayout>
+
+            <View style="@style/AppTheme.Separator"/>
+
+            <TextView
                 android:text="¿Cómo llegar?"
-                style="@style/AppTheme.DetailsView_Title" />
+                style="@style/AppTheme.DetailsView_TitleInfo" />
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
                 android:background="@drawable/default_gmap"/>
 
-
         </LinearLayout>
 
     </ScrollView>
 
-</LinearLayout>
-    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-        android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        tools:context="tecno.competitionplatform.activities.CompetitionActivity">
-    
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Título Competición"
-            android:id="@+id/competition_title"
-            android:textSize="25dp"
-            android:gravity="center"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
-    
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Fecha de inicio"
-            android:id="@+id/label_competition_start_date"
-            android:layout_marginTop="92dp"
-            android:singleLine="true"
-            android:layout_below="@+id/competition_title"
-            android:layout_alignParentStart="true" />
-    
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Fecha de clausura"
-            android:id="@+id/label_competition_end_date"
-            android:layout_marginTop="34dp"
-            android:singleLine="true"
-            android:layout_below="@+id/label_competition_start_date"
-            android:layout_alignStart="@+id/label_competition_start_date" />
-    
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Descripción de la competición"
-            android:id="@+id/competition_description"
-            android:layout_below="@+id/competition_title"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="25dp" />
-    
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="01/01/2014"
-            android:id="@+id/competition_start_date"
-            android:layout_alignTop="@+id/label_competition_start_date"
-            android:layout_alignParentEnd="true" />
-    
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="01/01/2015"
-            android:id="@+id/competition_end_date"
-            android:layout_alignTop="@+id/label_competition_end_date"
-            android:layout_alignStart="@+id/competition_start_date" />
-    </RelativeLayout>-->
-<!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/src/main/res/layout/activity_competition.xml -->
+</LinearLayout><!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/src/main/res/layout/activity_competition.xml -->

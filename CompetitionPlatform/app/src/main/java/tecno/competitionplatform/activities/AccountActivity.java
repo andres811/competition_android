@@ -35,7 +35,7 @@ public class AccountActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+        getActionBar().setDisplayHomeAsUpEnabled(false);
 
         mDialog = new ProgressDialog(AccountActivity.this);
         mDialog.setCanceledOnTouchOutside(false);

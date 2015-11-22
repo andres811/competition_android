@@ -64,7 +64,7 @@
     <!-- SEPARATOR -->
     <style name="AppTheme.Separator" >
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">0.5dp</item>
+        <item name="android:layout_height">0.2dp</item>
         <item name="android:background">@color/separator</item>
     </style>
 
@@ -115,7 +115,7 @@
         <item name="android:paddingTop">15dp</item>
     </style>
 
-    <style name="AppTheme.DetailsView_ImageInfoContainer">
+    <style name="AppTheme.DetailsView_ImageAndInfoRowContainer">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:orientation">horizontal</item>
@@ -125,13 +125,13 @@
     <style name="AppTheme.DetailsView_ImageView">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">145dp</item>
-        <item name="android:layout_weight">4</item>
+        <item name="android:layout_weight">5</item>
         <item name="android:background">@drawable/default_main_competition_image</item>
     </style>
 
-    <style name="AppTheme.DetailsView_HeaderInfoContainer">
+    <style name="AppTheme.DetailsView_InfoColContainer">
         <item name="android:layout_width">0dp</item>
-        <item name="android:layout_weight">3</item>
+        <item name="android:layout_weight">4</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:orientation">vertical</item>
         <item name="android:padding">10dp</item>
@@ -141,7 +141,7 @@
     <style name="AppTheme.DetailsView_InfoLabel">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:gravity">center</item>
+        <item name="android:gravity">left</item>
     </style>
 
     <style name="AppTheme.DetailsView_Info">
@@ -149,7 +149,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/info</item>
         <item name="android:layout_marginBottom">5dp</item>
-        <item name="android:gravity">center</item>
+        <item name="android:gravity">left</item>
     </style>
 
     <style name="AppTheme.DetailsView_DescriptionText">
@@ -172,7 +172,11 @@
         <item name="android:padding">0dp</item>
     </style>
 
-
+    <style name="AppTheme.DetailsView_ImageViewUser">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">240dp</item>
+        <item name="android:background">@drawable/default_subscriber_image</item>
+    </style>
 
 
 </resources>
