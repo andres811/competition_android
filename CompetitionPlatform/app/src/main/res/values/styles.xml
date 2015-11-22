@@ -6,18 +6,22 @@
         <item name="android:actionBarStyle">@style/AppTheme.ActionBar</item>
     </style>
 
+
     <!-- ACTION BAR -->
     <style name="AppTheme.ActionButtonOverflow" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
         <item name="android:src">@drawable/ic_perm_identity</item>
         <item name="android:background">@drawable/background_action_bar_button</item>
     </style>
+
     <style name="AppTheme.ActionBar" parent="android:style/Widget.Holo.ActionBar">
         <item name="android:background">@color/background</item>
         <item name="android:titleTextStyle">@style/AppTheme.ActionBar.TitleText</item>
     </style>
+
     <style name="AppTheme.ActionBar.TitleText" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
         <item name="android:textColor">@color/normal_text</item>
     </style>
+
 
     <!-- LIST ITEMS -->
     <style name="AppTheme.ListItem_Title" parent="Base.TextAppearance.AppCompat.Large">
@@ -29,6 +33,7 @@
         <item name="android:gravity">start</item>
         <item name="android:layout_weight">1.5</item>
     </style>
+
     <style name="AppTheme.ListItem_DescriptionText" parent="Base.TextAppearance.AppCompat.Large">
         <item name="android:layout_width">match_parent</item>
         <item name="android:textColor">@color/description_text</item>
@@ -38,6 +43,7 @@
         <item name="android:layout_weight">5</item>
         <item name="android:layout_marginBottom">1dp</item>
     </style>
+
     <style name="AppTheme.ListItem_Button" parent="Base.TextAppearance.AppCompat.Widget.Button">
         <item name="android:layout_weight">2.5</item>
         <item name="android:layout_height">0dp</item>
@@ -47,27 +53,105 @@
         <item name="android:textAlignment">center</item>
         <item name="android:padding">1dp</item>
     </style>
+
     <style name="AppTheme.ListItem_Image" parent="">
         <item name="android:layout_width">100dp</item>
         <item name="android:layout_height">100dp</item>
         <item name="android:background">@drawable/default_main_competition_image</item>
     </style>
 
-    <!-- DETAILS VIEW -->
-    <style name="AppTheme.DetailView_Title" >
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">0dp</item>
-        <item name="android:layout_weight">1</item>
-        <item name="android:textSize">25sp</item>
-        <item name="android:gravity">center</item>
-    </style>
 
     <!-- SEPARATOR -->
     <style name="AppTheme.Separator" >
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">0.5dp</item>
-        <item name="android:background">@color/separator</item>0
+        <item name="android:background">@color/separator</item>
     </style>
+
+
+    <!-- DETAILS VIEW -->
+    <style name="AppTheme.DetailsView_Title" parent="TextAppearance.AppCompat.Title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/normal_text</item>
+    </style>
+
+    <style name="AppTheme.DetailsView_ScrollViewContainer" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <style name="AppTheme.DetailsView_ScrollViewContainer_WithFixedFooter">
+        <!-- Needs a Relative parent to work-->
+        <item name="android:layout_marginBottom">40dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <style name="AppTheme.DetailsView_InfoContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">15dp</item>
+    </style>
+
+    <style name="AppTheme.DetailsView_ImageViewContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="AppTheme.DetailsView_ImageView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">130dp</item>
+        <item name="android:layout_weight">4</item>
+        <item name="android:background">@drawable/default_main_competition_image</item>
+    </style>
+
+    <style name="AppTheme.DetailsView_HeaderInfoContainer">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">3</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="AppTheme.DetailsView_DateLabel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="AppTheme.DetailsView_Date">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/info_date</item>
+    </style>
+
+    <style name="AppTheme.DetailsView_DescriptionText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/description_text</item>
+    </style>
+
+    <style name="AppTheme.DetailsView_FixedFooterContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+
+    <style name="AppTheme.DetailsView_FooterButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
 
 
 </resources>

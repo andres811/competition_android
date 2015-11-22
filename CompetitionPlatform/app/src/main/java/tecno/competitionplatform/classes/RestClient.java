@@ -38,7 +38,12 @@ public class RestClient {
     private JSONObject responseData = null;
     //or a JSONArray, depends of the services response data.
     private JSONArray responseDataArray = null;
+    //Exception message
+    private Exception exception;
 
+    public Exception getException() {
+        return exception;
+    }
 
     public JSONArray getResponseDataArray() {
         return responseDataArray;
@@ -158,23 +163,29 @@ public class RestClient {
         //get response code
         this.responseCode = conn.getResponseCode();
 
-        //get response data and saved in responseData or responseDataArray
-        inputStream = conn.getInputStream();
-        BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
-        String jsonResponse="", temp;
-        while (null != ((temp = br.readLine())))
-        {
-            jsonResponse=jsonResponse + temp;
-        }
-        if(!jsonResponse.equals("")){
-            Object auxJson = new JSONTokener(jsonResponse).nextValue();
-            if (auxJson instanceof JSONObject){
-                this.responseData = new JSONObject(jsonResponse);
+        try{
+            //get response data and saved in responseData or responseDataArray
+            inputStream = conn.getInputStream();
+            BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
+            String jsonResponse="", temp;
+            while (null != ((temp = br.readLine())))
+            {
+                jsonResponse=jsonResponse + temp;
             }
-            else if (auxJson instanceof JSONArray) {
-                this.responseDataArray  = new JSONArray(auxJson.toString());
-            }
+            if(!jsonResponse.equals("")){
+                Object auxJson = new JSONTokener(jsonResponse).nextValue();
+                if (auxJson instanceof JSONObject){
+                    this.responseData = new JSONObject(jsonResponse);
+                }
+                else if (auxJson instanceof JSONArray) {
+                    this.responseDataArray  = new JSONArray(auxJson.toString());
+                }
 
+            }
+        } catch(Exception e){
+            //For the doubts
+            this.exception = e;
+            //Continue with disconection.
         }
 
         //Destroy connection

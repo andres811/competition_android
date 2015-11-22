@@ -90,6 +90,11 @@
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="hint_foreground_material_dark">@color/bright_foreground_disabled_material_dark</color>
     <color name="hint_foreground_material_light">@color/bright_foreground_disabled_material_light</color>
+    <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="info_date">#caddfc</color>
+    <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <eat-comment/>
     <color name="material_blue_grey_800">#ff37474f</color>
     <color name="material_blue_grey_900">#ff263238</color>
     <color name="material_blue_grey_950">#ff21272b</color>
@@ -123,7 +128,7 @@
     <color name="secondary_text_disabled_material_light">#24000000</color>
     <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/src/main/res/values/colors.xml -->
     <eat-comment/>
-    <color name="separator">#caddfc</color>
+    <color name="separator">#8492a9</color>
     <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <color name="switch_thumb_disabled_material_dark">#ff616161</color>
@@ -458,12 +463,75 @@
         <item name="android:src">@drawable/ic_perm_identity</item>
         <item name="android:background">@drawable/background_action_bar_button</item>
     </style>
-    <style name="AppTheme.DetailView_Title">
+    <style name="AppTheme.DetailsView_Date">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/info_date</item>
+    </style>
+    <style name="AppTheme.DetailsView_DateLabel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="AppTheme.DetailsView_DescriptionText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/description_text</item>
+    </style>
+    <style name="AppTheme.DetailsView_FixedFooterContainer">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">0dp</item>
-        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+    <style name="AppTheme.DetailsView_FooterButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:padding">0dp</item>
+    </style>
+    <style name="AppTheme.DetailsView_HeaderInfoContainer">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">3</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="AppTheme.DetailsView_ImageView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">130dp</item>
+        <item name="android:layout_weight">4</item>
+        <item name="android:background">@drawable/default_main_competition_image</item>
+    </style>
+    <style name="AppTheme.DetailsView_ImageViewContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:padding">5dp</item>
+    </style>
+    <style name="AppTheme.DetailsView_InfoContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">15dp</item>
+    </style>
+    <style name="AppTheme.DetailsView_ScrollViewContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    <style name="AppTheme.DetailsView_ScrollViewContainer_WithFixedFooter">
+        <!-- Needs a Relative parent to work-->
+        <item name="android:layout_marginBottom">40dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    <style name="AppTheme.DetailsView_Title" parent="TextAppearance.AppCompat.Title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
         <item name="android:textSize">25sp</item>
         <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/normal_text</item>
     </style>
     <style name="AppTheme.ListItem_Button" parent="Base.TextAppearance.AppCompat.Widget.Button">
         <item name="android:layout_weight">2.5</item>
@@ -500,7 +568,7 @@
     <style name="AppTheme.Separator">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">0.5dp</item>
-        <item name="android:background">@color/separator</item>0
+        <item name="android:background">@color/separator</item>
     </style>
     <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
