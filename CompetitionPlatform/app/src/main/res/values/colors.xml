@@ -12,7 +12,7 @@
     <!-- Text -->
     <color name="normal_text">#FFF</color>
     <color name="description_text">#caddfc</color>
-    <color name="info_date">#caddfc</color>
+    <color name="info">#caddfc</color>
 
     <!-- Separator -->
     <color name="separator">#8492a9</color>

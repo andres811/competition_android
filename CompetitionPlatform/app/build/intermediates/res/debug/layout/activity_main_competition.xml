@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:padding="10dp">
+    android:padding="5dp">
 
     <TextView
         android:text="Título Evento"
@@ -32,23 +32,23 @@
                         <TextView
                             android:text="Inicio"
                             android:id="@+id/label_main_competition_start_date"
-                            style="@style/AppTheme.DetailsView_DateLabel"/>
+                            style="@style/AppTheme.DetailsView_InfoLabel"/>
 
                         <TextView
                             android:text="01/01/2014"
                             android:id="@+id/main_competition_start_date"
                             android:layout_marginBottom="10dp"
-                            style="@style/AppTheme.DetailsView_Date"/>
+                            style="@style/AppTheme.DetailsView_Info"/>
 
                         <TextView
                             android:text="Clausura"
                             android:id="@+id/label_main_competition_end_date"
-                            style="@style/AppTheme.DetailsView_DateLabel"/>
+                            style="@style/AppTheme.DetailsView_InfoLabel"/>
 
                         <TextView
                             android:text="01/01/2015"
                             android:id="@+id/main_competition_end_date"
-                            style="@style/AppTheme.DetailsView_Date"/>
+                            style="@style/AppTheme.DetailsView_Info"/>
 
 
                     </LinearLayout>

@@ -72,10 +72,19 @@
     <!-- DETAILS VIEW -->
     <style name="AppTheme.DetailsView_Title" parent="TextAppearance.AppCompat.Title">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">25sp</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/normal_text</item>
+    </style>
+
+    <style name="AppTheme.DetailsView_SubTitle" parent="TextAppearance.AppCompat.Title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/info</item>
+        <item name="android:padding">3dp</item>
     </style>
 
     <style name="AppTheme.DetailsView_ScrollViewContainer" >
@@ -94,7 +103,8 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:orientation">vertical</item>
-        <item name="android:padding">15dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingTop">15dp</item>
     </style>
 
     <style name="AppTheme.DetailsView_ImageViewContainer">
@@ -106,7 +116,7 @@
 
     <style name="AppTheme.DetailsView_ImageView">
         <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">130dp</item>
+        <item name="android:layout_height">145dp</item>
         <item name="android:layout_weight">4</item>
         <item name="android:background">@drawable/default_main_competition_image</item>
     </style>
@@ -120,16 +130,15 @@
         <item name="android:gravity">center</item>
     </style>
 
-    <style name="AppTheme.DetailsView_DateLabel">
-        <item name="android:layout_width">wrap_content</item>
+    <style name="AppTheme.DetailsView_InfoLabel">
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:singleLine">true</item>
     </style>
 
-    <style name="AppTheme.DetailsView_Date">
-        <item name="android:layout_width">wrap_content</item>
+    <style name="AppTheme.DetailsView_Info">
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/info_date</item>
+        <item name="android:textColor">@color/info</item>
     </style>
 
     <style name="AppTheme.DetailsView_DescriptionText">

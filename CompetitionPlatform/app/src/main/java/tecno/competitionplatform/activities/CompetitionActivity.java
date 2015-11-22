@@ -128,8 +128,8 @@ public class CompetitionActivity extends BaseActivity {
                     //Get layout items to set the content
                     TextView txtTitle = (TextView)findViewById(R.id.competition_title);
                     TextView txtDescription = (TextView)findViewById(R.id.competition_description);
-                    TextView txtStartDate = (TextView)findViewById(R.id.competition_start_date);
-                    TextView txtEndDate = (TextView)findViewById(R.id.competition_end_date);
+                    //TextView txtStartDate = (TextView)findViewById(R.id.competition_start_date);
+                    //TextView txtEndDate = (TextView)findViewById(R.id.competition_end_date);
 
                     txtTitle.setText(competition.getName());
                     txtDescription.setText(competition.getDescription());
