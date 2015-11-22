@@ -3,7 +3,6 @@ package tecno.competitionplatform.activities;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.app.Activity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
@@ -31,7 +30,7 @@ public class CompetitionActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_competition);
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+        getActionBar().setDisplayHomeAsUpEnabled(false);
         int competitionId = getIntent().getExtras().getInt("competitionId");
         mDialog = new ProgressDialog(CompetitionActivity.this);
         mDialog.setCanceledOnTouchOutside(false);
@@ -128,11 +127,19 @@ public class CompetitionActivity extends BaseActivity {
                     //Get layout items to set the content
                     TextView txtTitle = (TextView)findViewById(R.id.competition_title);
                     TextView txtDescription = (TextView)findViewById(R.id.competition_description);
+                    TextView txtMainCompetition = (TextView)findViewById(R.id.competition_main_competition_name);
+                    TextView txtLocationName = (TextView)findViewById(R.id.competition_location_name);
+                    TextView txtLocationRegion = (TextView)findViewById(R.id.competition_location_region);
+                    TextView txtLocationCapacity = (TextView)findViewById(R.id.competition_location_capacity);
                     //TextView txtStartDate = (TextView)findViewById(R.id.competition_start_date);
                     //TextView txtEndDate = (TextView)findViewById(R.id.competition_end_date);
 
                     txtTitle.setText(competition.getName());
                     txtDescription.setText(competition.getDescription());
+                    txtMainCompetition.setText(competition.getMainCompetition().getName());
+                    txtLocationName.setText(competition.getLocation().getName());
+                    txtLocationRegion.setText(competition.getLocation().getRegion().getName());
+                    txtLocationCapacity.setText(competition.getLocation().getCapacity().toString());
                     //txtStartDate.setText(mainCompetition.getStartDate().toString());
                     //txtEndDate.setText(mainCompetition.getEndDate().toString()));
 

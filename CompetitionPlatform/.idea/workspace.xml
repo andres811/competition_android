@@ -48,21 +48,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CompetitionActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CompetitionActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/CompetitionActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Competition.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/entities/Competition.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state vertical-scroll-proportion="-0.06786427">
+              <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -74,21 +64,69 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.6896553">
-              <caret line="75" column="72" selection-start-line="75" selection-start-column="72" selection-end-line="75" selection-end-column="72" />
+            <state vertical-scroll-proportion="-4.1034484">
+              <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_account.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="activity_account.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_account.xml">
           <provider editor-type-id="android-designer">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39618644">
-              <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+            <state vertical-scroll-proportion="-1.1724138">
+              <caret line="81" column="34" selection-start-line="81" selection-start-column="34" selection-end-line="81" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_login.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.551724">
+              <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+              <folding>
+                <element signature="e#1317#1339#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_subscribe.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_subscribe.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.827586">
+              <caret line="88" column="38" selection-start-line="88" selection-start-column="38" selection-end-line="88" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SubscribeActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/SubscribeActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="107" column="58" selection-start-line="107" selection-start-column="58" selection-end-line="107" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DefaultCustomTheme.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/DefaultCustomTheme.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.148148">
+              <caret line="5" column="64" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -97,8 +135,8 @@
       <file leaf-file-name="styles.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.0">
-              <caret line="176" column="46" selection-start-line="176" selection-start-column="46" selection-end-line="176" selection-end-column="46" />
+            <state vertical-scroll-proportion="-5.851852">
+              <caret line="88" column="17" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -108,7 +146,7 @@
         <entry file="file://$PROJECT_DIR$/app/build/generated/source/r/debug/tecno/competitionplatform/activities/R.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-5.5925927">
-              <caret line="2468" column="32" selection-start-line="2468" selection-start-column="32" selection-end-line="2468" selection-end-column="32" />
+              <caret line="2471" column="32" selection-start-line="2471" selection-start-column="32" selection-end-line="2471" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -1799,7 +1837,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/windows_title.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/CustomHeaderActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/window_title.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/login_header.xml" />
@@ -1818,10 +1855,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/adapters/ListCountryAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/entities/Subscriber.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/LoginActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_subscribe.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/classes/CustomDatePicker.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/classes/CustomDatePickerDialog.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/SubscribeActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values-v21/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
@@ -1832,7 +1867,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/classes/Helper.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/adapters/ListCompetitionAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/adapters/ListMainCompetitionAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/DefaultCustomTheme.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/list_row_borders.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_competition_list.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/MainCompetitionActivity.java" />
@@ -1843,13 +1877,17 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/competition_list_row.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main_competition_list.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/classes/RestClient.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/CompetitionActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main_competition.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/AccountActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_competition.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/DefaultCustomTheme.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_subscribe.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/SubscribeActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_competition.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_account.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/CompetitionActivity.java" />
       </list>
     </option>
   </component>
@@ -1969,6 +2007,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CompetitionPlatform" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CompetitionPlatform" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2471,7 +2539,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2642559" sideWeight="0.42124277" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2642559" sideWeight="0.42124277" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -2506,35 +2574,12 @@
           <properties />
           <option name="timeStamp" value="110" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/CompetitionActivity.java</url>
-          <line>125</line>
-          <properties />
-          <option name="timeStamp" value="122" />
-        </line-breakpoint>
       </breakpoints>
       <option name="time" value="123" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="348" column="7" selection-start-line="348" selection-start-column="7" selection-end-line="348" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-23/data/res/layout/date_picker_dialog.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53177965">
-          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/classes/CustomDatePicker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13572854">
@@ -2546,16 +2591,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="66" column="13" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/SubscribeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="158" column="63" selection-start-line="158" selection-start-column="63" selection-end-line="158" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2708,18 +2743,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/DefaultCustomTheme.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.185185">
-          <caret line="13" column="64" selection-start-line="13" selection-start-column="64" selection-end-line="13" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/MainCompetitionListActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2734,21 +2762,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_subscribe.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-23/android/app/Activity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="2098" column="21" selection-start-line="2098" selection-start-column="21" selection-end-line="2098" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2756,6 +2774,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="48" column="10" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="method#onPreExecute#0;class#ListCountriesTask#0;class#BaseActivity#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2768,6 +2790,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2849,6 +2872,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="166" column="78" selection-start-line="166" selection-start-column="78" selection-end-line="166" selection-end-column="78" />
+          <folding>
+            <element signature="e#1220#1221#0" expanded="false" />
+            <element signature="e#1252#1253#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2892,18 +2919,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/CompetitionActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/build/generated/source/r/debug/tecno/competitionplatform/activities/R.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+        <state vertical-scroll-proportion="-5.5925927">
+          <caret line="2471" column="32" selection-start-line="2471" selection-start-column="32" selection-end-line="2471" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/generated/source/r/debug/tecno/competitionplatform/activities/R.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings_activity_login.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.5925927">
-          <caret line="2468" column="32" selection-start-line="2468" selection-start-column="32" selection-end-line="2468" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.13572854">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/DefaultCustomTheme.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.148148">
+          <caret line="5" column="64" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.551724">
+          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+          <folding>
+            <element signature="e#1317#1339#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_subscribe.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.827586">
+          <caret line="88" column="38" selection-start-line="88" selection-start-column="38" selection-end-line="88" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/SubscribeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="107" column="58" selection-start-line="107" selection-start-column="58" selection-end-line="107" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.851852">
+          <caret line="88" column="17" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -2913,16 +2988,8 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.6896553">
-          <caret line="75" column="72" selection-start-line="75" selection-start-column="72" selection-end-line="75" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0">
-          <caret line="176" column="46" selection-start-line="176" selection-start-column="46" selection-end-line="176" selection-end-column="46" />
+        <state vertical-scroll-proportion="-4.1034484">
+          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2932,8 +2999,16 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39618644">
-          <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+        <state vertical-scroll-proportion="-1.1724138">
+          <caret line="81" column="34" selection-start-line="81" selection-start-column="34" selection-end-line="81" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/tecno/competitionplatform/activities/CompetitionActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.06786427">
+          <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
           <folding />
         </state>
       </provider>

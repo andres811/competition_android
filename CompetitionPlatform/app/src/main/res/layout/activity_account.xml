@@ -34,7 +34,7 @@
                     style="@style/AppTheme.DetailsView_InfoLabel"/>
 
                 <TextView
-                    android:text="Andres"
+                    android:text=""
                     android:id="@+id/account_name"
                     android:layout_marginBottom="10dp"
                     style="@style/AppTheme.DetailsView_Info"/>
@@ -44,7 +44,7 @@
                     style="@style/AppTheme.DetailsView_InfoLabel"/>
 
                 <TextView
-                    android:text="Peña"
+                    android:text=""
                     android:id="@+id/account_lastname"
                     style="@style/AppTheme.DetailsView_Info"/>
 
@@ -59,7 +59,7 @@
                     style="@style/AppTheme.DetailsView_InfoLabel"/>
 
                 <TextView
-                    android:text="andres@gmail.com"
+                    android:text=""
                     android:id="@+id/account_email"
                     style="@style/AppTheme.DetailsView_Info"
                     android:layout_marginBottom="15dp"/>
@@ -69,7 +69,7 @@
                     style="@style/AppTheme.DetailsView_InfoLabel"/>
 
                 <TextView
-                    android:text="01/01/2014"
+                    android:text=""
                     android:id="@+id/account_dob"
                     style="@style/AppTheme.DetailsView_Info"
                     android:layout_marginBottom="15dp"/>
@@ -79,7 +79,7 @@
                     style="@style/AppTheme.DetailsView_InfoLabel"/>
 
                 <TextView
-                    android:text="Uruguay"
+                    android:text=""
                     android:id="@+id/account_country"
                     style="@style/AppTheme.DetailsView_Info"/>
 

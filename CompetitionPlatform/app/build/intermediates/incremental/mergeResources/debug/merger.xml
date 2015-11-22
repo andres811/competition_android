@@ -1568,6 +1568,7 @@
         <item name="android:textColor">@color/button_text</item>
         <item name="android:padding">10dp</item>
         <item name="android:background">@drawable/background_button_color</item>
+        <item name="android:textStyle">bold</item>
 
     </style><style name="DefaultCustomTheme" parent="AppTheme">
         <item name="android:buttonStyle">@style/DefaultCustomTheme.ButtonDefault</item>

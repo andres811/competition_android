@@ -24,6 +24,7 @@
             android:inputType="textPersonName"
             android:hint="Name"
             android:ems="10"
+            android:textColor="#FFF"
             android:id="@+id/subscribe_name" />
 
         <EditText
@@ -32,6 +33,7 @@
             android:inputType="textPersonName"
             android:hint="Apellido"
             android:ems="10"
+            android:textColor="#FFF"
             android:id="@+id/subscribe_lastname" />
 
         <EditText
@@ -39,6 +41,7 @@
             android:layout_height="match_parent"
             android:inputType="textEmailAddress"
             android:ems="10"
+            android:textColor="#FFF"
             android:id="@+id/subscribe_email"
             android:hint="Email" />
 
@@ -47,6 +50,7 @@
             android:layout_height="match_parent"
             android:inputType="textPassword"
             android:ems="10"
+            android:textColor="#FFF"
             android:id="@+id/subscribe_password"
             android:hint="Contraseña"
             android:layout_marginTop="25dp"/>
@@ -56,6 +60,7 @@
             android:layout_height="match_parent"
             android:inputType="textPassword"
             android:ems="10"
+            android:textColor="#FFF"
             android:id="@+id/subscribe_repeat_password"
             android:hint="Repetir contraseña" />
 
@@ -66,6 +71,7 @@
             android:id="@+id/subscribe_dob"
             android:hint="Fecha de nacimiento"
             android:layout_marginTop="25dp"
+            android:textColor="#FFF"
             android:text="12/12/1990"
             android:onClick="onClickDob" />
 
@@ -74,6 +80,7 @@
             android:layout_height="match_parent"
             android:id="@+id/subscribe_country"
             android:spinnerMode="dropdown"
+            android:textColor="#FFF"
             android:layout_marginTop="25dp"/>
 
         <Button
