@@ -2,6 +2,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
     <style name="DefaultCustomTheme" parent="AppTheme">
         <item name="android:buttonStyle">@style/DefaultCustomTheme.ButtonDefault</item>
+        <item name="android:windowBackground">@color/background</item>
         <item name="android:background">@color/background</item>
         <item name="android:textColor">@color/normal_text</item>
 

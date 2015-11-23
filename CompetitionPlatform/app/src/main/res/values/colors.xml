@@ -13,6 +13,8 @@
     <color name="normal_text">#FFF</color>
     <color name="description_text">#caddfc</color>
     <color name="info">#caddfc</color>
+    <color name="hint">#b5e7e4e4</color>
+
 
     <!-- Separator -->
     <color name="separator">#677386</color>

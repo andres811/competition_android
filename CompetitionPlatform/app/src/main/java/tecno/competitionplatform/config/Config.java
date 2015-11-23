@@ -21,5 +21,7 @@ public class Config {
     //Substring length in list view
     public static final int PREVIEW_STRING_LENGTH = 110;
 
+    //Uruguay by default
+    public static final int DEFAULT_COUNTRY_SPINNER_VALUE = 232;
 
 }

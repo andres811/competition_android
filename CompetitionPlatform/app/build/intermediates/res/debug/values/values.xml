@@ -88,6 +88,11 @@
     <color name="foreground_material_light">@android:color/black</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
+    <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="hint">#b5e7e4e4</color>
+    <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <eat-comment/>
     <color name="hint_foreground_material_dark">@color/bright_foreground_disabled_material_dark</color>
     <color name="hint_foreground_material_light">@color/bright_foreground_disabled_material_light</color>
     <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/src/main/res/values/colors.xml -->
@@ -1540,6 +1545,22 @@
         <item name="android:windowTitleBackgroundStyle">@style/CustomWindowTitleBackground</item>
 
     </style>
+    <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="CustomThemeDialog" parent="Base.Theme.AppCompat.Dialog.MinWidth">
+        <item name="android:background">@color/background</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!-- From: file:/C:/Users/Andres/Documents/GitHub%20Repo/competition_android/CompetitionPlatform/app/src/main/res/values/custom_style.xml -->
+    <eat-comment/>
     <style name="CustomWindowTitleBackground">
 
         <item name="android:background">#323331</item>
@@ -1549,6 +1570,7 @@
     <eat-comment/>
     <style name="DefaultCustomTheme" parent="AppTheme">
         <item name="android:buttonStyle">@style/DefaultCustomTheme.ButtonDefault</item>
+        <item name="android:windowBackground">@color/background</item>
         <item name="android:background">@color/background</item>
         <item name="android:textColor">@color/normal_text</item>
 

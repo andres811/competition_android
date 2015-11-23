@@ -130,12 +130,12 @@ public class BaseActivity extends Activity {
         private final String mPassword;
 
         UserLoginTask(String email, String password) {
-            //mEmail = email;
-            //mPassword = password;
+            mEmail = email;
+            mPassword = password;
 
             //Dummy credentials.
-            mEmail = "despacito@porlaspiedras.com";
-            mPassword = "123123123";
+            //mEmail = "despacito@porlaspiedras.com";
+            //mPassword = "123123123";
         }
 
         @Override
@@ -206,9 +206,7 @@ public class BaseActivity extends Activity {
 
                 finish();
             } else {
-                //mPasswordView.setError(getString(R.string.error_incorrect_password));
                 AlertDialogManager.getErrorDialog(BaseActivity.this, "ERROR", result.getException().getMessage(), "Volver", true);
-                //mPasswordView.requestFocus();
             }
         }
 
@@ -305,6 +303,7 @@ public class BaseActivity extends Activity {
 
                 listCountryAdapter.notifyDataSetChanged();
                 mCountrySpinner.setAdapter(listCountryAdapter);
+                mCountrySpinner.setSelection(Config.DEFAULT_COUNTRY_SPINNER_VALUE);
 
             } else {
                 AlertDialogManager.getErrorDialog(mChildContext, "Error", result.getException().getMessage(),"Volver", true);
@@ -317,5 +316,4 @@ public class BaseActivity extends Activity {
             //showProgress(false);
         }
     }
-
 }

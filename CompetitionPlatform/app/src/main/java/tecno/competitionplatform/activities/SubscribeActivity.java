@@ -2,14 +2,17 @@ package tecno.competitionplatform.activities;
 
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 
 import com.google.gson.Gson;
@@ -111,6 +114,8 @@ public class SubscribeActivity extends BaseActivity {
             }
 
         },newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
+
+
     }
 
     /**
@@ -118,6 +123,15 @@ public class SubscribeActivity extends BaseActivity {
      */
     public void onClickDob(View v) {
         dobPickerDialog.show();
+
+        //setting style to buttons.
+        Button dobPickerNegativeButton = dobPickerDialog.getButton(DialogInterface.BUTTON_NEGATIVE);
+        Button dobPickerPositiveButton = dobPickerDialog.getButton(DialogInterface.BUTTON_POSITIVE);
+
+        dobPickerNegativeButton.setBackgroundResource(R.drawable.background_button_color);
+        dobPickerNegativeButton.setTextColor(this.getResources().getColor(R.color.normal_text));
+        dobPickerPositiveButton.setBackgroundResource(R.drawable.background_button_color);
+        dobPickerPositiveButton.setTextColor(this.getResources().getColor(R.color.normal_text));
     }
 
     /**

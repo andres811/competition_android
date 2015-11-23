@@ -20,6 +20,7 @@
 
             <AutoCompleteTextView android:id="@+id/email" android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:hint="@string/prompt_email"
+                android:textColorHint="@color/hint"
                 android:inputType="textEmailAddress" android:maxLines="1"
                 android:textColor="#FFF"
                 android:singleLine="true" />
@@ -29,6 +30,7 @@
                 android:imeActionId="@+id/login"
                 android:imeActionLabel="@string/action_sign_in_short"
                 android:textColor="#FFF"
+                android:textColorHint="@color/hint"
                 android:imeOptions="actionUnspecified" android:inputType="textPassword"
                 android:maxLines="1" android:singleLine="true" />
 
