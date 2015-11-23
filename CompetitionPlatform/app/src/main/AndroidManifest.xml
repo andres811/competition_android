@@ -16,6 +16,7 @@
         android:windowSoftInputMode="adjustResize">
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,11 +26,13 @@
         </activity>
         <activity
             android:name=".LoginActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_login"
             android:windowSoftInputMode="adjustResize|stateVisible" >
         </activity>
         <activity
             android:name=".MainCompetitionListActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_event_list"
             android:parentActivityName=".MainActivity" >
             <meta-data
@@ -46,6 +49,7 @@
         </activity>
         <activity
             android:name=".MainCompetitionActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_main_competition"
             android:parentActivityName=".MainCompetitionListActivity" >
             <meta-data
@@ -54,6 +58,7 @@
         </activity>
         <activity
             android:name=".CompetitionListActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_competition_list"
             android:parentActivityName=".MainCompetitionActivity" >
             <meta-data
@@ -62,6 +67,7 @@
         </activity>
         <activity
             android:name=".CompetitionActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_competition"
             android:parentActivityName=".CompetitionListActivity" >
             <meta-data
@@ -70,14 +76,17 @@
         </activity>
         <activity
             android:name=".BaseActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_base" >
         </activity>
         <activity
             android:name=".AccountActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_account" >
         </activity>
         <activity
             android:name=".SubscribeActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_subscribe"
             android:parentActivityName=".MainActivity" >
             <meta-data

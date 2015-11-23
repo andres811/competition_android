@@ -43,7 +43,7 @@ public class CompetitionActivity extends BaseActivity {
         if (item.getItemId() == android.R.id.home ) {
 
         }
-        return true;
+        return super.onOptionsItemSelected(item);
     }
 
     public class ReadCompetitionTask extends AsyncTask<Void, Void, ResultHandler<Competition>> {

@@ -110,7 +110,7 @@ public class BaseActivity extends Activity {
             return true;
         }
 
-        return false;
+        return super.onOptionsItemSelected(item);
     }
 
     protected SessionManager getSessionManager(){

@@ -35,7 +35,8 @@
         android:windowSoftInputMode="adjustResize" >
         <activity
             android:name="tecno.competitionplatform.activities.MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -45,12 +46,14 @@
         <activity
             android:name="tecno.competitionplatform.activities.LoginActivity"
             android:label="@string/title_activity_login"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateVisible" >
         </activity>
         <activity
             android:name="tecno.competitionplatform.activities.MainCompetitionListActivity"
             android:label="@string/title_activity_event_list"
-            android:parentActivityName="tecno.competitionplatform.activities.MainActivity" >
+            android:parentActivityName="tecno.competitionplatform.activities.MainActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="tecno.competitionplatform.activities.MainActivity" />
@@ -66,7 +69,8 @@
         <activity
             android:name="tecno.competitionplatform.activities.MainCompetitionActivity"
             android:label="@string/title_activity_main_competition"
-            android:parentActivityName="tecno.competitionplatform.activities.MainCompetitionListActivity" >
+            android:parentActivityName="tecno.competitionplatform.activities.MainCompetitionListActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="tecno.competitionplatform.activities.MainCompetitionListActivity" />
@@ -74,7 +78,8 @@
         <activity
             android:name="tecno.competitionplatform.activities.CompetitionListActivity"
             android:label="@string/title_activity_competition_list"
-            android:parentActivityName="tecno.competitionplatform.activities.MainCompetitionActivity" >
+            android:parentActivityName="tecno.competitionplatform.activities.MainCompetitionActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="tecno.competitionplatform.activities.MainCompetitionActivity" />
@@ -82,23 +87,27 @@
         <activity
             android:name="tecno.competitionplatform.activities.CompetitionActivity"
             android:label="@string/title_activity_competition"
-            android:parentActivityName="tecno.competitionplatform.activities.CompetitionListActivity" >
+            android:parentActivityName="tecno.competitionplatform.activities.CompetitionListActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="tecno.competitionplatform.activities.CompetitionListActivity" />
         </activity>
         <activity
             android:name="tecno.competitionplatform.activities.BaseActivity"
-            android:label="@string/title_activity_base" >
+            android:label="@string/title_activity_base"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="tecno.competitionplatform.activities.AccountActivity"
-            android:label="@string/title_activity_account" >
+            android:label="@string/title_activity_account"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="tecno.competitionplatform.activities.SubscribeActivity"
             android:label="@string/title_activity_subscribe"
-            android:parentActivityName="tecno.competitionplatform.activities.MainActivity" >
+            android:parentActivityName="tecno.competitionplatform.activities.MainActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="tecno.competitionplatform.activities.MainActivity" />
