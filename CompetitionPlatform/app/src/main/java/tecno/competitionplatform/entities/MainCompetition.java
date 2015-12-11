@@ -1,6 +1,7 @@
 package tecno.competitionplatform.entities;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by Andres on 22/10/2015.
@@ -13,6 +14,15 @@ public class MainCompetition {
     private Integer styleType;
     private Date startDate;
     private Date endDate;
+    private List<Post> posts;
+
+    public List<Post> getPosts() {
+        return posts;
+    }
+
+    public void setPosts(List<Post> posts) {
+        this.posts = posts;
+    }
 
     public String getDescription() {
         return description;

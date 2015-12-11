@@ -64,7 +64,7 @@ public class ListPostAdapter extends ArrayAdapter<Post>
             }
 
             if (createdDate != null) {
-                createdDate.setText(new SimpleDateFormat(Config.VIEW_DATE_FORMAT).format(p.getCreatedDate()));
+                createdDate.setText("Escrito el " + new SimpleDateFormat(Config.VIEW_DATE_FORMAT).format(p.getCreatedDate()));
             }
 
             if (description != null) {

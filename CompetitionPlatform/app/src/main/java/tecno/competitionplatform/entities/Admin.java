@@ -8,7 +8,6 @@ public class Admin {
     private int adminId;
     private String nickname;
     private String email;
-    private int status;
     private String password;
     private int role;
     private String token;
@@ -35,14 +34,6 @@ public class Admin {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public int getStatus() {
-        return status;
-    }
-
-    public void setStatus(int status) {
-        this.status = status;
     }
 
     public String getPassword() {

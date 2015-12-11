@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * Created by Andres on 10/12/2015.
  */
-public class Post {
+public class Post implements Comparable<Post> {
 
     private int postId;
     private Date createdDate;
@@ -60,5 +60,10 @@ public class Post {
 
     public void setAdmin(Admin admin) {
         this.adminId = admin;
+    }
+
+    @Override
+    public int compareTo(Post o) {
+        return getCreatedDate().compareTo(o.getCreatedDate());
     }
 }

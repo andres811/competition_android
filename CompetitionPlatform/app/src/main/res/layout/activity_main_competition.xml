@@ -57,24 +57,9 @@
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content">
-
-                    <ListView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/main_competition_posts_list_view"
-                        android:divider="@color/separator"
-                        android:dividerHeight="1px"/>
-
-
-
-                </LinearLayout>
 
 
                 <TextView
-                    android:text="Descripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del eventoDescripción del evento"
                     android:id="@+id/main_competition_description"
                     android:paddingTop="10dp"
                     style="@style/AppTheme.DetailsView_DescriptionText"
@@ -84,6 +69,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:background="@drawable/default_gmap"/>-->
+
+                <View style="@style/AppTheme.Separator"/>
+
+                <TextView
+                    android:text="Últimas noticias"
+                    android:id="@+id/last_posts_title"
+                    android:visibility="invisible"
+                    style="@style/AppTheme.DetailsView_TitleInfo" />
+
+                <ListView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/main_competition_posts_list_view"
+                    android:divider="@color/separator"
+                    android:dividerHeight="1px"/>
+
+
+
 
 
             </LinearLayout>

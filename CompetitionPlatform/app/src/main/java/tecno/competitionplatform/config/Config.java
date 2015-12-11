@@ -12,7 +12,7 @@ public class Config {
     public static final String COMPETITION_SERVICE = "entities.competition";
     public static final String SUBSCRIBER_SERVICE = "suscriber";
     public static final String COUNTRY_SERVICE = "entities.country";
-    public static final String POST_SERVICE = "entities.post";
+    public static final String POST_BY_MAIN_COMPETITION_SERVICE= "entities.post/mainCompetition";
 
     //Date formats
     public static final String GSON_DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss"; //Can't touch this
