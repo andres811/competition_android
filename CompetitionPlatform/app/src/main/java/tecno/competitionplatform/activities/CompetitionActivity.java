@@ -4,8 +4,18 @@ import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -14,12 +24,14 @@ import org.json.JSONObject;
 
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
+import java.text.SimpleDateFormat;
 
 import tecno.competitionplatform.classes.AlertDialogManager;
 import tecno.competitionplatform.classes.RestClient;
 import tecno.competitionplatform.classes.ResultHandler;
 import tecno.competitionplatform.config.Config;
 import tecno.competitionplatform.entities.Competition;
+import tecno.competitionplatform.entities.Location;
 
 public class CompetitionActivity extends BaseActivity {
 
@@ -36,7 +48,9 @@ public class CompetitionActivity extends BaseActivity {
         mDialog.setCanceledOnTouchOutside(false);
         mReadCompetitionTask = new ReadCompetitionTask(competitionId);
         mReadCompetitionTask.execute((Void) null);
+
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -131,17 +145,34 @@ public class CompetitionActivity extends BaseActivity {
                     TextView txtLocationName = (TextView)findViewById(R.id.competition_location_name);
                     TextView txtLocationRegion = (TextView)findViewById(R.id.competition_location_region);
                     TextView txtLocationCapacity = (TextView)findViewById(R.id.competition_location_capacity);
-                    //TextView txtStartDate = (TextView)findViewById(R.id.competition_start_date);
-                    //TextView txtEndDate = (TextView)findViewById(R.id.competition_end_date);
+                    TextView txtStartDate = (TextView)findViewById(R.id.competition_start_date);
+                    TextView txtStartTime = (TextView)findViewById(R.id.competition_start_time);
+                    GoogleMap map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
+
+                    Location location = competition.getLocation();
+                    LatLng locationLatLng = new LatLng(location.getLatitude(),location.getLongitude());
+                    map.setMyLocationEnabled(true);
+                    map.moveCamera(CameraUpdateFactory.newLatLngZoom(locationLatLng, 13));
+
+                    map.addMarker(new MarkerOptions()
+                            .title(location.getName())
+                            .snippet("Capacidad: " + location.getCapacity().toString())
+                            .position(locationLatLng));
 
                     txtTitle.setText(competition.getName());
                     txtDescription.setText(competition.getDescription());
                     txtMainCompetition.setText(competition.getMainCompetition().getName());
-                    txtLocationName.setText(competition.getLocation().getName());
-                    txtLocationRegion.setText(competition.getLocation().getRegion().getName());
-                    txtLocationCapacity.setText(competition.getLocation().getCapacity().toString());
-                    //txtStartDate.setText(mainCompetition.getStartDate().toString());
-                    //txtEndDate.setText(mainCompetition.getEndDate().toString()));
+                    txtLocationName.setText(location.getName());
+                    txtLocationRegion.setText(location.getRegion().getName());
+                    txtLocationCapacity.setText(location.getCapacity().toString());
+
+                    //date formatter
+                    SimpleDateFormat sdfDate = new SimpleDateFormat(Config.VIEW_DATE_FORMAT);
+                    SimpleDateFormat sdfTime= new SimpleDateFormat(Config.VIEW_TIME_FORMAT);
+
+
+                    txtStartDate.setText(sdfDate.format(competition.getStartDate()).toString());
+                    txtStartTime.setText(sdfTime.format(competition.getStartDate()).toString());
 
 
 

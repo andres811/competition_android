@@ -1,5 +1,7 @@
 package tecno.competitionplatform.entities;
 
+import java.util.Date;
+
 /**
  * Created by Andres on 25/10/2015.
  */
@@ -11,6 +13,15 @@ public class Competition {
     private String name;
     private String description;
     private Discipline disciplineId;
+    private Date startDate;
+
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
+    }
 
     public Integer getCompetitionId() {
         return competitionId;

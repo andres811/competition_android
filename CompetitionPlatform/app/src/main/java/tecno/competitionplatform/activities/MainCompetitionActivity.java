@@ -139,6 +139,8 @@ public class MainCompetitionActivity extends BaseActivity {
                 txtStartDate.setText(sdf.format(mainCompetition.getStartDate()).toString());
                 txtEndDate.setText(sdf.format(mainCompetition.getEndDate()).toString());
 
+
+
                 btnListCompetitions.setOnClickListener(new View.OnClickListener() {
 
                     @Override

@@ -12,11 +12,12 @@ public class Config {
     public static final String COMPETITION_SERVICE = "entities.competition";
     public static final String SUBSCRIBER_SERVICE = "suscriber";
     public static final String COUNTRY_SERVICE = "entities.country";
+    public static final String POST_SERVICE = "entities.post";
 
     //Date formats
     public static final String GSON_DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss"; //Can't touch this
     public static final String VIEW_DATE_FORMAT = "dd/MM/yyyy";
-    public static final String VIEW_DATETIME_FORMAT = "dd/MM/yyyy HH:mm";
+    public static final String VIEW_TIME_FORMAT = "HH:mm";
 
     //Substring length in list view
     public static final int PREVIEW_STRING_LENGTH = 110;

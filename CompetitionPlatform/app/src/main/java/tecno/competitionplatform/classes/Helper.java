@@ -8,6 +8,7 @@ import tecno.competitionplatform.config.Config;
 public class Helper {
 
     private static Helper instance = null;
+
     protected Helper() {
         // Exists only to defeat instantiation.
     }

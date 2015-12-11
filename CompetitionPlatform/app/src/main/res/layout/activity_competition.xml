@@ -19,7 +19,8 @@
 
     <View style="@style/AppTheme.Separator"/>
 
-    <ScrollView style="@style/AppTheme.DetailsView_ScrollViewContainer" >
+    <ScrollView android:id="@+id/scrollView"
+        style="@style/AppTheme.DetailsView_ScrollViewContainer" >
 
         <LinearLayout style="@style/AppTheme.DetailsView_InfoContainer">
 
@@ -45,6 +46,7 @@
 
                     <TextView
                         android:text="15:00 Hs"
+                        android:id="@+id/competition_start_time"
                         style="@style/AppTheme.DetailsView_Info"/>
 
 
@@ -103,10 +105,22 @@
                 android:text="¿Cómo llegar?"
                 style="@style/AppTheme.DetailsView_TitleInfo" />
 
+            <!--
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
                 android:background="@drawable/default_gmap"/>
+            -->
+
+            <fragment
+                android:id="@+id/map"
+                class="com.google.android.gms.maps.MapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"/>
+
+
+
+
 
         </LinearLayout>
 
