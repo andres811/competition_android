@@ -172,9 +172,9 @@ MERGED from com.android.support:support-v4:23.1.0:22:5
 	android:theme
 		ADDED from AndroidManifest.xml:23:9
 uses-library#com.google.android.maps
-ADDED from AndroidManifest.xml:26:9
+ADDED from AndroidManifest.xml:25:9
 	android:name
-		ADDED from AndroidManifest.xml:26:23
+		ADDED from AndroidManifest.xml:25:23
 meta-data#com.google.android.maps.v2.API_KEY
 ADDED from AndroidManifest.xml:27:9
 	android:value
@@ -184,9 +184,9 @@ ADDED from AndroidManifest.xml:27:9
 activity#tecno.competitionplatform.activities.MainActivity
 ADDED from AndroidManifest.xml:31:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:33:13
-	android:label
 		ADDED from AndroidManifest.xml:34:13
+	android:label
+		ADDED from AndroidManifest.xml:33:13
 	android:name
 		ADDED from AndroidManifest.xml:32:13
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
@@ -202,9 +202,9 @@ ADDED from AndroidManifest.xml:38:17
 activity#tecno.competitionplatform.activities.LoginActivity
 ADDED from AndroidManifest.xml:41:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:43:13
-	android:label
 		ADDED from AndroidManifest.xml:44:13
+	android:label
+		ADDED from AndroidManifest.xml:43:13
 	android:windowSoftInputMode
 		ADDED from AndroidManifest.xml:45:13
 	android:name
@@ -212,11 +212,11 @@ ADDED from AndroidManifest.xml:41:9
 activity#tecno.competitionplatform.activities.MainCompetitionListActivity
 ADDED from AndroidManifest.xml:47:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:49:13
-	android:label
-		ADDED from AndroidManifest.xml:50:13
-	android:parentActivityName
 		ADDED from AndroidManifest.xml:51:13
+	android:label
+		ADDED from AndroidManifest.xml:49:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:50:13
 	android:name
 		ADDED from AndroidManifest.xml:48:13
 meta-data#android.support.PARENT_ACTIVITY
@@ -236,59 +236,67 @@ ADDED from AndroidManifest.xml:56:9
 activity#tecno.competitionplatform.activities.MainCompetitionActivity
 ADDED from AndroidManifest.xml:64:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:66:13
-	android:label
-		ADDED from AndroidManifest.xml:67:13
-	android:parentActivityName
 		ADDED from AndroidManifest.xml:68:13
+	android:label
+		ADDED from AndroidManifest.xml:66:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:67:13
 	android:name
 		ADDED from AndroidManifest.xml:65:13
 activity#tecno.competitionplatform.activities.CompetitionListActivity
 ADDED from AndroidManifest.xml:73:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:75:13
-	android:label
-		ADDED from AndroidManifest.xml:76:13
-	android:parentActivityName
 		ADDED from AndroidManifest.xml:77:13
+	android:label
+		ADDED from AndroidManifest.xml:75:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:76:13
 	android:name
 		ADDED from AndroidManifest.xml:74:13
 activity#tecno.competitionplatform.activities.CompetitionActivity
 ADDED from AndroidManifest.xml:82:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:84:13
-	android:label
-		ADDED from AndroidManifest.xml:85:13
-	android:parentActivityName
 		ADDED from AndroidManifest.xml:86:13
+	android:label
+		ADDED from AndroidManifest.xml:84:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:85:13
 	android:name
 		ADDED from AndroidManifest.xml:83:13
 activity#tecno.competitionplatform.activities.BaseActivity
 ADDED from AndroidManifest.xml:91:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:93:13
-	android:label
 		ADDED from AndroidManifest.xml:94:13
+	android:label
+		ADDED from AndroidManifest.xml:93:13
 	android:name
 		ADDED from AndroidManifest.xml:92:13
 activity#tecno.competitionplatform.activities.AccountActivity
 ADDED from AndroidManifest.xml:96:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:98:13
-	android:label
 		ADDED from AndroidManifest.xml:99:13
+	android:label
+		ADDED from AndroidManifest.xml:98:13
 	android:name
 		ADDED from AndroidManifest.xml:97:13
 activity#tecno.competitionplatform.activities.SubscribeActivity
 ADDED from AndroidManifest.xml:101:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:103:13
-	android:label
-		ADDED from AndroidManifest.xml:104:13
-	android:parentActivityName
 		ADDED from AndroidManifest.xml:105:13
+	android:label
+		ADDED from AndroidManifest.xml:103:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:104:13
 	android:name
 		ADDED from AndroidManifest.xml:102:13
+activity#tecno.competitionplatform.activities.SettingsActivity
+ADDED from AndroidManifest.xml:110:9
+	android:label
+		ADDED from AndroidManifest.xml:112:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:113:13
+	android:name
+		ADDED from AndroidManifest.xml:111:13
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 MERGED from com.google.android.gms:play-services:7.5.0:18:5

@@ -24,7 +24,8 @@
                     android:paddingLeft="35dp"
                     android:paddingRight="35dp"
                     android:paddingBottom="15dp">
-                    <ImageView style="@style/AppTheme.DetailsView_ImageViewUser"/>
+                    <ImageView android:id="@+id/subscriber_image"
+                        style="@style/AppTheme.DetailsView_ImageViewUser"/>
                 </FrameLayout>
 
 
@@ -93,6 +94,7 @@
 
             <Button
                 android:id="@+id/edit_account_btn"
+                android:onClick="onClickEditAccountButton"
                 android:text="Editar datos"
                 style="@style/AppTheme.DetailsView_FooterButton"/>
 

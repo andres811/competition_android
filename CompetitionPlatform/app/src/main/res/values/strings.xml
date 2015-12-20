@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Plataforma Competición</string>
+    <string name="app_name">MultiEvents Suscriptor</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Configuración</string>
@@ -23,4 +23,7 @@
     <string name="title_activity_competition">Detalle de la competencia</string>
     <string name="title_activity_account">Mi cuenta</string>
     <string name="title_activity_subscribe">Suscripción</string>
+    <string name="title_activity_settings">Configuración</string>
+
+
 </resources>

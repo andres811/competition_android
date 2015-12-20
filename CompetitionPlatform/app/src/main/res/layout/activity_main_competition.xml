@@ -35,7 +35,7 @@
                             style="@style/AppTheme.DetailsView_InfoLabel"/>
 
                         <TextView
-                            android:text="01/01/2014"
+                            android:text=""
                             android:id="@+id/main_competition_start_date"
                             android:layout_marginBottom="10dp"
                             style="@style/AppTheme.DetailsView_Info"/>
@@ -46,7 +46,7 @@
                             style="@style/AppTheme.DetailsView_InfoLabel"/>
 
                         <TextView
-                            android:text="01/01/2015"
+                            android:text=""
                             android:id="@+id/main_competition_end_date"
                             style="@style/AppTheme.DetailsView_Info"/>
 

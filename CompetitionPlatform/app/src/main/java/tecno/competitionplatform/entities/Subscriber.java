@@ -16,7 +16,7 @@ public class Subscriber {
     private String token;
     private Country countryId;
 
-    //Constructor
+    //Constructors
     public Subscriber(Integer subscriberId, String email, String firstname, String token) {
         this.subscriberId = subscriberId;
         this.email = email;
@@ -33,6 +33,7 @@ public class Subscriber {
         this.countryId = countryId;
     }
 
+    //getters and setters
     public String getPassword() {
         return password;
     }

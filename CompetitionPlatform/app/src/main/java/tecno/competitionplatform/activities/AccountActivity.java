@@ -1,12 +1,17 @@
 package tecno.competitionplatform.activities;
 
+import android.annotation.TargetApi;
 import android.app.ProgressDialog;
-import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -14,6 +19,7 @@ import com.google.gson.GsonBuilder;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.text.SimpleDateFormat;
@@ -22,7 +28,6 @@ import tecno.competitionplatform.classes.AlertDialogManager;
 import tecno.competitionplatform.classes.RestClient;
 import tecno.competitionplatform.classes.ResultHandler;
 import tecno.competitionplatform.config.Config;
-import tecno.competitionplatform.entities.MainCompetition;
 import tecno.competitionplatform.entities.SessionUser;
 import tecno.competitionplatform.entities.Subscriber;
 
@@ -30,6 +35,7 @@ public class AccountActivity extends BaseActivity {
 
     private ReadSubscriberTask mReadSubscriberTask = null;
     private ProgressDialog mDialog;
+    private ImageView mSubscriberImage = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,11 +43,83 @@ public class AccountActivity extends BaseActivity {
         setContentView(R.layout.activity_account);
         getActionBar().setDisplayHomeAsUpEnabled(false);
 
+        mSubscriberImage = (ImageView) findViewById(R.id.subscriber_image);
+
         mDialog = new ProgressDialog(AccountActivity.this);
         mDialog.setCanceledOnTouchOutside(false);
 
         mReadSubscriberTask = new ReadSubscriberTask();
         mReadSubscriberTask.execute((Void) null);
+    }
+
+    public void onClickEditAccountButton(View view) {
+        Toast.makeText(AccountActivity.this, "Funcionalidad no disponible",
+                Toast.LENGTH_LONG).show();
+    }
+
+    public class SetSubscriberImageTask extends AsyncTask<Void, Void, ResultHandler<Bitmap>> {
+
+        public SetSubscriberImageTask() {}
+
+        @Override
+        protected void onPreExecute() {}
+
+        @Override
+        protected ResultHandler<Bitmap> doInBackground(Void... params) {
+
+            ResultHandler<Bitmap> result = new ResultHandler<>();
+
+            //Get subscriber id and token from the user data session
+            Integer subscriberId = getSessionManager().getUser().getUserId();
+
+
+            //create the service url
+            String url = Config.BASE_URL_SERVICES + Config.SUBSCRIBER_IMAGE_SERVICE;
+            url += "/" + subscriberId;
+
+            try {
+                RestClient restClient = new RestClient(url);
+
+                Bitmap bmp = restClient.downloadImage(url);
+                result.setData(bmp);
+
+            } catch (MalformedURLException e) {
+                result.setException(e);
+                e.printStackTrace();
+            } catch (IOException e) {
+                result.setData(null);
+                e.printStackTrace();;
+            }
+            return result;
+        }
+
+        @TargetApi(Build.VERSION_CODES.KITKAT)
+        @Override
+        protected void onPostExecute(final ResultHandler<Bitmap> result) {
+
+
+            if (result != null && result.validateResponse()) {
+
+                Bitmap bmp = result.getData();
+                if (bmp != null) {
+
+                    mSubscriberImage.setBackground(new BitmapDrawable(getResources(), bmp));
+
+                } else {
+                    mSubscriberImage.setBackground(getResources().getDrawable(R.drawable.default_subscriber_image));
+                }
+
+
+            } else {
+                AlertDialogManager.getErrorDialog(AccountActivity.this, "ERROR", result.getException().getMessage(), "Volver", true);
+            }
+        }
+
+        @Override
+        protected void onCancelled() {
+
+            //showProgress(false);
+        }
     }
 
     public class ReadSubscriberTask extends AsyncTask<Void, Void, ResultHandler<Subscriber>> {
@@ -131,7 +209,6 @@ public class AccountActivity extends BaseActivity {
         @Override
         protected void onPostExecute(final ResultHandler<Subscriber> result) {
 
-
             mDialog.dismiss();
 
             if (result !=null && result.validateResponse()) {
@@ -154,6 +231,9 @@ public class AccountActivity extends BaseActivity {
                 txtDob.setText(sdf.format(subscriber.getDob()).toString());
                 txtEmail.setText(subscriber.getEmail());
                 txtCountry.setText(subscriber.getCountry().getName());
+
+                //setting suscriber image if exist
+                new SetSubscriberImageTask().execute((Void) null);
 
 
             } else {

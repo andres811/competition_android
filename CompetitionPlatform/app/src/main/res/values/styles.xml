@@ -104,7 +104,7 @@
         <!-- Needs a Relative parent to work-->
         <item name="android:layout_marginBottom">40dp</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
     <style name="AppTheme.DetailsView_InfoContainer">
@@ -175,7 +175,7 @@
     <style name="AppTheme.DetailsView_ImageViewUser">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">240dp</item>
-        <item name="android:background">@drawable/default_subscriber_image</item>
+        <!--<item name="android:background">@drawable/default_subscriber_image</item>-->
     </style>
 
     <style name="CustomThemeDialog" parent="Base.Theme.AppCompat.Dialog.MinWidth">

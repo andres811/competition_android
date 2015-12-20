@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.support.v4.content.IntentCompat;
+import android.widget.Toast;
 
 import java.util.HashMap;
 
@@ -143,6 +144,8 @@ public class SessionManager {
         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
                 IntentCompat.FLAG_ACTIVITY_CLEAR_TASK);
 
+        Toast.makeText(_context, "Has cerrado sesión!",
+                Toast.LENGTH_LONG).show();
         // Staring Login Activity
         _context.startActivity(i);
     }

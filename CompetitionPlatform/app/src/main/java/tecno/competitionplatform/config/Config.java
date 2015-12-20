@@ -6,13 +6,16 @@ package tecno.competitionplatform.config;
 public class Config {
 
     //Url Services
-    public static final String BASE_URL_SERVICES = "http://tecnocompetition.ddns.net:8080/pfinal/services/";
+    public static String BASE_URL_SERVICES = "http://tecnocompetition.ddns.net:8080/pfinal/services/";
+    public static String BASE_URL_SECURE_SERVICES = "https://tecnocompetition.ddns.net:8181/pfinal/services/";
     public static final String AUTHENTICATION_SERVICE = "auth";
     public static final String MAINCOMPETITION_SERVICE = "entities.maincompetition";
     public static final String COMPETITION_SERVICE = "entities.competition";
     public static final String SUBSCRIBER_SERVICE = "suscriber";
+    public static final String SUBSCRIBER_IMAGE_SERVICE = "subscriberFileManager/image";
     public static final String COUNTRY_SERVICE = "entities.country";
     public static final String POST_BY_MAIN_COMPETITION_SERVICE= "entities.post/mainCompetition";
+
 
     //Date formats
     public static final String GSON_DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss"; //Can't touch this

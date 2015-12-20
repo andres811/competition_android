@@ -5,15 +5,23 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.app.Activity;
+import android.support.v7.internal.app.ToolbarActionBar;
+import android.support.v7.widget.AppCompatImageView;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -24,6 +32,7 @@ import org.json.JSONObject;
 
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import tecno.competitionplatform.adapters.ListCountryAdapter;
@@ -86,11 +95,45 @@ public class BaseActivity extends Activity {
             s.setSpan(new ForegroundColorSpan(Color.BLUE), 0, s.length(), 0);
             labelNameItem.setTitle(s);
         } else {
-            //Do nothing
+
+            //inflater.inflate(R.menu.menu_main, menu);
+            //getActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
+
+            //setOverflowButtonColor(this , Color.CYAN);
+
         }
 
 
         return super.onCreateOptionsMenu(menu);
+    }
+
+    public static void setOverflowButtonColor(final Activity activity, final int color) {
+        final String overflowDescription = activity.getString(R.string.abc_action_menu_overflow_description);
+        final ViewGroup decorView = (ViewGroup) activity.getWindow().getDecorView();
+        final ViewTreeObserver viewTreeObserver = decorView.getViewTreeObserver();
+        viewTreeObserver.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                final ArrayList<View> outViews = new ArrayList<View>();
+                decorView.findViewsWithText(outViews, overflowDescription,
+                        View.FIND_VIEWS_WITH_CONTENT_DESCRIPTION);
+                if (outViews.isEmpty()) {
+                    return;
+                }
+                AppCompatImageView overflow=(AppCompatImageView) outViews.get(0);
+                overflow.setColorFilter(color);
+                removeOnGlobalLayoutListener(decorView, this);
+            }
+        });
+    }
+
+    public static void removeOnGlobalLayoutListener(View v, ViewTreeObserver.OnGlobalLayoutListener listener) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN) {
+            v.getViewTreeObserver().removeGlobalOnLayoutListener(listener);
+        }
+        else {
+            v.getViewTreeObserver().removeOnGlobalLayoutListener(listener);
+        }
     }
 
     @Override
@@ -106,6 +149,10 @@ public class BaseActivity extends Activity {
             return true;
         } else if ((id == R.id.action_account_info)) {
             Intent intent = new Intent(this, AccountActivity.class);
+            startActivity(intent);
+            return true;
+        } else if (id == R.id.action_settings){
+            Intent intent = new Intent(this, SettingsActivity.class);
             startActivity(intent);
             return true;
         }
@@ -203,6 +250,8 @@ public class BaseActivity extends Activity {
                 Subscriber subscriber = result.getData();
                 getSessionManager().createLoginSession(subscriber.getSubscriberId(), subscriber.getFirstname(), subscriber.getEmail(), subscriber.getToken());
 
+                Toast.makeText(BaseActivity.this, "Has iniciado sesión!",
+                        Toast.LENGTH_LONG).show();
 
                 finish();
             } else {
@@ -315,5 +364,15 @@ public class BaseActivity extends Activity {
 
             //showProgress(false);
         }
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_MENU) {
+            Intent intent = new Intent(this, SettingsActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

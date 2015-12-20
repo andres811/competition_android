@@ -1,5 +1,8 @@
 package tecno.competitionplatform.classes;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -108,6 +111,10 @@ public class RestClient {
 
         headers.put(name,value);
 
+    }
+
+    public Bitmap downloadImage(String url) throws IOException {
+        return BitmapFactory.decodeStream(new URL (url).openConnection().getInputStream());
     }
 
     /*

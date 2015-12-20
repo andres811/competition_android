@@ -5,8 +5,8 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="17"
-        android:targetSdkVersion="17" />
+        android:minSdkVersion="19"
+        android:targetSdkVersion="19" />
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -117,6 +117,14 @@
             android:label="@string/title_activity_subscribe"
             android:parentActivityName="tecno.competitionplatform.activities.MainActivity"
             android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="tecno.competitionplatform.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name="tecno.competitionplatform.activities.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName="tecno.competitionplatform.activities.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="tecno.competitionplatform.activities.MainActivity" />
